@@ -21,6 +21,7 @@
     "physiological_range_exclusion": 76,
     "subject_encounter_mismatch": 0,
     "unsupported_code": 167983,
+    "unsupported_component_structure": 0,
     "unsupported_unit": 0,
     "unsupported_value_type": 411388
   },

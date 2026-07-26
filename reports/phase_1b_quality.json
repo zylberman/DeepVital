@@ -1,0 +1,29 @@
+{
+  "configuration": {
+    "consecutive_low_map_hours": 2,
+    "forward_fill_max_hours": 2,
+    "hourly_aggregation": "median",
+    "input_window_hours": 12,
+    "map_threshold": 65.0,
+    "prediction_horizon_hours": 6,
+    "require_complete_future_map": true
+  },
+  "counts": {
+    "candidate_windows": 10008,
+    "canonical_rows": 89415,
+    "duplicate_values_collapsed": 13225,
+    "forward_filled_cells": 8846,
+    "hourly_observed_cells": 76190,
+    "hourly_rows": 12309,
+    "positive_windows": 1759,
+    "unfilled_missing_cells": 13436,
+    "windows_created": 8872,
+    "windows_excluded_incomplete_future_map": 1136
+  },
+  "entities": {
+    "hospital_admissions": 128,
+    "icu_stays": 140,
+    "patients": 100
+  },
+  "event_prevalence": 0.19826420198376915
+}

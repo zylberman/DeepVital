@@ -184,8 +184,12 @@ def test_ambiguous_hospital_mapping_is_rejected(tmp_path: Path) -> None:
     assert error == "ambiguous_icu_mapping"
 
 
-def test_value_quantity_and_component_extraction() -> None:
+def test_value_quantity_extraction_and_unconfirmed_components_disabled() -> None:
     resource = _observation()
+    measurements = list(observation_measurements(resource))
+    assert [item["coding"]["code"] for item in measurements] == ["hr"]
+    assert measurements[0]["quantity"]["value"] == 80.0
+
     resource["component"] = [
         {
             "code": {
@@ -197,8 +201,7 @@ def test_value_quantity_and_component_extraction() -> None:
         }
     ]
     measurements = list(observation_measurements(resource))
-    assert [item["coding"]["code"] for item in measurements] == ["hr", "sys"]
-    assert measurements[1]["quantity"]["value"] == 120
+    assert [item["coding"]["code"] for item in measurements] == ["hr"]
 
 
 def test_fahrenheit_conversion_requires_confirmed_unit() -> None:
@@ -243,6 +246,52 @@ def test_string_value_is_not_misclassified_as_missing(tmp_path: Path) -> None:
     assert quality["rejections"]["missing_value"] == 0
 
 
+def test_no_icu_candidate_and_missing_timestamp_are_explicit(tmp_path: Path) -> None:
+    index = build_encounter_index(_fhir_dir(tmp_path, []))
+    stay, error = resolve_icu_stay(
+        index,
+        "Patient/SYNTHETIC-PATIENT-RESOURCE",
+        "Encounter/SYNTHETIC-HOSPITAL-RESOURCE",
+        parse_fhir_datetime("2020-01-03T12:00:00Z"),
+    )
+    assert stay is None
+    assert error == "no_candidate_icu_stay"
+    stay, error = resolve_icu_stay(
+        index,
+        "Patient/SYNTHETIC-PATIENT-RESOURCE",
+        "Encounter/SYNTHETIC-ICU-RESOURCE",
+        None,
+    )
+    assert stay is None
+    assert error == "missing_timestamp"
+
+
+def test_components_and_implausible_values_are_rejected(tmp_path: Path) -> None:
+    component_observation = _observation()
+    component_observation["component"] = [
+        {
+            "code": {"coding": [{"system": SYSTEM, "code": "sys"}]},
+            "valueQuantity": {"value": 120, "unit": "mmHg"},
+        }
+    ]
+    rows, quality = extract_rows(
+        _fhir_dir(tmp_path, [component_observation]),
+        VITAL_CONFIG,
+        UNIT_CONFIG,
+    )
+    assert rows == []
+    assert quality["rejections"]["unsupported_component_structure"] == 1
+
+    other = tmp_path / "range"
+    rows, quality = extract_rows(
+        _fhir_dir(other, [_observation(value=999.0)]),
+        VITAL_CONFIG,
+        UNIT_CONFIG,
+    )
+    assert rows == []
+    assert quality["rejections"]["physiological_range_exclusion"] == 1
+
+
 def test_quality_report_contains_no_identifiers(tmp_path: Path) -> None:
     rows, quality = extract_rows(
         _fhir_dir(tmp_path, [_observation()]), VITAL_CONFIG, UNIT_CONFIG
@@ -271,10 +320,10 @@ def test_deterministic_end_to_end_synthetic_extraction(tmp_path: Path) -> None:
     )
     first = tmp_path / "first.csv"
     second = tmp_path / "second.csv"
-    assert write_output(first, rows)[1] == "csv"
-    write_output(second, list(reversed(rows)))
+    assert write_output(first, rows, "csv")[1] == "csv"
+    write_output(second, list(reversed(rows)), "csv")
     # write_output preserves its input order; extraction itself is deterministic.
-    write_output(second, rows)
+    write_output(second, rows, "csv")
     assert first.read_bytes() == second.read_bytes()
     with first.open(encoding="utf-8", newline="") as handle:
         output_rows = list(csv.DictReader(handle))
