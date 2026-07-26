@@ -1,0 +1,14 @@
+# Manipulación de datos y SQL
+pandas
+numpy
+sqlalchemy
+psycopg2-binary
+
+# Deep Learning y Análisis Estadístico
+torch
+scipy
+scikit-learn
+
+# Backend API
+fastapi
+uvicorn
