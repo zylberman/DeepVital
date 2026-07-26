@@ -1,0 +1,46 @@
+{
+  "canonical_observations": 89415,
+  "entities": {
+    "hospital_admissions": 275,
+    "icu_stays": 140,
+    "patients": 100
+  },
+  "observations_rejected": 579447,
+  "observations_selected": 89415,
+  "output_format": "csv",
+  "rejections": {
+    "ambiguous_icu_mapping": 0,
+    "malformed_json": 0,
+    "missing_code": 0,
+    "missing_encounter_reference": 0,
+    "missing_subject_reference": 0,
+    "missing_timestamp": 0,
+    "missing_value": 0,
+    "no_candidate_icu_stay": 0,
+    "non_object_json": 0,
+    "physiological_range_exclusion": 76,
+    "subject_encounter_mismatch": 0,
+    "unsupported_code": 167983,
+    "unsupported_unit": 0,
+    "unsupported_value_type": 411388
+  },
+  "relationship_index_quality": {
+    "hospital_encounter_resources_read": 275,
+    "icu_encounter_resources_read": 140,
+    "invalid_hospital_encounters": 0,
+    "invalid_icu_encounters": 0,
+    "invalid_patient_resources": 0,
+    "malformed_relationship_resources": 0,
+    "patient_resources_read": 100
+  },
+  "represented_entities": {
+    "hospital_admissions": 128,
+    "icu_stays": 140,
+    "patients": 100
+  },
+  "resources_read": 668862,
+  "unit_conversions": {
+    "fahrenheit_to_celsius": 3379,
+    "identity": 86036
+  }
+}

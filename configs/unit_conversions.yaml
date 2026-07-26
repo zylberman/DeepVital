@@ -1,0 +1,41 @@
+{
+  "heart_rate": {
+    "normalized_unit": "beats/min",
+    "accepted_units": {"bpm": "identity", "beats/min": "identity", "/min": "identity"}
+  },
+  "respiratory_rate": {
+    "normalized_unit": "breaths/min",
+    "accepted_units": {"insp/min": "identity", "breaths/min": "identity", "/min": "identity"}
+  },
+  "systolic_bp": {
+    "normalized_unit": "mmHg",
+    "accepted_units": {"mmHg": "identity", "mm[Hg]": "identity"}
+  },
+  "diastolic_bp": {
+    "normalized_unit": "mmHg",
+    "accepted_units": {"mmHg": "identity", "mm[Hg]": "identity"}
+  },
+  "mean_arterial_pressure": {
+    "normalized_unit": "mmHg",
+    "accepted_units": {"mmHg": "identity", "mm[Hg]": "identity"}
+  },
+  "oxygen_saturation": {
+    "normalized_unit": "percent",
+    "accepted_units": {"%": "identity", "percent": "identity"}
+  },
+  "temperature": {
+    "normalized_unit": "degrees Celsius",
+    "accepted_units": {
+      "°C": "identity",
+      "Cel": "identity",
+      "degC": "identity",
+      "°F": "fahrenheit_to_celsius",
+      "[degF]": "fahrenheit_to_celsius",
+      "degF": "fahrenheit_to_celsius"
+    }
+  },
+  "oxygen_flow": {
+    "normalized_unit": "L/min",
+    "accepted_units": {"L/min": "identity"}
+  }
+}

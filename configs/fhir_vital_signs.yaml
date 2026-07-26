@@ -1,0 +1,32 @@
+{
+  "code_system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items",
+  "mappings": {
+    "220045": {"display": "Heart Rate", "variable": "heart_rate"},
+    "220050": {"display": "Arterial Blood Pressure systolic", "variable": "systolic_bp"},
+    "220051": {"display": "Arterial Blood Pressure diastolic", "variable": "diastolic_bp"},
+    "220052": {"display": "Arterial Blood Pressure mean", "variable": "mean_arterial_pressure"},
+    "220179": {"display": "Non Invasive Blood Pressure systolic", "variable": "systolic_bp"},
+    "220180": {"display": "Non Invasive Blood Pressure diastolic", "variable": "diastolic_bp"},
+    "220181": {"display": "Non Invasive Blood Pressure mean", "variable": "mean_arterial_pressure"},
+    "220210": {"display": "Respiratory Rate", "variable": "respiratory_rate"},
+    "220277": {"display": "O2 saturation pulseoxymetry", "variable": "oxygen_saturation"},
+    "223761": {"display": "Temperature Fahrenheit", "variable": "temperature"},
+    "223762": {"display": "Temperature Celsius", "variable": "temperature"},
+    "223834": {"display": "O2 Flow", "variable": "oxygen_flow"},
+    "225309": {"display": "ART BP Systolic", "variable": "systolic_bp"},
+    "225310": {"display": "ART BP Diastolic", "variable": "diastolic_bp"},
+    "225312": {"display": "ART BP Mean", "variable": "mean_arterial_pressure"},
+    "227287": {"display": "O2 Flow (additional cannula)", "variable": "oxygen_flow"},
+    "227582": {"display": "BiPap O2 Flow", "variable": "oxygen_flow"}
+  },
+  "physiological_ranges": {
+    "heart_rate": [20.0, 300.0],
+    "respiratory_rate": [1.0, 100.0],
+    "systolic_bp": [30.0, 350.0],
+    "diastolic_bp": [10.0, 250.0],
+    "mean_arterial_pressure": [20.0, 300.0],
+    "oxygen_saturation": [0.0, 100.0],
+    "temperature": [25.0, 45.0],
+    "oxygen_flow": [0.0, 100.0]
+  }
+}

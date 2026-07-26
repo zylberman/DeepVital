@@ -1,0 +1,1326 @@
+code_system,code,display,resource_count,value_type,observed_units
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220001,Problem List,1159,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220045,Heart Rate,13913,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220046,Heart rate Alarm - High,1217,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220047,Heart Rate Alarm - Low,1208,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220048,Heart Rhythm,12460,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220050,Arterial Blood Pressure systolic,5525,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220051,Arterial Blood Pressure diastolic,5524,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220052,Arterial Blood Pressure mean,5560,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220056,Arterial Blood Pressure Alarm - Low,433,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220058,Arterial Blood Pressure Alarm - High,436,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220059,Pulmonary Artery Pressure systolic,325,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220060,Pulmonary Artery Pressure diastolic,324,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220061,Pulmonary Artery Pressure mean,314,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220063,Pulmonary Artery Pressure Alarm - High,36,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220066,Pulmonary Artery Pressure Alarm - Low,36,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220072,Central Venous Pressure Alarm - High,111,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220073,Central Venous Pressure  Alarm - Low,108,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220074,Central Venous Pressure,1386,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220088,Cardiac Output (thermodilution),27,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220179,Non Invasive Blood Pressure systolic,8347,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220180,Non Invasive Blood Pressure diastolic,8349,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220181,Non Invasive Blood Pressure mean,8342,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220194,Temporary AV interval,1,valueQuantity,msec [msec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220210,Respiratory Rate,13913,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220224,Arterial O2 pressure,623,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220227,Arterial O2 Saturation,104,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220228,Hemoglobin,912,valueQuantity,g/dl [g/dl]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220235,Arterial CO2 Pressure,623,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220245,CO2 production,122,valueQuantity,ml/min [ml/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220274,PH (Venous),128,valueQuantity,units [units]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220277,O2 saturation pulseoxymetry,13540,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220292,Minute Volume Alarm - Low,1303,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220293,Minute Volume Alarm - High,1297,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220339,PEEP set,1447,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220507,Activated Clotting Time,7,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220545,Hematocrit (serum),922,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220546,WBC,832,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220580,Ammonia,2,valueQuantity,umol/L [umol/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220581,Amylase,8,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220587,AST,273,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220602,Chloride (serum),995,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220603,Cholesterol,6,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220615,Creatinine (serum),928,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220621,Glucose (serum),931,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220624,HDL,4,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220632,LDH,170,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220635,Magnesium,907,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220644,ALT,273,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220645,Sodium (serum),993,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220650,Total Protein,7,valueQuantity,g/dL [g/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220734,PH (dipstick),80,valueQuantity,units [units]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220739,GCS - Eye Opening,3274,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,220765,Intra Cranial Pressure,302,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223679,TCO2 (calc) Venous,89,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223751,Non-Invasive Blood Pressure Alarm - High,876,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223752,Non-Invasive Blood Pressure Alarm - Low,876,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223758,Code Status,147,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223759,Precautions: Standard +,64,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223760,Health Care Proxy,23,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223761,Temperature Fahrenheit,3379,valueQuantity,°F [°F]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223762,Temperature Celsius,391,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223763,Bladder Pressure,45,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223764,Orthostatic HR lying,1,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223765,Orthostatic HR sitting,2,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223766,Orthostatic BPs standing,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223767,Intra Cranial Pressure Alarm - High,21,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223768,Intra Cranial Pressure Alarm - Low,21,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223769,O2 Saturation Pulseoxymetry Alarm - High,1208,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223770,O2 Saturation Pulseoxymetry Alarm - Low,1212,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223771,PCWP,8,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223772,SvO2,89,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223773,PA Line cm Mark,55,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223780,Daily Wake Up Deferred,29,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223781,Pain Present,3330,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223782,Pain Type,1901,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223783,Pain Location,2780,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223784,Pain Cause,2237,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223791,Pain Level,1456,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223791,Pain Level,643,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223792,Pain Management,5371,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223794,Pain Level Acceptable,2065,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223795,Pain Assessment Method,3310,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223796,Untoward Effect,1415,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223797,Sensory Level,42,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223800,Epidural Appearance,55,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223801,NMB Medication,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223802,Nerve Stimulated,26,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223805,Nausea and Vomiting (CIWA),62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223806,Tremor (CIWA),62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223810,Paroxysmal Sweats,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223811,Anxiety,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223814,Auditory Disturbance,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223817,Agitation,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223818,Tactile Disturbances,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223819,Visual Disturbances,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223820,Headache,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223821,Orient/Clouding Sensory,60,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223823,Insomnia,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223824,Seizure,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223825,Sustained Nystagmus,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223827,Ataxia,48,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223828,Slurred Speech,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223829,Drowsiness,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223830,PH (Arterial),644,valueQuantity,units [units]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223834,O2 Flow,1090,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223835,Inspired O2 Fraction,1746,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223836,Airway Type,105,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223837,ETT Size (ID),1143,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223838,ETT Location,1150,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223847,Passey Muir Valve in use,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223848,Ventilator Type,906,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223848,Ventilator Type,386,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223849,Ventilator Mode,1011,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223849,Ventilator Mode,37,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223872,Inspired Gas Temp.,963,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223873,Paw High,1296,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223874,Vti High,1258,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223875,Fspn High,1179,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223876,Apnea Interval,1288,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223898,Orientation,259,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223900,GCS - Verbal Response,3266,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223901,GCS - Motor Response,3251,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223902,Speech,252,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223904,Gag Reflex,988,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223905,Cough Reflex,996,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223907,Pupil Size Right,2546,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223911,Spontaneous Movement,245,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223916,Response to Stimuli (Type),244,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223917,RU Strength/Movement,246,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223918,RL Strength/Movement,246,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223919,LU Strength/Movement,245,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223920,LL Strength/Movement,242,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223923,Seizure Activity,32,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223924,RLE Sensation,62,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223925,Seizure Duration,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223926,Neuro Drain #1 Type,246,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223930,Neuro Drain #1 Level,247,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223931,Neuro Drain #1 Status,461,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223932,Neuro Drain #1 Drainage,238,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223934,Dorsal PedPulse R,2207,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223935,PostTib. Pulses R,1641,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223936,Radial Pulse R,1301,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223938,Ulnar Pulse R,72,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223939,Brachial Pulse R,47,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223940,Femoral Pulse R,34,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223941,Popliteal Pulse R,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223942,Graft/Flap Pulse,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223943,Dorsal PedPulse L,2160,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223944,Brachial Pulse L,28,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223945,Femoral Pulse L,32,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223946,Popliteal Pulse L,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223947,PostTib. Pulses L,1620,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223948,Radial Pulse L,1279,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223949,Ulnar Pulse L,70,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223951,Capillary Refill R,1540,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223952,Pericardial Drain Status,23,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223953,Pericardial Drain Drainage,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223954,Pericardial Drain Site,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223955,Temporary Pacemaker Type,121,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223956,Temporary Pacemaker Mode,121,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223958,Temporary Venticular Sens Threshold mV,50,valueQuantity,mV [mV]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223960,Temporary Venticular Stim Threshold mA,50,valueQuantity,mA [mA]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223961,Temporary Pacemaker Wire Condition,123,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223962,Temporary Pacemaker Wires Venticular,123,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223966,Transcutaneous Pacer Placement,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223967,Angio Site # 1,248,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223968,Angio Appearance # 1,262,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223970,Angio Dressing # 1,233,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223971,Angio Site # 2,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223972,Angio Appearance # 2,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223973,Angio Dressing # 2,46,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223976,RUE Color,1718,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223979,RLE Color,1754,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223982,LUE Color,1718,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223983,LLE Color,1738,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223985,Respiratory Pattern,1253,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223986,RUL Lung Sounds,3047,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223987,RLL Lung Sounds,3104,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223988,LUL Lung Sounds,3015,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223989,LLL Lung Sounds,3070,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223990,Respiratory Effort,1241,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223991,Cough Effort,2096,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223992,Cough Type,1660,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223993,Chest Tube Site # 1,336,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223994,CT #1 Suction Amount,305,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223995,CT #1 Fluctuate,280,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223996,CT #1 Drainage,317,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223997,CT #1 Dressing,318,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223998,CT #1 Crepitus,297,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,223999,Oral Cavity,2471,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224000,Nares R,1693,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224001,Diet Type,2570,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224003,Abdominal Assessment,2898,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224004,Bowel Sounds,2245,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224005,Flatus,757,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224006,Emesis Appearance,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224007,GI #1 Intub Site,1218,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224009,GI #1 Tube Drainage,395,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224010,GI #1 Tube Place Check,16,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224011,Stool Consistency,672,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224012,Stool Management,535,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224013,Stool Guaiac,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224015,Urine Source,2359,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224016,Urine Color,2087,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224017,GU Catheter Size,1703,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224019,Bladder Irrigation,26,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224023,Support Systems,1604,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224024,Family Communication,1543,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224025,Spiritual Support,12,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224026,Skin Integrity,1993,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224027,Skin Temperature,1969,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224028,Skin Color,1945,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224031,Edema Location,2181,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224032,Impaired Skin Site #1,436,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224037,Impaired Skin Cleanse #1,154,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224038,Impaired Skin Treatment #1,303,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224040,Incision Closure #1,773,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224041,Incision Drainage #1,499,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224042,Incision Dressing #1,174,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224043,Incision Cleansing #1,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224054,Braden Sensory Perception,1662,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224055,Braden Moisture,1659,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224056,Braden Activity,1659,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224057,Braden Mobility,1659,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224058,Braden Nutrition,1656,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224059,Braden Friction/Shear,1656,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224072,Education Learner,1013,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224073,Education Topic,3497,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224075,Education Readiness,260,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224076,Education Barrier,1215,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224077,Education Method,1078,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224079,Education Response,997,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224080,Head of Bed,5124,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224082,Turn,5045,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224084,Activity,2379,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224085,Assistance Device,112,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224086,Activity Tolerance,4863,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224087,Therapeutic Bed,3346,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224088,Pressure Reducing Device,2163,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224089,Anti Embolic Device,3196,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224090,Knee Immobilizer Status,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224091,Continuous Pressure Machine Status,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224092,Range of Motion Location,200,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224093,Position,4742,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224101,Chest PT R/L,56,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224105,Warming Device,267,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224106,Cooling Device,235,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224109,Cervical Collar Type,315,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224110,Cervical Collar Status,293,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224114,PT Splint Location #1,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224119,22 Gauge Site Appear,23,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224121,22 Gauge Reason Discontinued,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224144,Blood Flow (ml/min),435,valueQuantity,ml/min [ml/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224145,Heparin Dose (per hour),217,valueQuantity,units [units]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224146,System Integrity,532,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224149,Access Pressure,426,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224150,Filter Pressure,426,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224151,Effluent Pressure,425,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224152,Return Pressure,425,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224153,Replacement Rate,440,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224154,Dialysate Rate,440,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224161,Resp Alarm - High,1187,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224162,Resp Alarm - Low,1187,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224167,Manual Blood Pressure Systolic Left,3,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224168,Parameters Checked,2970,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224169,MDI #1 Puff,73,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224170,MDI #1 Drug,117,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224172,MDI #2 Puff,33,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224173,MDI #2 Drug,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224188,PICC Line Site Appear,813,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224191,Hourly Patient Fluid Removal,449,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224192,Pulsus Paradoxus,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224226,Impaired Skin Wound Base #1,568,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224259,Impaired Skin Drainage #1,429,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224281,Multi Lumen Site Appear,796,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224283,Multi Lumen Waveform Appear,586,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224289,Arterial line Site Appear,1110,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224291,Arterial line Waveform Appear,988,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224297,Cordis/Introducer Site Appear,104,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224308,Capillary Refill L,1501,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224309,Assisted Systole,38,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224310,Augmented Diastole,38,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224311,BAEDP,38,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224322,IABP Mean,38,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224327,PCA medication,114,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224328,PCA dose,111,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224329,PCA lockout (min),109,valueQuantity,min [min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224330,PCA 1 hour limit,109,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224331,PCA basal rate (mL/hour),92,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224332,PCA inject,83,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224359,QTc,14,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224366,Epidural Infusion Rate (mL/hr),83,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224367,Epidural Total Dose (mL),16,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224368,Epidural Medication,80,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224369,Sputum Consistency,672,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224370,Sputum Color,684,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224372,Sputum Source,762,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224373,Sputum Amount,778,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224375,Cont Neb - Med,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224379,PCA cleared,81,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224389,Heart Sounds,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224390,Temporary Atrial Sens,68,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224391,ETT Mark (location),271,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224404,ART Lumen Volume,119,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224406,VEN Lumen Volume,119,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224409,Pain Level Response,762,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224409,Pain Level Response,483,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224410,PCA bolus,41,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224411,Epidural Bolus (mL),7,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224413,TOF Response,26,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224414,TOF Twitch,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224415,ETT Mark (cm),1144,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224417,Cuff Pressure,265,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224418,Cuff Volume (mL),1,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224419,Negative Insp. Force,18,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224420,Vital Cap,7,valueQuantity,Liters [Liters]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224421,Spont Vt,93,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224422,Spont RR,93,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224423,CT #2 Crepitus,32,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224424,CT #2 Drainage,37,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224425,CT #2 Dressing,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224426,CT #2 Fluctuate,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224427,CT #2 Suction Amount,64,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224428,CT #3 Crepitus,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224430,CT #3 Drainage,13,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224432,CT #3 Dressing,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224434,CT #3 Fluctuate,12,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224436,CT #3 Suction Amount,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224438,Chest Tube Site # 2,100,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224439,Chest Tube Site #3,38,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224440,Chest Tube Site #4,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224441,GI #2 Intub Site,88,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224445,GI #2 Tube Drainage,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224456,PT Splint Location #2,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224561,Impaired Skin Type #1,245,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224562,Impaired Skin Length #1,177,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224563,Impaired Skin Depth #1,51,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224564,Impaired Skin Odor #1,475,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224565,Surrounding Tissue #1,584,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224631,Pressure Ulcer Stage #1,40,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224631,Pressure Ulcer Stage #1,60,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224632,Tunneling Present #1,109,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224633,Undermining Present #1,109,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224639,Daily Weight,441,valueQuantity,kg [kg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224640,Service,173,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224641,Alarms On,3020,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224642,Temperature Site,3794,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224643,Manual Blood Pressure Diastolic Left,3,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224645,Orthostatic BPs lying,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224646,Orthostatic BPs sitting,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224647,Orthostatic HR standing,1,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224650,Ectopy Type 1,11044,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224651,Ectopy Frequency 1,1247,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224652,Unassisted Systole,38,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224654,PAEDP,38,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224661,Baseline Current/mA,10,valueQuantity,mA [mA]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224662,Current Used/mA,23,valueQuantity,mA [mA]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224663,PCA attempt,83,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224665,PCA total dose,83,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224684,Tidal Volume (set),769,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224685,Tidal Volume (observed),1331,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224686,Tidal Volume (spontaneous),661,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224687,Minute Volume,1359,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224688,Respiratory Rate (Set),801,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224689,Respiratory Rate (spontaneous),1314,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224690,Respiratory Rate (Total),1331,valueQuantity,insp/min [insp/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224691,Flow Rate (L/min),330,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224692,Flow Pattern,1237,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224695,Peak Insp. Pressure,1319,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224696,Plateau Pressure,510,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224697,Mean Airway Pressure,1342,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224700,Total PEEP Level,490,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224701,PSV Level,698,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224702,PCV Level,17,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224705,P High (APRV),4,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224706,P Low (APRV),4,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224707,T High (APRV),4,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224709,T Low (APRV),4,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224711,Recruitment Duration,1,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224712,Recruitment Mode,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224713,Circuit Changed,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224715,SBT Started,131,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224716,SBT Stopped,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224717,SBT Successfully Completed,95,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224730,Corneal Reflex Right,73,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224731,Corneal Reflex Left,73,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224733,Pupil Size Left,2545,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224735,Flow Rate (variable/fixed),1157,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224738,Inspiratory Time,740,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224740,RSBI Deferred,116,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224746,Transpulmonary Pressure (Exp. Hold),13,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224747,Transpulmonary Pressure (Insp. Hold),13,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224751,Temporary Pacemaker Rate,114,valueQuantity,bpm [bpm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224752,Temporary Atrial Sens Threshold mV,48,valueQuantity,mV [mV]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224753,Temporary Atrial Sens Setting mV,59,valueQuantity,mV [mV]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224754,Temporary Atrial Stim Threshold mA,49,valueQuantity,mA [mA]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224755,Temporary Atrial Stim Setting mA,57,valueQuantity,mA [mA]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224756,Response,245,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224758,RUE Sensation,62,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224759,LUE Sensation,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224762,LLE Sensation,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224767,RUE Temp,1730,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224769,LUE Temp,1730,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224771,RLE Temp,1772,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224773,LLE Temp,1755,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224775,CT #1 Leak,278,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224777,CT #2 Leak,33,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224779,CT #3 Leak,12,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224785,GI #1 Tube Type,1243,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224786,GI #1 Tube Status,1194,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224788,GI #2 Tube Type,88,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224789,GI #2 Tube Status,84,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224794,Stool Color,683,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224796,Ostomy,159,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224797,Ostomy Appearance,97,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224800,AV Fistula R Bruit,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224801,AV Fistula R Thrill,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224803,AV Fistula L Bruit,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224804,AV Fistula L Thrill,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224806,CT #1 Suction Type,335,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224808,CT #2 Suction Type,64,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224810,CT #3 Suction Type,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224828,Arterial Base Excess,623,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224829,Trach Tube Type,93,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224830,Trach Tube Manufacturer,68,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224831,Trach Tube Size (I.D.),68,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224832,ETT Type,1140,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224833,SBT Deferred,40,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224834,Temporary Ventricular Sens,59,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224835,Temporary Ventricular Capture,56,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224837,Temporary Ventricular Sens Setting mV,32,valueQuantity,mV [mV]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224838,Temporary Ventricular Stim Setting mA,30,valueQuantity,mA [mA]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224839,Temporary Pacemaker Wires Atrial,123,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224842,Cardiac Output (CCO),93,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224844,Permanent Pacemaker Mode,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224846,Impaired Skin Width #1,177,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224847,Impaired Skin Drainage Amount #1,327,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224848,Incision Appearance #1,823,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224850,Incision Drainage Amount #1,316,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224851,Dressing Status #1,168,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224860,Skin Condition,1941,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224862,Edema Amount,1144,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224865,Flow Sensitivity,1236,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224866,Temporary Atrial Capture,67,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224876,Urine Appearance,2006,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224879,Nares L,1674,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224888,Impaired Skin Cleanse #2,81,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224889,Impaired Skin Cleanse #3,32,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224890,Impaired Skin Cleanse #4,13,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224891,Impaired Skin Cleanse #5,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224893,Impaired Skin Cleanse #7,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224895,Impaired Skin Depth #2,4,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224896,Impaired Skin Depth #3,31,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224897,Impaired Skin Depth #4,10,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224899,Impaired Skin Depth #6,21,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224902,Impaired Skin Drainage #2,153,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224903,Impaired Skin Drainage #3,175,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224904,Impaired Skin Drainage #4,81,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224905,Impaired Skin Drainage #5,71,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224906,Impaired Skin Drainage #6,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224907,Impaired Skin Drainage #7,42,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224908,Impaired Skin Drainage #8,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224909,Impaired Skin Drainage Amount #2,71,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224910,Impaired Skin Drainage Amount #3,50,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224911,Impaired Skin Drainage Amount #4,76,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224912,Impaired Skin Drainage Amount #5,58,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224913,Impaired Skin Drainage Amount #6,50,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224914,Impaired Skin Drainage Amount #7,40,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224915,Impaired Skin Drainage Amount #8,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224916,Impaired Skin Length #2,32,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224917,Impaired Skin Length #3,57,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224918,Impaired Skin Length #4,54,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224919,Impaired Skin Length #5,26,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224920,Impaired Skin Length #6,40,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224921,Impaired Skin Length #7,17,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224923,Impaired Skin Odor #2,176,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224924,Impaired Skin Odor #3,136,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224925,Impaired Skin Odor #4,64,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224926,Impaired Skin Odor #5,70,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224927,Impaired Skin Odor #6,61,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224928,Impaired Skin Odor #7,10,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224930,Impaired Skin Site #2,224,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224931,Impaired Skin Site #3,229,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224932,Impaired Skin Site #4,67,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224933,Impaired Skin Site #5,133,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224934,Impaired Skin Site #6,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224935,Impaired Skin Site #7,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224937,Impaired Skin Treatment #2,145,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224938,Impaired Skin Treatment #3,103,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224939,Impaired Skin Treatment #4,66,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224940,Impaired Skin Treatment #5,45,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224941,Impaired Skin Treatment #6,42,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224942,Impaired Skin Treatment #7,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224944,Impaired Skin Type #2,145,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224945,Impaired Skin Type #3,118,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224946,Impaired Skin Type #4,63,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224947,Impaired Skin Type #5,45,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224948,Impaired Skin Type #6,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224949,Impaired Skin Type #7,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224951,Impaired Skin Width #2,4,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224952,Impaired Skin Width #3,31,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224953,Impaired Skin Width #4,54,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224954,Impaired Skin Width #5,26,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224955,Impaired Skin Width #6,40,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224956,Impaired Skin Width #7,17,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224958,Impaired Skin Wound Base #2,233,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224959,Impaired Skin Wound Base #3,206,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224960,Impaired Skin Wound Base #4,167,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224961,Impaired Skin Wound Base #5,124,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224962,Impaired Skin Wound Base #6,115,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224963,Impaired Skin Wound Base #7,60,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224965,Pressure Ulcer Stage #2,42,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224965,Pressure Ulcer Stage #2,9,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224966,Pressure Ulcer Stage #3,95,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224967,Pressure Ulcer Stage #4,47,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224972,Surrounding Tissue #2,280,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224973,Surrounding Tissue #3,243,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224974,Surrounding Tissue #4,135,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224975,Surrounding Tissue #5,161,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224976,Surrounding Tissue #6,112,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224977,Surrounding Tissue #7,51,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224978,Surrounding Tissue #8,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224979,Tunneling Present #2,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224980,Tunneling Present #3,78,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224981,Tunneling Present #4,13,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224982,Tunneling Present #5,43,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224983,Tunneling Present #6,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224984,Tunneling Present #7,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224986,Undermining Present #2,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224987,Undermining Present #3,78,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224988,Undermining Present #4,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224989,Undermining Present #5,43,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224990,Undermining Present #6,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224991,Undermining Present #7,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224993,Incision Appearance #2,236,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224994,Incision Appearance #3,58,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224995,Incision Appearance #4,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224998,Incision Cleansing #2,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,224999,Incision Cleansing #3,9,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225004,Incision Closure #2,274,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225005,Incision Closure #3,57,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225006,Incision Closure #4,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225013,Incision Drainage #2,151,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225014,Incision Drainage #3,33,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225015,Incision Drainage #4,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225018,Incision Drainage Amount #2,87,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225019,Incision Drainage Amount #3,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225020,Incision Drainage Amount #4,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225023,Incision Dressing #2,44,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225024,Incision Dressing #3,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225028,Dressing Status #2,50,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225029,Dressing Status #3,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225048,Knee Location - Immobilizer,56,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225050,Warming Device Status,223,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225052,Cooling Device Status,201,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225054,Anti Embolic Device Status,2902,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225059,Past medical history,298,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225067,Is the spokesperson the Health Care Proxy,146,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225070,Unable to assess psychological,88,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225072,Living situation,192,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225074,Any fear in relationships,123,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225076,Emotional / physical / sexual harm by partner or close relation,95,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225078,Social work consult,132,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225082,Pregnant,35,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225085,Post menopausal,17,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225086,Unable to assess cognitive / perceptual,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225087,Visual / hearing deficit,150,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225090,Interpreter,74,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225091,Unable to assess activity / mobility,68,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225092,Self ADL,176,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225094,History of slips / falls,173,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225097,Balance,174,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225099,Judgement,169,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225101,Use of assistive devices,130,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225103,Intravenous  / IV access prior to admission,199,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225105,Unable to assess habits,62,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225106,ETOH,157,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225110,Recreational drug use,143,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225112,Unable to assess pain,74,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225113,Currently experiencing pain,132,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225117,Unable to assess nutrition / education,75,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225118,Difficulty swallowing,149,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225120,Appetite,148,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225122,Special diet,130,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225124,Unintentional weight loss >10 lbs.,131,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225126,Dialysis patient,150,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225129,Unable to assess teaching / learning needs,76,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225131,Teaching directed toward,154,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225133,Discharge needs,70,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225135,Consults,152,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225175,See chart for initial patient assessment,49,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225176,Range of Motion Status,206,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225180,PT Splint Status #1,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225182,PT Splint Status #2,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225183,Current Goal,442,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225184,Eye Care,532,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225185,Skin Care,87,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225187,Back Care,94,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225188,Cough/Deep Breath,466,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225189,Incentive Spirometry,304,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225192,Collar Care,46,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225206,Multi Lumen Zero/Calibrate,102,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225210,Arterial Line Zero/Calibrate,443,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225217,Trauma Line Site Appear,100,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225225,CCO PAC Site Appear,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225227,CCO PAC Waveform Appear,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225228,CCO PAC Zero/Calibrate,7,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225230,20 Gauge Reason Discontinued,51,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225231,20 Gauge Site Appear,212,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225233,18 Gauge Reason Discontinued,28,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225234,18 Gauge Site Appear,165,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225236,16 Gauge Reason Discontinued,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225237,16 Gauge Site Appear,83,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225239,14 Gauge Reason Discontinued,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225240,14 Gauge Site Appear,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225280,Called Out,47,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225309,ART BP Systolic,486,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225310,ART BP Diastolic,486,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225312,ART BP Mean,488,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225313,Bed Bath,27,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225323,Dialysis Catheter Site Appear,177,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225339,IABP Site Appear,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225341,IABP Art. Waveform Appear,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225342,IABP Zero/Calibrate,11,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225347,Midline Site Appear,38,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225355,PA Catheter Site Appear,50,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225357,PA Catheter Waveform Appear,44,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225358,PA Catheter Zero/Calibrate,26,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225371,Pheresis Catheter Site Appear,88,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225379,Indwelling Port (PortaCath) Site Appear,137,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225612,Alkaline Phosphate,273,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225624,BUN,927,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225625,Calcium non-ionized,865,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225628,CK-MB fraction (%),21,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225634,CK (CPK),98,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225637,Differential-Atyps,49,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225638,Differential-Bands,49,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225639,Differential-Basos,116,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225640,Differential-Eos,117,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225641,Differential-Lymphs,117,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225642,Differential-Monos,117,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225643,Differential-Neuts,117,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225651,Direct Bilirubin,30,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225664,Glucose finger stick (range 70-100),1637,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225667,Ionized Calcium,457,valueQuantity,mmol/L [mmol/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225668,Lactic Acid,530,valueQuantity,mmol/L [mmol/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225671,LDL calculated,5,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225672,Lipase,17,valueQuantity,IU/L [IU/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225674,Mixed Venous O2% Sat,32,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225677,Phosphorous,866,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225684,Serum Osmolality,14,valueQuantity,mOsm/kg [mOsm/kg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225690,Total Bilirubin,291,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225693,Triglyceride,18,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225695,Uric Acid,50,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225698,TCO2 (calc) Arterial,623,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225722,Arterial Line Tip Cultured,51,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225724,Cordis/Introducer Line Tip Cultured,7,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225725,Dialysis Catheter Tip Cultured,12,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225728,Midline Tip Cultured,2,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225729,Multi Lumen Line Tip Cultured,16,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225730,PA Catheter Line Tip Cultured,3,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225732,PICC Line Tip Cultured,19,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225735,Trauma Line Tip Cultured,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225737,Arterial Line Discontinued,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225738,CCO PAC Discontinued,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225739,Cordis/Introducer Discontinued,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225740,Dialysis Catheter Discontinued,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225742,IABP Line Discontinued,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225743,Midline Discontinued,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225744,Multi Lumen Line Discontinued,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225745,PA Catheter Discontinued,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225747,PICC Line Discontinued,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225750,Trauma Line Discontinued,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225764,Sheath Line Discontinued,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225767,Sheath Site Appear,20,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225770,Sheath Waveform Appear,20,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225771,Sheath Zero/Calibrate,6,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225772,Sheath Size,12,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225811,CV - past medical history,351,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225813,Baseline pain level,84,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225813,Baseline pain level,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225949,NIV Mask,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225956,Reason for CRRT Filter Change,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225976,Replacement Fluid,439,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225977,Dialysate Fluid,439,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225978,Slope,1235,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225979,IABP Size,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225981,IABP Alarms Activated,11,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225982,IABP Balloon Waveform,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225984,IABP Trigger,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225985,IABP Helium Tubing,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225986,IABP Arterial Waveform Source,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225987,IABP Power Source,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225988,IABP Position on leg,33,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225989,Pericardial Drain Aspiration,9,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,225990,Pericardial Drain Flush,9,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226062,Venous CO2 Pressure,89,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226063,Venous O2 Pressure,89,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226092,Orthostatic BPd lying,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226094,Orthostatic BPd sitting,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226096,Orthostatic BPd standing,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226104,Level of Consciousness,259,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226107,Arterial Line placed in outside facility,980,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226108,CCO PAC placed in outside facility,19,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226109,Cordis/Introducer placed in outside facility,73,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226110,IABP placed in outside facility,11,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226112,Midline placed in outside facility,38,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226113,Multi Lumen placed in outside facility,748,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226114,PA Catheter placed in outside facility,39,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226115,PICC Line placed in outside facility,722,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226117,Sheath placed in outside facility,20,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226118,Dialysis Catheter placed in outside facility,175,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226119,Trauma Line placed in outside facility,90,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226122,Pheresis Catheter placed in outside facility,54,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226129,ICP Line placed in outside facility,61,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226130,ICP Line Site Appear,85,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226131,ICP Line Tip Cultured,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226133,ICP Line Waveform Appear,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226134,ICP Line Zero/Calibrate,23,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226135,14 Gauge placed in outside facility,6,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226136,16 Gauge placed in outside facility,142,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226137,18 Gauge placed in outside facility,707,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226138,20 Gauge placed in outside facility,997,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226139,22 Gauge placed in outside facility,193,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226168,Oral Care,2209,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226169,Subglottal Suctioning,956,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226180,Sexuality / reproductive problems,136,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226185,ICU Consent Signed,38,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226253,SpO2 Desat Limit,1176,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226329,Blood Temperature CCO (C),95,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226457,Ultrafiltrate Output,441,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226473,Blood Transfusion Consent,11,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226479,Ectopy Type 2,43,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226480,Ectopy Frequency 2,38,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226499,Hemodialysis Output,10,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226512,Admission Weight (Kg),129,valueQuantity,kg [kg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226531,Admission Weight (lbs.),236,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226534,Sodium (whole blood),71,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226536,Chloride (whole blood),46,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226537,Glucose (whole blood),209,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226540,Hematocrit (whole blood - calc),84,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226707,Height,71,valueQuantity,Inch [Inch]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226730,Height (cm),71,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226732,O2 Delivery Device(s),3145,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226814,Known difficult intubation,943,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226815,Airway problems,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226846,Feeding Weight,11,valueQuantity,kg [kg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226871,Expiratory Ratio,509,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226873,Inspiratory Ratio,507,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,226889,Legal Guardian,18,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227066,Cerebral Perfusion Pressure,220,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227073,Anion gap,941,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227111,PCA  dose units,110,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227113,PCA 1 hour limit units,109,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227115,PCA bolus units,38,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227117,PCA total dose units,78,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227119,Epidural Location,80,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227120,Motor Deficit,42,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227121,Pupil Response Right,2538,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227124,Dialysis Catheter Type,172,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227125,Indwelling (PortaCath) Port Type,132,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227127,Indwelling (PortaCath) Port #1,124,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227130,Trach Care,33,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227131,Cont. Neb Med Dose,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227133,Small Volume Neb Drug #2,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227187,Pinsp (Draeger only),2,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227239,ABP Alarm Source,428,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227240,NBP Alarm Source,864,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227241,PAP Alarm Source,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227242,Manual Blood Pressure Diastolic Right,5,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227243,Manual Blood Pressure Systolic Right,5,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227287,O2 Flow (additional cannula),145,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227288,Pupil Response Left,2535,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227290,CRRT mode,217,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227292,Arterial Line Dressing Occlusive,858,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227293,Multi Lumen Dressing Occlusive,604,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227341,History of falling (within 3 mnths),1157,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227342,Secondary diagnosis,1161,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227343,Ambulatory aid,1156,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227344,IV/Saline lock,1156,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227345,Gait/Transferring,1157,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227346,Mental status,1155,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227349,High risk (>51) interventions,455,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227350,Cordis/Introducer Dressing Occlusive,94,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227351,PA Catheter Dressing Occlusive,47,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227352,CCO PAC Dressing Occlusive,22,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227353,Trauma Line Dressing Occlusive,90,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227355,IABP Dressing Occlusive,11,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227356,Sheath Line Dressing Occlusive,20,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227357,Dialysis Catheter Dressing Occlusive,173,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227358,PICC Line Dressing Occlusive,661,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227360,Indwelling Port (PortaCath) Dressing Occlusive,125,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227363,ICP Line Dressing Occlusive,61,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227365,14 Gauge Dressing Occlusive,6,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227366,16 Gauge Dressing Occlusive,142,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227367,18 Gauge Dressing Occlusive,706,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227368,20 Gauge Dressing Occlusive,1003,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227369,22 Gauge Dressing Occlusive,191,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227375,Daily Wake Up,40,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227418,Midline Dressing Occlusive,33,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227429,Troponin-T,121,valueQuantity,ng/mL [ng/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227439,Indwelling Port (PortaCath) placed in outside facility,126,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227440,Digoxin,9,valueQuantity,ng/mL [ng/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227441,LDL measured,1,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227442,Potassium (serum),994,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227443,HCO3 (serum),943,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227444,C Reactive Protein (CRP),6,valueQuantity,mg/L [mg/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227445,CK-MB,112,valueQuantity,ng/mL [ng/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227446,Brain Natiuretic Peptide (BNP),10,valueQuantity,pg/mL [pg/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227450,Tobramycin (Peak),1,valueQuantity,ug/mL [ug/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227451,Tobramycin (Random),1,valueQuantity,ug/mL [ug/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227454,Vancomycin (Random),32,valueQuantity,ug/mL [ug/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227455,Vancomycin (Trough),38,valueQuantity,ug/mL [ug/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227456,Albumin,111,valueQuantity,g/dL [g/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227457,Platelet Count,853,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227460,Phenobarbital,1,valueQuantity,ug/mL [ug/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227461,Phenytoin (Dilantin),9,valueQuantity,ug/mL [ug/mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227463,Cortisol,4,valueQuantity,ug/dL [ug/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227464,Potassium (whole blood),200,valueQuantity,mEq/L [mEq/L]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227465,Prothrombin time,609,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227466,PTT,652,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227467,INR,609,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227468,Fibrinogen,107,valueQuantity,mg/dL [mg/dL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227469,Thrombin,1,valueQuantity,sec [sec]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227470,Sed Rate,2,valueQuantity,mm/hr [mm/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227471,Specific Gravity (urine),80,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227472,Incision Site #1,184,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227473,Incision Site #2,54,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227474,Incision Site #3,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227516,PO2 (Mixed Venous),20,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227517,Humidification,1267,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227537,ART Blood Pressure Alarm - High,55,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227538,ART Blood Pressure Alarm - Low,55,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227539,ART Blood Pressure Alarm Source,53,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227565,Ventilator Tank #1,408,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227566,Ventilator Tank #2,409,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227570,Small Volume Neb Drug/Dose #1,65,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227577,BiPap Mode,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227578,BiPap Mask,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227579,BiPap EPAP,13,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227580,BiPap IPAP,13,valueQuantity,cmH2O [cmH2O]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227582,BiPap O2 Flow,13,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227583,Autoset/CPAP,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227585,GI Guaiac,26,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227586,GI pH,7,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227588,GI #1 Tube Place Method,15,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227627,Arctic Sun/Alsius Set Temp,75,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227628,Arctic Sun Water Temp,80,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227630,Arctic Sun Temp #1 Location,128,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227631,Arctic Sun Temp #2 Location,92,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227632,Arctic Sun/Alsius Temp #1 C,122,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227634,Arctic Sun/Alsius Temp #2 C,88,valueQuantity,°C [°C]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227636,Knee Location - CPM,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227686,Central Venous O2% Sat,13,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227687,Tobacco Use History,143,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227716,Cerebral Perfusion Pressure Alarm - High,6,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227717,Cerebral Perfusion Pressure Alarm - Low,6,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227723,AVA Dressing Occlusive,7,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227726,AVA Line Tip Cultured,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227727,AVA Line placed in outside facility,5,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227728,AVA Line Site Appear,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227730,AVA Waveform Appearance,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227731,AVA Line Zero/Calibrate,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227732,AVA Line Placement Confirmed by X-ray,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227751,CCO PAC Placement Confirmed by X-ray,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227752,Cordis/Introducer Placement Confirmed by X-ray,70,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227753,Dialysis Catheter Placement Confirmed by X-ray,173,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227754,IABP Placement Confirmed by X-ray,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227755,Midline Placement Confirmed by X-ray,38,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227756,Multi Lumen Placement Confirmed by X-ray,699,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227757,PA Catheter Placement Confirmed by X-ray,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227758,Pheresis Catheter Placement Confirmed by X-ray,54,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227759,PICC Line Placement Confirmed by X-ray,683,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227761,Sheath Placement Confirmed by X-ray,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227762,Trauma Line Placement Confirmed by X-ray,77,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227771,Traction/Immobile #1,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227780,Impaired Skin  - Dressing Status #1,112,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227781,Impaired Skin  - Dressing Status #2,33,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227783,Impaired Skin - Dressing Status  #4,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227785,Impaired Skin  - Dressing Status #6,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227786,Impaired Skin  - Dressing Status #7,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227801,Stool Guaiac QC,26,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227802,GI Guaiac QC,12,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227805,SvO2 SQI,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227807,In-line Suction Catheter Changed,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227809,ETT Position Change,47,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227810,ETT Re-taped,41,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227813,Medication Bolus - Adjunctive Pain Management,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227831,Grooming,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227832,UE Bathing,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227836,LE Dressing,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227837,Toileting,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227845,Rolling,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227846,Supine / Side-lying to Sit,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227847,Sit to Stand,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227858,Rest HR - Aerobic Capacity,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227860,Rest RR - Aerobic Capacity,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227861,Rest O2 Sat - Aerobic Capacity,4,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227864,Activity HR - Aerobic Capacity,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227866,Activity RR - Aerobic Capacity,3,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227867,Activity O2 Sat - Aerobic Capacity,2,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227870,Recovery HR - Aerobic Capacity,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227872,Recovery RR - Aerobic Capacity,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227873,Recovery O2 Sat - Aerobic Capacity,4,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227943,Anticipated Discharge,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227944,Side Rails,3032,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227945,Restraint (Non-violent),2018,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227946,Restraint Ordered (Non-violent),1800,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227947,Reason for Restraint (Non-violent),2666,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227948,Restraint Device (Non-violent),2043,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227949,Face to Face Eval (Non-violent),1440,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227950,Restraint Location,2024,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227951,Circulation/Skin Integrity,1886,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227952,Position Change,1875,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227953,Range of Motion,1850,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227954,Status and Comfort,2268,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227955,Food and Fluid,2327,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227956,Urinal/Bedpan,1846,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227957,Signs of Injury from Intervention,1871,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227958,Less Restrictive Measures,7675,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227959,Restraints Evaluated,1886,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227960,Patient/Family Informed,1879,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227961,Side  Rails,1831,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227968,All Medications Tolerated without Adverse Side Effects,1388,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227969,Safety Measures,19330,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227980,Intra Aortic Balloon Pump Setting,40,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227981,Neuro Drain #2 Type,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227982,Neuro Drain #2 Status,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227983,Neuro Drain #2 Drainage,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227984,Neuro Drain #2 Level,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227985,Neuro Drain #1 Landmark,247,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227986,Neuro Drain #2 Landmark,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227988,Pronator drift present,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227989,Intra Cranial Pressure #2,11,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227990,Intra Cranial Pressure #2 Alarm - High,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,227991,Intra Cranial Pressure #2 Alarm - Low,1,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228004,Citrate (ACD-A),275,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228005,PBP (Prefilter) Replacement Rate,440,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228006,Post Filter Replacement Rate,439,valueQuantity,ml/hr [ml/hr]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228007,14 G Phlebitis Scale,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228008,14 G Infiltration Scale,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228009,16 G Phlebitis Scale,65,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228010,16 G Infiltration Scale,63,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228011,18 G Phlebitis Scale,515,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228012,18 G Infiltration Scale,512,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228013,20 G Phlebitis Scale,753,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228014,20 G Infiltration Scale,750,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228015,22 G Phlebitis Scale,149,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228016,22 G Infiltration Scale,148,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228096,Richmond-RAS Scale,2751,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228097,14 Gauge placed in the field,6,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228098,16 Gauge placed in the field,142,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228099,18 Gauge placed in the field,707,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228100,20 Gauge placed in the field,994,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228101,22 Gauge placed in the field,192,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228137,CHG Bath,19,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228175,Calibrated (PiCCO),17,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228176,CFI (PiCCO),29,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228177,CI (PiCCO),61,valueQuantity,L/min/m2 [L/min/m2]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228178,CO (PiCCO),59,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228179,ELWI (PiCCO),27,valueQuantity,ml/kg [ml/kg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228180,GEDI (PiCCO),29,valueQuantity,mL/m2 [mL/m2]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228182,SVI (PiCCO),59,valueQuantity,mL/m2 [mL/m2]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228184,SVV (PiCCO),17,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228185,SVRI (PiCCO),47,valueQuantity,dynes.sec.cm-5/m2 [dynes.sec.cm-5/m2]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228229,PAR-Activity,46,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228230,PAR-Circulation,46,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228231,PAR-Consciousness,46,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228232,PAR-Oxygen saturation,45,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228233,PAR-Remain sedated,25,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228234,PAR-Respiration,46,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228236,Insulin pump,285,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228290,IO Dressing,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228292,IO Placed in outside facility,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228293,IO Site Appearance,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228294,IO Wristband in place,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228296,PCA concentrations,41,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228297,Daily Wake Up Deferred,207,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228298,Daily Wake Up,1897,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228299,Goal Richmond-RAS Scale,2455,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228300,CAM-ICU MS change,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228301,CAM-ICU Inattention,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228303,CAM-ICU Disorganized thinking,33,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228305,ST Segment Monitoring On,2383,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228306,Assistance Device,1028,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228307,GI #1 Tube Place Check,1032,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228308,GI #1 Tube Place Method,514,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228309,GI #2 Tube Place Check,73,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228310,GI #2 Tube Place Method,42,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228318,Shivering Assessment,66,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228332,Delirium assessment,1296,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228334,CAM-ICU Altered LOC,374,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228335,CAM-ICU Disorganized thinking,31,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228336,CAM-ICU Inattention,197,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228337,CAM-ICU MS Change,542,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228343,OCAT - Lips Tongue Gums Palate,15,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228344,"OCAT - Saliva secretions, Voice quality",15,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228345,OCAT - Swallow,15,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228346,OCAT - Teeth,15,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228368,Cardiac Index (CI NICOM),49,valueQuantity,L/min/m2 [L/min/m2]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228369,Cardiac Output (CO NICOM),38,valueQuantity,L/min [L/min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228370,CO / CI Change,8,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228372,Leg Raise Result (NICOM),8,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228373,Passive Leg Raise Performed,8,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228374,Stroke Volume (SV NICOM),30,valueQuantity,mL/beat [mL/beat]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228375,Stroke Volume Index (SVI NICOM),39,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228376,Stroke Volume Variation (SVV NICOM),28,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228377,SVI Change,8,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228380,Thoracic Fluid Content (TFC) (NICOM),1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228381,Total Peripheral Resistance (TPR) (NICOM),12,valueQuantity,dynes*sec/cm5 [dynes*sec/cm5]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228382,Total Peripheral Resistance Index (TPRI) (NICOM),18,valueQuantity,dynes*sec/cm5/m2 [dynes*sec/cm5/m2]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228393,Bath,1007,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228394,Orientation to Person,1234,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228395,Orientation to Place,1186,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228396,Orientation to Time,1167,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228397,Commands Response,2092,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228398,Commands,1980,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228399,Facial Droop,994,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228400,Visual Field Cut,489,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228401,Pronator Drift,403,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228402,Neurological Symptoms,88,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228404,Motor L Arm,871,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228405,Motor L Leg,875,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228406,Motor R Arm,868,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228407,Motor R Leg,871,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228409,Strength L Arm,2109,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228410,Strength L Leg,2104,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228411,Strength R Leg,2103,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228412,Strength R Arm,2107,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228413,Seizure Activity,34,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228414,Speech,1975,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228415,Corneal Reflex Left,607,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228416,Corneal Reflex Right,609,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228419,Compression device # 1,81,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228420,Compression device # 2,8,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228442,BIS - EMG,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228443,BIS - SQI,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228444,BIS Index Range,2,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228496,Impaired Skin #1- Location,911,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228497,Impaired Skin #2- Location,327,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228498,Impaired Skin #3- Location,301,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228499,Impaired Skin #4- Location,124,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228500,Impaired Skin #5- Location,244,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228501,Impaired Skin #6- Location,56,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228502,Impaired Skin #7- Location,20,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228503,Impaired Skin #8- Location,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228506,Pressure Ulcer #1- Location,115,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228507,Pressure Ulcer #2- Location,28,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228508,Pressure Ulcer #3- Location,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228516,Impaired Skin #1- Type,435,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228518,Impaired Skin #1- Cleanse,73,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228519,Impaired Skin #2- Cleanse,31,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228520,Impaired Skin #3- Cleanse,16,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228521,Impaired Skin #4- Cleanse,17,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228522,Impaired Skin #5- Cleanse,8,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228523,Impaired Skin #6- Cleanse,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228524,Impaired Skin #7- Cleanse,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228529,Impaired Skin #1- Treatment,329,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228530,Impaired Skin #2- Treatment,144,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228531,Impaired Skin #3- Treatment,106,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228532,Impaired Skin #4- Treatment,77,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228533,Impaired Skin #5- Treatment,56,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228534,Impaired Skin #6- Treatment,23,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228535,Impaired Skin #7- Treatment,18,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228539,Pressure Ulcer #1- Treatment,73,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228540,Pressure Ulcer #2- Treatment,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228541,Pressure Ulcer #3- Treatment,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228549,Pressure Ulcer #1- Type,114,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228550,Pressure Ulcer #2- Type,27,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228551,Pressure Ulcer #3- Type,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228559,Incision #1- Location,567,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228560,Incision #2- Location,293,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228561,Incision #3- Location,44,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228562,Incision #4- Location,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228565,Incision #1- Cleanse,52,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228566,Incision #2- Cleanse,15,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228567,Incision #3- Cleanse,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228571,Incision #1- Treatment,430,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228572,Incision #2- Treatment,153,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228573,Incision #3- Treatment,35,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228574,Incision #4- Treatment,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228575,Incision #5- Treatment,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228577,Impaired Skin #2- Type,183,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228578,Impaired Skin #3- Type,108,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228579,Impaired Skin #4- Type,78,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228580,Impaired Skin #5- Type,74,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228581,Impaired Skin #6- Type,40,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228582,Impaired Skin #7- Type,17,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228583,Impaired Skin #8- Type,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228594,Incision #1- Dressing Status,375,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228595,Incision #2- Dressing Status,124,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228596,Incision #3- Dressing Status,24,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228597,Incision #4- Dressing Status,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228600,Impaired Skin #1- Dressing Status,253,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228601,Impaired Skin #2- Dressing Status,103,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228602,Impaired Skin #3- Dressing Status,60,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228603,Impaired Skin #4- Dressing Status,44,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228604,Impaired Skin #5- Dressing Status,23,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228605,Impaired Skin #6- Dressing Status,19,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228606,Impaired Skin #7- Dressing Status,13,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228610,Pressure Ulcer #1- Depth,63,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228611,Pressure Ulcer #2- Depth,4,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228620,Pressure Ulcer #1- Width,67,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228621,Pressure Ulcer #2- Width,4,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228622,Pressure Ulcer #3- Width,7,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228640,EtCO2,202,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228648,Home TF,241,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228649,Pressure Ulcer Present,237,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228687,Code Status.,15,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228689,Discharge from ICU,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228691,Febrile last 24 hours,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228692,Glucose Control - Prophy,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228697,Mobilization Plan,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228698,Abdominal - (GI / Hepatic / Renal),3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228699,Cardiovascular,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228700,DVT Prophy,9,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228702,Lines/Tubes,17,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228704,Neurological,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228709,Respiratory,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228710,Sedation goal,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228712,VAP - Prophy,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228713,Vascular,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228714,Bladder scanned,47,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228719,Vented,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228723,Pressure ulcer #1- Length,67,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228724,Pressure ulcer #2- Length,4,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228725,Pressure ulcer #3- Length,7,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228733,Pressure ulcer #1- Wound Base,162,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228734,Pressure ulcer #2- Wound Base,18,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228735,Pressure ulcer #3- Wound Base,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228743,Pressure ulcer #1- Surrounding tissue,150,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228744,Pressure ulcer #2- Surrounding tissue,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228745,Pressure ulcer #3- Surrounding tissue,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228753,Pressure ulcer #1- Drainage,43,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228754,Pressure ulcer #2- Drainage,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228755,Pressure ulcer #3- Drainage,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228763,Pressure ulcer #1- Drainage amount,31,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228764,Pressure ulcer #2- Drainage amount,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228765,Pressure ulcer #3- Drainage amount,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228773,Pressure ulcer #1- Odor,28,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228774,Pressure ulcer #2- Odor,5,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228775,Pressure ulcer #3- Odor,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228783,Pressure ulcer #1- Cleanse,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228784,Pressure ulcer #2- Cleanse,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228803,Pressure ulcer #1- Dressing status,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228804,Pressure ulcer #2- Dressing status,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228813,Pressure ulcer #1- Stage,105,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228814,Pressure ulcer #2- Stage,27,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228815,Pressure ulcer #3- Stage,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228833,Pressure ulcer #1- Tunneling present,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228834,Pressure ulcer #2- Tunneling present,18,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228835,Pressure ulcer #3- Tunneling present,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228843,Pressure ulcer #1- Undermining present,54,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228844,Pressure ulcer #2- Undermining present,18,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228845,Pressure ulcer #3- Undermining present,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228853,Impaired Skin #1- Type,93,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228854,Impaired Skin #2- Type,57,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228855,Impaired Skin #3- Type,50,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228856,Impaired Skin #4- Type,18,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228857,Impaired Skin #5- Type,12,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228858,Impaired Skin #6- Type,8,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228859,Impaired Skin #7- Type,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228866,Plateau Pressure (IABP),33,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228867,Assist Device,7,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228868,Assistance,3947,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228878,PeCO2,12,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228879,Education Readiness/Motivation,745,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228880,Education Existing Knowledge,742,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228888,Pain NCP - Expected outcomes,119,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228890,Pain NCP - Interventions,1916,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228894,Impaired Fluid Balance NCP - Expected outcomes,1341,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228898,Impaired Fluid Balance NCP - Interventions,2839,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228902,Altered Respiratory Status NCP - Expected outcomes,2104,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228903,Altered Respiratory Status NCP - Goal,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228905,Altered Respiratory Status NCP - Interventions,5398,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228907,Altered Respiratory Status NCP - outcomes met,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228911,Altered Skin Integrity NCP - Expected outcomes,529,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228914,Altered Skin Integrity NCP - Interventions,1186,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228924,Impaired Tissue Perfusion NCP - Expected outcomes,3704,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228926,Impaired Tissue Perfusion NCP - Goal,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228928,Impaired Tissue Perfusion NCP - Interventions,5463,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228933,Post-op Care NCP - Expected outcomes,1361,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228937,Post-op Care NCP - Interventions,1684,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228943,Infection NCP - Expected outcomes,891,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228945,Infection NCP - Goal,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228947,Infection NCP - Interventions,2949,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228949,Infection NCP - outcomes met,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228953,Coping/Knowledge Deficit  NCP - Expected outcomes,479,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228957,Coping/Knowledge Deficit  NCP - Interventions,1110,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228962,Nutrition  NCP - Expected outcomes,77,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228966,Nutrition  NCP - Interventions,231,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228971,Nutrition NCP - Body needs,54,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228973,Altered Mental Status  NCP - Expected outcomes,1314,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228977,Altered Mental Status  NCP - Interventions,2252,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228983,Safety Restraints NCP - Expected outcomes,781,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228988,Safety Restraints NCP - Interventions,4658,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228993,Discharge NCP - Expected outcomes,98,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,228997,Discharge NCP - Interventions,242,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229001,Self harm NCP - Expected outcomes,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229003,Self harm NCP - Interventions,43,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229027,Constitutional,4,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229032,HEENT,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229079,Pain Controlled,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229087,Critically ill,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229088,Altered Mental Status  NCP - Plan revised,122,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229089,Altered Mental Status  NCP - Problem resolved,289,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229090,Altered Respiratory Status NCP - Plan revised,175,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229091,Altered Respiratory Status NCP - Problem resolved,478,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229092,Altered Skin Integrity NCP - Plan revised,50,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229093,Altered Skin Integrity NCP - Problem resolved,116,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229094,Coping/Knowledge Deficit  NCP - Plan revised,36,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229095,Coping/Knowledge Deficit  NCP - Problem resolved,110,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229096,Discharge NCP - Plan revised,20,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229097,Discharge NCP - Problem resolved,49,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229098,Impaired Fluid Balance NCP - Plan revised,111,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229099,Impaired Fluid Balance NCP - Problem resolved,287,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229100,Impaired Tissue Perfusion NCP - Plan revised,190,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229101,Impaired Tissue Perfusion NCP - Problem resolved,491,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229102,Infection NCP - Plan revised,127,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229103,Infection NCP - Problem resolved,347,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229104,Nutrition  NCP - Plan revised,17,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229105,Nutrition  NCP - Problem resolved,54,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229106,Pain NCP - Plan revised,95,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229107,Pain NCP - Problem resolved,308,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229108,Post-op Care NCP - Plan revised,107,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229109,Post-op Care NCP - Problem resolved,211,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229110,Safety Restraints NCP - Plan revised,87,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229111,Safety Restraints NCP - Problem resolved,304,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229112,Self harm NCP - Plan revised,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229113,Self harm NCP - Problem resolved,11,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229122,Elimination NCP - Problem resolved,30,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229123,Elimination NCP - Plan revised,12,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229124,Altered Sensory Perception NCP - Expected Outcomes,225,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229126,Altered Sensory Perception NCP - Interventions,797,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229128,Altered Sensory Perception NCP - Plan revised,32,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229129,Altered Sensory Perception NCP - Problem resolved,70,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229133,Elimination NCP - Expected outcomes,48,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229134,Elimination NCP - Interventions,162,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229136,Substance withdrawal NCP - Expected outcomes,166,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229138,Substance withdrawal NCP - Interventions,351,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229140,Substance withdrawal NCP - Plan revised,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229141,Substance withdrawal NCP - Problem resolved,43,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229143,Metabolic disturbance NCP - Expected outcomes,31,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229145,Metabolic disturbance NCP - Interventions,51,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229147,Metabolic disturbance NCP - Plan revised,5,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229148,Metabolic disturbance NCP - Problem resolved,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229150,Palliative Care NCP - Expected outcomes,45,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229152,Palliative Care NCP - Interventions,150,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229154,Palliative Care NCP - Plan revised,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229155,Palliative Care NCP - Problem resolved,22,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229160,Timespent,1,valueQuantity,min [min]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229243,Neuro Mon Line Type,61,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229244,Humidifier Water Changed,725,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229245,Humidifier Water % Fill Level,763,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229247,Trans Membrane Pressure,402,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229248,Pressure Drop,402,valueQuantity,mmHg [mmHg]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229288,Nutrition,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229292,GI Prophy,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229293,Pain Control,8,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229300,GI #1 Tube Mark (CM),369,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229301,GI #2 Tube Mark (CM),4,valueQuantity,cm [cm]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229314,Ventilator Mode (Hamilton),402,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229316,TOF Twitch,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229319,Activity / Mobility (JH-HLM),94,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229321,Activity / Mobility (JH-HLM),2653,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229322,Breathing pattern/effort,1318,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229323,Current Dyspnea Assessment,583,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229324,CAM-ICU Disorganized thinking,27,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229325,CAM-ICU Inattention,296,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229326,CAM-ICU MS Change,597,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229327,Activity Intolerance  NCP - Expected outcomes,10,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229330,Activity Intolerance  NCP - Interventions,3,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229344,Impaired Mobility NCP - Expected outcomes,33,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229347,Impaired Mobility  NCP - Interventions,32,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229349,Impaired Mobility NCP - Problem resolved,14,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229350,Impaired Mobility NCP - Plan revised,16,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229354,Foley Cath Insertion Location,836,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229355,Absolute Neutrophil Count,3,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229356,Differential - Immature Granulocytes,28,valueQuantity,% [%]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229357,Absolute Count - Neuts,67,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229358,Absolute Count - Lymphs,67,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229359,Absolute Count - Monos,67,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229360,Absolute Count - Eos,67,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229361,Absolute Count - Basos,67,valueQuantity,K/uL [K/uL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229369,Acuity Workload Question 1,355,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229370,Acuity Workload Question 2,355,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229371,Bladder Scan Estimate,22,valueQuantity,mL [mL]
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229381,Orientation,2410,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229383,Extraocular Movements,166,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229384,Tongue,207,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229385,Shoulder Shrug,134,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229386,Cerebellar - Finger -> Nose,59,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229387,Cerebellar - Heel -> Shin,39,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229416,Disposition,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229434,Unable to obtain,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229448,See eMAR for meds,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229452,Exam-Neuro,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229454,Exam-Ext/MSK,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229464,Discussed on Rounds,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229475,Indwelling Port (PortaCath) Power Port,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229476,PICC Line Power PICC,78,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229535,Line Type,149,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229536,Dialysis Catheter Type,2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229537,Pheresis Catheter Type,54,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229538,PICC - Heparin Dependent,20,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229592,Exam-GU,1,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229600,CAUTI Info Given,27,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229604,Therapeutic Bed,215,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229633,Basic Mobility (AM-PAC),2,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229636,Test Performed (AM-PAC),2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229638,Discharge Recommendations (AM-PAC),2,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229681,Indwelling Urinary Catheter Care,4,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229685,Vaulables Checklist,1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229687,Pain Assessment Method,21,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229689,CPOT-Pain Assessment Method,13,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229691,CPOT-Muscle Tension (CPOTb),5,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229692,CPOT-Muscle Tension (CPOTa),1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229694,CPOT-Vocalization (CPOTa),1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229695,CPOT-Vocalization (CPOTb),5,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229696,CPOT-Body Movements (CPOTb),5,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229697,CPOT-Body Movements (CPOTa),1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229698,CPOT-Facial Expression (CPOTb),5,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229699,CPOT-Facial Expression (CPOTa),1,valueQuantity,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229703,CPOT-Pain Management,6,valueString,
+http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-chartevents-d-items,229858,Therapeutic Bed,7,valueString,

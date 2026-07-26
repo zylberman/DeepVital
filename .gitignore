@@ -1,4 +1,41 @@
-data/
+cat > .gitignore <<'EOF'
+# Python
 __pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+notebooks/venv/
+
+# Environment and secrets
 .env
+.env.*
+!.env.example
+
+# Raw and derived clinical data
+data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/
+data/*.zip
+data/raw/
+data/interim/
+data/processed/
+
+# Models and reports generated locally
+models/
+reports/figures/
+reports/metrics/
+reports/tables/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+EOF
