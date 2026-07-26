@@ -26,14 +26,35 @@ def main() -> int:
     parser.add_argument(
         "--config", type=Path, default=PROJECT_ROOT / "configs/cohort.yaml"
     )
+    parser.add_argument(
+        "--splitting-config",
+        type=Path,
+        default=PROJECT_ROOT / "configs/splitting.yaml",
+    )
+    parser.add_argument(
+        "--split-manifest",
+        type=Path,
+        default=PROJECT_ROOT / "data/processed/split_manifest.json",
+    )
+    parser.add_argument(
+        "--split-report",
+        type=Path,
+        default=PROJECT_ROOT / "reports/split_summary.json",
+    )
     args = parser.parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
+    splitting_config = json.loads(
+        args.splitting_config.read_text(encoding="utf-8")
+    )
     report = build_phase_1b_dataset(
         args.canonical_input,
         args.hourly_output,
         args.windows_output,
         args.quality_report,
         config,
+        splitting_config,
+        args.split_manifest,
+        args.split_report,
     )
     counts = report["counts"]
     print(

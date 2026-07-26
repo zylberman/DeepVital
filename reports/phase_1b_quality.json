@@ -1,4 +1,9 @@
 {
+  "accounting_identities": {
+    "candidate_window_partition": true,
+    "hourly_cell_partition": true,
+    "label_partition": true
+  },
   "configuration": {
     "consecutive_low_map_hours": 2,
     "forward_fill_max_hours": 2,
@@ -15,15 +20,25 @@
     "forward_filled_cells": 8846,
     "hourly_observed_cells": 76190,
     "hourly_rows": 12309,
+    "negative_windows": 7113,
+    "observations_outside_icu_period": 0,
     "positive_windows": 1759,
+    "prediction_times_excluded_incomplete_future_horizon": 795,
+    "prediction_times_excluded_insufficient_history": 1506,
     "unfilled_missing_cells": 13436,
     "windows_created": 8872,
-    "windows_excluded_incomplete_future_map": 1136
+    "windows_excluded_incomplete_future_map": 1136,
+    "windows_excluded_minimum_observed_data": 0
   },
   "entities": {
     "hospital_admissions": 128,
     "icu_stays": 140,
     "patients": 100
   },
-  "event_prevalence": 0.19826420198376915
+  "event_prevalence": 0.19826420198376915,
+  "patient_splitting": {
+    "assigned_patients": 100,
+    "patient_overlap_count": 0,
+    "seed": 20260726
+  }
 }

@@ -4,9 +4,9 @@
 **Intended use:** Retrospective research only; not for clinical decision-making
 
 This phase transforms the private canonical observation table into stay-bounded
-hourly data and future-labeled retrospective windows. It does not split patients,
-fit preprocessing statistics, train a model, select a threshold, or evaluate model
-performance.
+hourly data and future-labeled retrospective windows. It now assigns deterministic
+patient-level train, validation, and test splits. It does not fit preprocessing
+statistics, train a model, select a decision threshold, or evaluate performance.
 
 ## Input population
 
@@ -15,7 +15,7 @@ contains a locally resolved `subject_id`, `hadm_id`, and `stay_id`. Processing i
 grouped by the complete three-key identity and never combines rows across an ICU
 stay, hospital admission, or patient.
 
-The actual Phase 1B run represented:
+The audited Phase 1B completion run represented:
 
 - 100 patients;
 - 128 hospital admissions;
@@ -62,7 +62,7 @@ forward-filled value retains `missing=1`, so real and carried-forward observatio
 remain distinguishable. Time since observation continues to increase after the
 forward-fill limit even though the value becomes missing.
 
-The actual run contained 8,846 forward-filled cells and 13,436 missing cells that
+The audited run contained 8,846 forward-filled cells and 13,436 missing cells that
 remained unfilled.
 
 ## Retrospective predictor window
@@ -97,37 +97,39 @@ window.
 The actual build produced:
 
 - 10,008 candidate windows;
-- 1,136 exclusions for incomplete future MAP;
+- 1,136 exclusions for incomplete future MAP assessment;
 - 8,872 labeled windows;
-- 1,759 positive labels;
-- event prevalence 19.83%.
+- 1,759 positive labels and 7,113 negative labels;
+- event prevalence 19.8264%.
 
 This prevalence describes overlapping retrospective windows, not unique clinical
 events or patients.
 
 ## Private outputs
 
-- `data/processed/hourly_vitals.csv`: 12,309 rows and 36 columns;
-- `data/processed/modeling_windows.csv`: 8,872 rows and 293 columns.
+- `data/processed/hourly_vitals.csv`: 12,309 rows;
+- `data/processed/modeling_windows.csv`: 8,872 rows;
+- `data/processed/split_manifest.json`: private patient assignments.
 
 Both files contain local identifiers and must not be committed, logged, copied into
 public examples, or treated as deidentified public data.
 
-The public aggregate report is `reports/phase_1b_quality.json`.
+The audited public aggregate reports are `reports/phase_1b_quality.json` and
+`reports/split_summary.json`.
 
 ## Known limitations
 
-- The hourly grid begins at the first and ends at the last canonical vital-sign
-  hour, not at independently loaded ICU admission/discharge bounds. Leading and
-  trailing hours without any supported vital are therefore absent.
+- The audited legacy builder uses the first and last supported canonical observation
+  hour within each already-resolved ICU stay. A separate period-bounded builder
+  exists, but administrative-bound integration should be unified before modeling.
 - BP source precedence and simultaneous invasive/non-invasive measurements remain
   unresolved.
 - Duplicate aggregation uses the median across mapped sources; this requires
   sensitivity analysis before scientific inference.
 - Complete future MAP is a strict primary-label requirement and may select for
   more frequently monitored periods.
-- Overlapping windows are correlated. Future train/validation/test splitting must
-  occur by patient before any fitting.
+- Overlapping windows are correlated. Patient-level splitting is implemented, but
+  split prevalence differs in this small demo.
 - No imputer, scaler, feature selection, calibration, or threshold selection has
   been fit.
 - Oxygen flow is not FiO2 and is not a validated continuous supplemental-oxygen
@@ -135,8 +137,6 @@ The public aggregate report is `reports/phase_1b_quality.json`.
 
 ## Recommended next action
 
-Before model development, perform a Phase 1C validity review: incorporate or audit
-ICU admission/discharge bounds, define BP source precedence, quantify label
-selection caused by missing future MAP, create patient-disjoint train/validation/
-test splits, and add leakage assertions. Fit no preprocessing transformation on the
-full dataset.
+Before model development, unify ICU admission/discharge-bound handling, define BP
+source precedence, quantify label selection caused by missing future MAP, and freeze
+the patient split. Fit no preprocessing transformation on the full dataset.

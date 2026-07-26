@@ -1,0 +1,20 @@
+{
+  "observation_window_hours": 12,
+  "prediction_horizon_hours": 6,
+  "include_prediction_hour": true,
+  "tabular_features": [
+    "current",
+    "previous",
+    "change",
+    "rolling_mean",
+    "rolling_median",
+    "rolling_min",
+    "rolling_max",
+    "rolling_std",
+    "rolling_slope",
+    "observed_count",
+    "proportion_missing",
+    "hours_since_last_observation"
+  ],
+  "derived_features": ["pulse_pressure", "shock_index"]
+}

@@ -1,0 +1,16 @@
+{
+  "forward_fill_max_hours": {
+    "heart_rate": 2,
+    "respiratory_rate": 2,
+    "systolic_bp": 2,
+    "diastolic_bp": 2,
+    "mean_arterial_pressure": 2,
+    "oxygen_saturation": 2,
+    "temperature": 2,
+    "oxygen_flow": 2
+  },
+  "minimum_total_observed_cells_per_window": 1,
+  "minimum_observed_hours_by_variable": {},
+  "backward_fill": false,
+  "interpolation": false
+}
