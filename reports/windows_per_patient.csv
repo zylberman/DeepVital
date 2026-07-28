@@ -1,0 +1,7 @@
+split,statistic,value
+test,patient_count,15
+test,minimum,3
+test,p25,35
+test,median,90
+test,p75,147
+test,maximum,284

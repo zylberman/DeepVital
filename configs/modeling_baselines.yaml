@@ -1,0 +1,28 @@
+{
+  "random_seed": 20260726,
+  "clinical_benchmarks": {
+    "risk_center_map": 65.0,
+    "risk_scale_map": 10.0,
+    "fixed_map_thresholds": [60.0, 65.0, 70.0],
+    "trend_projection_hours": 6,
+    "shock_index_center": 0.7,
+    "shock_index_scale": 0.15,
+    "modified_shock_index_center": 0.9,
+    "modified_shock_index_scale": 0.2
+  },
+  "models": {
+    "dummy_prevalence": {"strategy": "prior"},
+    "logistic_regression": {
+      "class_weight": "balanced",
+      "C": 1.0,
+      "max_iter": 1000
+    },
+    "gaussian_naive_bayes": {"var_smoothing": 1e-09},
+    "hist_gradient_boosting": {
+      "learning_rate": 0.05,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1.0
+    }
+  }
+}

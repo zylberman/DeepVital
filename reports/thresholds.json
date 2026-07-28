@@ -1,0 +1,97 @@
+{
+  "constant_prevalence": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.1930447125621008,
+    "youden": 1.000000000001
+  },
+  "dummy_prevalence": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.1930447125621008,
+    "youden": 1.000000000001
+  },
+  "gaussian_nb": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.9999999728753725,
+    "youden": 0.9999999999956231
+  },
+  "hist_gradient_boosting": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.12931097906842115,
+    "youden": 0.15366168213522963
+  },
+  "last_map": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.33181222783183395,
+    "youden": 0.37754066879814546
+  },
+  "logistic_regression": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.42501226040485013,
+    "youden": 0.5748397839089348
+  },
+  "map_change": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.3543436937742045,
+    "youden": 0.4378234991142019
+  },
+  "map_current": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.33181222783183395,
+    "youden": 0.37754066879814546
+  },
+  "map_mean_3h": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.3543436937742045,
+    "youden": 0.38540550173245036
+  },
+  "map_mean_6h": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.33181222783183395,
+    "youden": 0.37754066879814546
+  },
+  "map_min_3h": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.4501660026875221,
+    "youden": 0.5
+  },
+  "map_min_6h": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.52497918747894,
+    "youden": 0.6341355910108007
+  },
+  "map_previous": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.33181222783183395,
+    "youden": 0.37754066879814546
+  },
+  "map_slope": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.48933728115366715,
+    "youden": 0.5008741249835721
+  },
+  "map_threshold_60": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.0,
+    "youden": 1.0
+  },
+  "map_threshold_65": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.0,
+    "youden": 1.0
+  },
+  "map_threshold_70": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.0,
+    "youden": 1.0
+  },
+  "modified_shock_index": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.7873162231873087,
+    "youden": 0.91308131008862
+  },
+  "shock_index": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.5369694450320078,
+    "youden": 0.7625419716560975
+  }
+}
