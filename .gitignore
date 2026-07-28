@@ -34,6 +34,7 @@ reports/figures/*
 !reports/figures/risk_distribution.png
 reports/metrics/
 reports/tables/
+artifacts/synthetic_demo/
 
 # Jupyter
 .ipynb_checkpoints/

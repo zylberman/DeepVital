@@ -247,6 +247,21 @@ calibration summaries, and aggregate report schemas.
 Passing unit tests demonstrate the tested software contracts. They do not reproduce
 model training, establish clinical validity, or provide new evaluation evidence.
 
+## Synthetic reproducibility demo
+
+The public synthetic workflow exercises generation, 12-hour windowing, future
+6-hour labels, patient-level splitting, model fitting, validation-only selection,
+and a synthetic holdout without reading clinical data or Phase 2 artifacts.
+
+```bash
+make check
+make demo
+```
+
+See [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for the reproducibility
+boundary, generated artifacts, and the distinction between synthetic demonstration
+and the authorized clinical-data experiment.
+
 ## Reproducing the pipeline
 
 The full numerical results require authorized local access to the MIMIC-IV demo
