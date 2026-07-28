@@ -5,8 +5,9 @@ from __future__ import annotations
 import csv
 import json
 from collections import Counter
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 from deepvital.features.windows import build_stay_windows, window_columns
 from deepvital.splitting.patient_split import (

@@ -9,7 +9,6 @@ from typing import Any
 
 from deepvital.fhir.reader import stream_fhir_resources
 
-
 PATIENT_IDENTIFIER_SYSTEM = "http://mimic.mit.edu/fhir/mimic/identifier/patient"
 HOSPITAL_IDENTIFIER_SYSTEM = (
     "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp"

@@ -18,7 +18,6 @@ from deepvital.fhir.extraction import (
 from deepvital.fhir.reader import stream_fhir_resources
 from deepvital.preprocessing.units import normalize_unit
 
-
 SYSTEM = "https://synthetic.invalid/chartevents"
 PATIENT_SYSTEM = "http://mimic.mit.edu/fhir/mimic/identifier/patient"
 HOSPITAL_SYSTEM = "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp"

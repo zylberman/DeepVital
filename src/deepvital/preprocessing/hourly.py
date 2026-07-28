@@ -5,10 +5,11 @@ from __future__ import annotations
 import csv
 import statistics
 from collections import defaultdict
+from collections.abc import Iterator
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 
 def parse_utc(value: str) -> datetime:

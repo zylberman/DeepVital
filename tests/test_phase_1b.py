@@ -6,17 +6,15 @@ from deepvital.cohort.dataset import (
     assert_accounting_identities,
     build_phase_1b_dataset,
 )
-from deepvital.features.windows import build_stay_windows
 from deepvital.features.temporal import derived_features, trailing_features
+from deepvital.features.windows import build_stay_windows
 from deepvital.labeling.hypotension import sustained_hypotension_label
 from deepvital.preprocessing.hourly import CanonicalStay, aggregate_stay_hourly
 from deepvital.splitting.patient_split import (
     assert_patient_disjoint,
     assign_patient_splits,
 )
-from deepvital.windows.builder import stream_hourly_stays
-from deepvital.windows.builder import build_modeling_dataset
-
+from deepvital.windows.builder import build_modeling_dataset, stream_hourly_stays
 
 VARIABLES = ["heart_rate", "mean_arterial_pressure"]
 CONFIG = {

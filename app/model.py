@@ -1,11 +1,11 @@
 import torch
-import torch.nn as nn
-import torch.optim as optim
+from torch import nn
+
 
 # 1. Definición de la Arquitectura de la Red Neuronal
 class DeepVitalModel(nn.Module):
     def __init__(self):
-        super(DeepVitalModel, self).__init__()
+        super().__init__()
         
         # Brazo 1: Procesa los datos estáticos (Ej: Edad, Peso, Género codificado)
         # Suponemos que entran 5 variables clínicas estáticas
@@ -33,7 +33,7 @@ class DeepVitalModel(nn.Module):
         out_tab = self.tabular_branch(datos_tabulares)
         
         # Pasar datos por el brazo del sensor
-        out_sensor, (hn, cn) = self.sensor_branch(datos_sensores)
+        out_sensor, _ = self.sensor_branch(datos_sensores)
         # Solo nos quedamos con la última predicción de la secuencia de tiempo
         out_sensor = out_sensor[:, -1, :] 
         

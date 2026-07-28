@@ -5,8 +5,9 @@ from __future__ import annotations
 import csv
 import json
 from collections import Counter
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 from deepvital.cohort.encounters import (
     EncounterIndex,
@@ -16,7 +17,6 @@ from deepvital.cohort.encounters import (
 )
 from deepvital.fhir.reader import stream_fhir_resources
 from deepvital.preprocessing.units import normalize_unit
-
 
 CANONICAL_COLUMNS = [
     "subject_id",
@@ -39,7 +39,7 @@ def load_yaml_compatible_json(path: Path) -> dict[str, Any]:
     """Load configuration written in the JSON subset of YAML."""
     value = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(value, dict):
-        raise ValueError("Configuration root must be a mapping")
+        raise TypeError("Configuration root must be a mapping")
     return value
 
 

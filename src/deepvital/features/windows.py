@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import hashlib
-from typing import Any, Iterator
+from collections.abc import Iterator
+from typing import Any
 
 from deepvital.features.temporal import derived_features, trailing_features
 from deepvital.labeling.hypotension import sustained_hypotension_label

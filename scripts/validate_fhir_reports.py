@@ -5,9 +5,8 @@ import gzip
 import re
 import sys
 from collections import Counter
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
-
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = PROJECT_ROOT / "reports"
@@ -259,7 +258,7 @@ def main() -> int:
 
         try:
             headers, rows = read_csv(path)
-        except Exception as exc:
+        except (OSError, UnicodeDecodeError, csv.Error, ValueError, AttributeError) as exc:
             errors.append(f"{filename}: cannot parse CSV: {exc}")
             continue
 
