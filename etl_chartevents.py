@@ -1,12 +1,22 @@
-import json
 import gzip
+import json
+import os
+
 import pandas as pd
 from sqlalchemy import create_engine
 
-# Connect to local PostgreSQL
-engine = create_engine('postgresql://deepvital_admin:admin_password@localhost:5432/uci_data')
 
-def process_vital_signs(file_path):
+def _database_engine():
+    database_url = os.getenv("DEEPVITAL_DATABASE_URL")
+    if not database_url:
+        raise RuntimeError(
+            "DEEPVITAL_DATABASE_URL is not configured. "
+            "Copy .env.example to .env and provide a local database URL."
+        )
+    return create_engine(database_url)
+
+
+def process_vital_signs(file_path, engine=None):
     records = []
     print("Starting vital signs extraction (Chartevents)...")
     
@@ -52,7 +62,10 @@ def process_vital_signs(file_path):
     df_vitals['timestamp'] = pd.to_datetime(df_vitals['timestamp'], utc=True)
     
     # Save to PostgreSQL
-    df_vitals.to_sql('vital_signs', engine, if_exists='replace', index=False)
+    engine = engine or _database_engine()
+    # Refuse to overwrite an existing table. This legacy loader must only target
+    # an explicitly configured, disposable research database.
+    df_vitals.to_sql('vital_signs', engine, if_exists='fail', index=False)
     print(f"Success! {len(df_vitals)} records saved to 'vital_signs' table.")
 
 if __name__ == "__main__":
