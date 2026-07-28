@@ -43,7 +43,11 @@ FORBIDDEN = {
 
 
 def candidate_feature_names(fieldnames: Iterable[str]) -> list[str]:
-    """Select prespecified current/trailing predictors and exclude identifiers."""
+    """Select predictors available through time t and reject leakage-prone fields.
+
+    Patient identifiers preserve grouping elsewhere, but neither identifiers nor
+    future measurements belong in the feature matrix.
+    """
     available = set(fieldnames)
     wanted = [f"{v}_{s}" for v in VITALS for s in SUMMARY_SUFFIXES]
     wanted += [

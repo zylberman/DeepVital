@@ -41,6 +41,15 @@ Hourly data, windows, and the split manifest are private local artifacts under
 ignored `data/processed/`. Public reports contain counts and proportions only.
 Console output contains only aggregate totals.
 
+A patient can contribute many overlapping windows. A window-level split would put
+near-duplicate observations from the same patient on both sides of evaluation, so
+the patient assignment is treated as part of the frozen cohort rather than
+regenerated during modeling.
+
+Processed tables remain local because they contain patient-level identifiers needed
+to preserve grouping. Aggregate reports are retained so the analysis can still be
+audited without publishing those rows.
+
 ## Remaining safeguards before modeling
 
 - Verify split stability and outcome balance on larger cohorts.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate locked Phase 2 models once on the held-out test partition."""
+"""Apply validation-locked models and thresholds to the developmental holdout."""
 
 from __future__ import annotations
 
@@ -43,6 +43,8 @@ def main() -> int:
     model_config = read_json(ROOT / "configs/modeling_baselines.yaml")
     evaluation = read_json(ROOT / "configs/evaluation.yaml")
     lock = read_json(ROOT / "models/baselines/model_selection.json")
+    # Selection has already happened on validation data. This command only applies
+    # the locked candidates and thresholds to the developmental holdout.
     assert lock["status"] == "locked_before_test" and lock["test_accessed"] is False
     dataset = ROOT / "data/processed/modeling_windows.csv"
     x_test, y_test, features, test_rows = load_split(dataset, "test")
@@ -80,6 +82,8 @@ def main() -> int:
     write_metrics(ROOT / "reports/test_metrics.csv", metric_rows)
     write_metrics(ROOT / "reports/model_comparison.csv", comparison_rows)
     write_metrics(ROOT / "reports/windows_per_patient.csv", patient_window_distribution(test_rows, "test"))
+    # Resample patients, not windows. Treating overlapping windows as independent
+    # would make the resulting intervals look more precise than the cohort allows.
     bootstrap = patient_bootstrap(
         [row["subject_id"] for row in test_rows],
         y_test,

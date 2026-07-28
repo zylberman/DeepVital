@@ -8,12 +8,14 @@ aggregate split report, and candidate-window accounting passes. Predictors are
 restricted to values through `t`; the outcome remains `t+1` through `t+6`.
 
 The validation rule selected the six-hour trailing mean MAP benchmark
-(`map_mean_6h`). On validation it achieved AUROC 0.7897, AUPRC 0.6124, and Brier
-score 0.1622. The validation prevalence was 0.2682.
+(`map_mean_6h`). Model complexity was not part of the rule: the transparent
+benchmark remained selected because it had the strongest validation AUPRC under
+the predefined comparison. On validation it achieved AUROC 0.7897, AUPRC 0.6124,
+and Brier score 0.1622. The validation prevalence was 0.2682.
 
-The locked model was then evaluated once on 1,551 test windows from 15 patients.
-Test prevalence was 0.1412. At its validation-selected Youden threshold,
-`map_mean_6h` achieved:
+The locked model was evaluated on 1,551 developmental-holdout windows from 15
+patients. Holdout prevalence was 0.1412. At its validation-selected Youden
+threshold, `map_mean_6h` achieved:
 
 - AUROC 0.8649
 - AUPRC 0.5490

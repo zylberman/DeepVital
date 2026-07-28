@@ -10,7 +10,11 @@ from .metrics import evaluate_probabilities
 
 
 def resample_patient_indices(subjects: list[str], rng: random.Random) -> list[int]:
-    """Sample patients with replacement and include all their windows per draw."""
+    """Sample patients with replacement and preserve each draw's full cluster.
+
+    Window-level sampling would mistake correlated windows for independent
+    observations and produce overly optimistic uncertainty.
+    """
     grouped: dict[str, list[int]] = defaultdict(list)
     for index, subject in enumerate(subjects):
         grouped[subject].append(index)

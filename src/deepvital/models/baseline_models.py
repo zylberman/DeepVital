@@ -7,7 +7,11 @@ from typing import Any
 
 
 def build_baseline_models(config: Mapping[str, Any], seed: int) -> dict[str, Any]:
-    """Build unfitted conventional models; imports remain optional at collection."""
+    """Build unfitted models with preprocessing enclosed in each pipeline.
+
+    Keeping imputation and scaling beside the estimator makes it difficult to fit
+    either transformation on validation or holdout rows by accident.
+    """
     from sklearn.dummy import DummyClassifier
     from sklearn.ensemble import HistGradientBoostingClassifier
     from sklearn.impute import SimpleImputer

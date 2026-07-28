@@ -55,6 +55,8 @@ def main() -> int:
     model_config = read_json(ROOT / "configs/modeling_baselines.yaml")
     evaluation_config = read_json(ROOT / "configs/evaluation.yaml")
     dataset = ROOT / "data/processed/modeling_windows.csv"
+    # Reuse the Phase 1B assignments. Re-splitting here would break the link
+    # between the audited cohort report and the fitted models.
     x_train, y_train, features, _train_rows = load_split(dataset, "train")
     x_validation, y_validation, validation_features, validation_rows = load_split(dataset, "validation")
     assert features == validation_features
@@ -101,6 +103,8 @@ def main() -> int:
             )
     primary_metric = evaluation_config["primary_model_selection_metric"]
     secondary_metric = evaluation_config["secondary_model_selection_metric"]
+    # Complexity is not rewarded by the selection rule; every candidate competes
+    # on the same validation metrics and deterministic tie-break.
     selected = select_model(selection_metrics, primary_metric, secondary_metric)
     simple_names = {
         name

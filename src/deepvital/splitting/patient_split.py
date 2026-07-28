@@ -1,4 +1,8 @@
-"""Deterministic patient-level train/validation/test splitting."""
+"""Keep every correlated window from a patient in one deterministic split.
+
+A window-level split would evaluate on observations closely related to windows
+already seen during training.
+"""
 
 from __future__ import annotations
 

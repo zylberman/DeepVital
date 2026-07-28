@@ -30,15 +30,18 @@ missing values natively. No post-hoc calibration model was fitted.
 Selection used validation AUPRC, with Brier score as the tie-breaker. Thresholds
 were locked on validation: 0.5, Youden index, and a sensitivity target near
 0.80. Model name is the deterministic final tie-break if both metrics are equal.
-Test was opened only after the selection record was written. Confidence
-intervals use 1,000 deterministic patient-cluster bootstrap replicates.
+The developmental holdout was first opened only after the selection record was
+written, but it was later rerun during metric and pipeline corrections. Confidence
+intervals use 1,000 deterministic patient-cluster bootstrap replicates because
+resampling individual windows would ignore within-patient correlation.
 
 ## Limitations
 
-- The demo cohort has only 100 patients and the test set has 15 patients.
+- The demo cohort has only 100 patients and the developmental holdout has 15
+  patients.
 - Repeated windows within a stay are correlated; patient bootstrap addresses
   clustering but uncertainty remains wide.
-- Validation and test prevalence differ materially.
+- Validation and developmental-holdout prevalence differ materially.
 - Neutral risk 0.5 is used when a transparent clinical score is unavailable.
 - Results are internal validation on a demo dataset, not external validation.
 - Association and predictive utility do not imply causal importance.

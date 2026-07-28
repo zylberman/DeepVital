@@ -73,7 +73,11 @@ def build_stay_windows(
     minimum_total_observed_cells: int = 0,
     minimum_observed_hours_by_variable: dict[str, int] | None = None,
 ) -> tuple[Iterator[dict[str, Any]], dict[str, int]]:
-    """Build windows entirely within one already-isolated ICU stay."""
+    """Build trailing windows inside one stay without exposing future measurements.
+
+    The prediction is made at time t, so values from t+1 onward are reserved for
+    outcome construction even when they are present in the source table.
+    """
     output: list[dict[str, Any]] = []
     candidate_count = 0
     incomplete_count = 0

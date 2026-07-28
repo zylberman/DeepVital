@@ -364,10 +364,10 @@ appropriate regulatory analysis.
 
 ## Author
 
-The repository does not currently provide a verified author name. DeepVital is
-presented as an interdisciplinary portfolio project at the intersection of medical
-practice and information-technology engineering. No institutional endorsement or
-clinical deployment experience is implied.
+The repository does not currently provide a verified author name. As a physician
+and information-technology engineer, I designed DeepVital around a question that is
+clinically understandable and technically auditable. No institutional endorsement
+or clinical deployment experience is implied.
 
 ## License and data
 

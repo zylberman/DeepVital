@@ -22,7 +22,11 @@ def write_json(path: Path, value) -> None:
 
 
 def phase_1b_gate() -> dict:
-    """Reconcile private dataset, manifest, and aggregate Phase 1B reports."""
+    """Verify private cohort artifacts without copying identifiers into reports.
+
+    The gate keeps Phase 2 tied to the audited Phase 1B split while exposing only
+    aggregate reconciliation results.
+    """
     dataset = ROOT / "data/processed/modeling_windows.csv"
     manifest_path = ROOT / "data/processed/split_manifest.json"
     quality = read_json(ROOT / "reports/phase_1b_quality.json")
