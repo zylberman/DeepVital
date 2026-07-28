@@ -1,0 +1,19 @@
+{
+  "candidate_prediction_times": 10185,
+  "canonical_admissions": 128,
+  "canonical_patients": 100,
+  "eligible_windows": 8970,
+  "event_prevalence": 0.19777034559643256,
+  "exclusions": {
+    "incomplete_future_horizon": 803,
+    "insufficient_12_hour_history": 1514,
+    "insufficient_future_map_assessment": 1215,
+    "invalid_or_missing_stay_identifier": 0,
+    "label_indeterminate_other": 0,
+    "minimum_observed_data": 0,
+    "prediction_time_outside_icu_period": 0
+  },
+  "icu_stays_processed": 140,
+  "negative_windows": 7196,
+  "positive_windows": 1774
+}

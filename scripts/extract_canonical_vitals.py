@@ -7,13 +7,12 @@ import argparse
 import sys
 from pathlib import Path
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from deepvital.fhir.extraction import (  # noqa: E402
+from deepvital.fhir.extraction import (
     extract_rows,
     load_yaml_compatible_json,
     write_output,
@@ -26,6 +25,7 @@ def main() -> int:
     parser.add_argument("--fhir-dir", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--quality-report", required=True, type=Path)
+    parser.add_argument("--format", required=True, choices=("parquet", "csv"))
     parser.add_argument(
         "--vital-config",
         type=Path,
@@ -40,7 +40,7 @@ def main() -> int:
     vital_config = load_yaml_compatible_json(args.vital_config)
     unit_config = load_yaml_compatible_json(args.unit_config)
     rows, quality = extract_rows(args.fhir_dir, vital_config, unit_config)
-    _, output_format = write_output(args.output, rows)
+    _, output_format = write_output(args.output, rows, args.format)
     write_quality_report(args.quality_report, quality, output_format)
     print(
         f"Canonical extraction complete: {quality['canonical_observations']} rows; "

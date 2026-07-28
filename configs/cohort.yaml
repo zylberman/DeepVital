@@ -1,0 +1,22 @@
+{
+  "variables": [
+    "heart_rate",
+    "respiratory_rate",
+    "systolic_bp",
+    "diastolic_bp",
+    "mean_arterial_pressure",
+    "oxygen_saturation",
+    "temperature",
+    "oxygen_flow"
+  ],
+  "hourly_aggregation": "median",
+  "forward_fill_max_hours": 2,
+  "input_window_hours": 12,
+  "prediction_horizon_hours": 6,
+  "outcome": {
+    "variable": "mean_arterial_pressure",
+    "threshold": 65.0,
+    "consecutive_hours": 2,
+    "require_complete_future_map": true
+  }
+}

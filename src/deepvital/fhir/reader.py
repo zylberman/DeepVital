@@ -4,8 +4,9 @@ from __future__ import annotations
 
 import gzip
 import json
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 
 def stream_fhir_resources(

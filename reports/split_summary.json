@@ -1,0 +1,41 @@
+{
+  "patient_overlap_count": 0,
+  "proportions": {
+    "test": 0.15,
+    "train": 0.7,
+    "validation": 0.15
+  },
+  "seed": 20260726,
+  "splits": {
+    "test": {
+      "event_prevalence": 0.14119922630560927,
+      "hospital_admissions": 18,
+      "icu_stays": 19,
+      "negative_windows": 1332,
+      "patients": 15,
+      "patients_with_windows": 15,
+      "positive_windows": 219,
+      "windows": 1551
+    },
+    "train": {
+      "event_prevalence": 0.1930447125621008,
+      "hospital_admissions": 84,
+      "icu_stays": 90,
+      "negative_windows": 4548,
+      "patients": 70,
+      "patients_with_windows": 63,
+      "positive_windows": 1088,
+      "windows": 5636
+    },
+    "validation": {
+      "event_prevalence": 0.26824925816023737,
+      "hospital_admissions": 15,
+      "icu_stays": 16,
+      "negative_windows": 1233,
+      "patients": 15,
+      "patients_with_windows": 14,
+      "positive_windows": 452,
+      "windows": 1685
+    }
+  }
+}

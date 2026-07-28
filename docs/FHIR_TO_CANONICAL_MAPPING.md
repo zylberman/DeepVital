@@ -33,8 +33,7 @@ Code system:
 
 These 17 code/display/value-type combinations were confirmed in
 `reports/fhir_chartevents_codes.csv` as `valueQuantity`. Chartevents contained no
-components, but component `code` plus `valueQuantity` extraction is supported and
-tested synthetically for compatible future FHIR sources.
+components, so component extraction is deliberately disabled in Phase 1A.
 
 ## FHIR field mapping
 
@@ -45,9 +44,9 @@ tested synthetically for compatible future FHIR sources.
 | `stay_id` | ICU Encounter `identifier.value` |
 | `observation_time` | Observation `effectiveDateTime` |
 | `source_resource` | fixed source-family name for the input file |
-| `code_system` | Observation or component `code.coding.system` |
-| `observation_code` | Observation or component `code.coding.code` |
-| `observation_display` | Observation or component `code.coding.display` |
+| `code_system` | Observation `code.coding.system` |
+| `observation_code` | Observation `code.coding.code` |
+| `observation_display` | Observation `code.coding.display` |
 | `normalized_variable` | `configs/fhir_vital_signs.yaml` |
 | `numeric_value` | `valueQuantity.value` |
 | `original_unit` | `valueQuantity.unit` |
@@ -64,6 +63,7 @@ tested synthetically for compatible future FHIR sources.
 - multiple timestamp-compatible ICU candidates;
 - missing code or numeric value;
 - present but unsupported non-quantity value type;
+- unconfirmed component structure;
 - unsupported coding system/code;
 - unsupported or absent unit;
 - value outside the configured physiological plausibility range.

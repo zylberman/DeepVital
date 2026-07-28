@@ -5,8 +5,9 @@ from __future__ import annotations
 import csv
 import json
 from collections import Counter
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 from deepvital.cohort.encounters import (
     EncounterIndex,
@@ -16,7 +17,6 @@ from deepvital.cohort.encounters import (
 )
 from deepvital.fhir.reader import stream_fhir_resources
 from deepvital.preprocessing.units import normalize_unit
-
 
 CANONICAL_COLUMNS = [
     "subject_id",
@@ -39,7 +39,7 @@ def load_yaml_compatible_json(path: Path) -> dict[str, Any]:
     """Load configuration written in the JSON subset of YAML."""
     value = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(value, dict):
-        raise ValueError("Configuration root must be a mapping")
+        raise TypeError("Configuration root must be a mapping")
     return value
 
 
@@ -52,17 +52,10 @@ def _codings(concept: Any) -> Iterator[dict[str, Any]]:
 
 
 def observation_measurements(resource: dict[str, Any]) -> Iterator[dict[str, Any]]:
-    """Yield top-level and component code/valueQuantity measurements."""
+    """Yield confirmed top-level Chartevents code/valueQuantity measurements."""
     if isinstance(resource.get("valueQuantity"), dict):
         for coding in _codings(resource.get("code")):
             yield {"coding": coding, "quantity": resource["valueQuantity"]}
-    for component in resource.get("component", []):
-        if not isinstance(component, dict) or not isinstance(
-            component.get("valueQuantity"), dict
-        ):
-            continue
-        for coding in _codings(component.get("code")):
-            yield {"coding": coding, "quantity": component["valueQuantity"]}
 
 
 def _canonical_row(
@@ -141,6 +134,9 @@ def extract_rows(
         if mapping_error:
             rejections[mapping_error] += 1
             continue
+        if resource.get("component"):
+            rejections["unsupported_component_structure"] += 1
+            continue
         measurements = list(observation_measurements(resource))
         if not measurements:
             if "valueQuantity" in resource:
@@ -201,6 +197,7 @@ def extract_rows(
         "missing_code",
         "missing_value",
         "unsupported_value_type",
+        "unsupported_component_structure",
         "unsupported_code",
         "unsupported_unit",
         "physiological_range_exclusion",
@@ -234,9 +231,13 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-def write_output(path: Path, rows: list[dict[str, Any]]) -> tuple[Path, str]:
-    """Write Parquet when requested/available, otherwise deterministic CSV."""
-    if path.suffix.lower() == ".parquet":
+def write_output(
+    path: Path, rows: list[dict[str, Any]], requested_format: str = "csv"
+) -> tuple[Path, str]:
+    """Write the requested format, falling back from Parquet to deterministic CSV."""
+    if requested_format not in {"csv", "parquet"}:
+        raise ValueError("requested_format must be 'csv' or 'parquet'")
+    if requested_format == "parquet":
         try:
             import pyarrow as pa
             import pyarrow.parquet as pq
@@ -244,10 +245,12 @@ def write_output(path: Path, rows: list[dict[str, Any]]) -> tuple[Path, str]:
             fallback = path.with_suffix(".csv")
             write_csv(fallback, rows)
             return fallback, "csv"
+        path = path.with_suffix(".parquet")
         path.parent.mkdir(parents=True, exist_ok=True)
         table = pa.Table.from_pylist(rows, schema=None)
         pq.write_table(table, path)
         return path, "parquet"
+    path = path.with_suffix(".csv")
     write_csv(path, rows)
     return path, "csv"
 

@@ -1,0 +1,15 @@
+{
+  "frequency_hours": 1,
+  "method": "median",
+  "variables": [
+    "heart_rate",
+    "respiratory_rate",
+    "systolic_bp",
+    "diastolic_bp",
+    "mean_arterial_pressure",
+    "oxygen_saturation",
+    "temperature",
+    "oxygen_flow"
+  ],
+  "use_confirmed_icu_period": true
+}

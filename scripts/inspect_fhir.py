@@ -13,9 +13,9 @@ import gzip
 import hashlib
 import json
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Iterator
 from pathlib import Path
-from typing import Any, Iterable, Iterator
-
+from typing import Any
 
 TIMESTAMP_FIELDS = {
     "authoredOn",

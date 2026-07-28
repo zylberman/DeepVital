@@ -1,0 +1,14 @@
+{
+  "map_variable": "mean_arterial_pressure",
+  "threshold": 65.0,
+  "comparison": "strict_less_than",
+  "consecutive_low_hours": 2,
+  "future_horizon_hours": 6,
+  "require_all_future_map_hours_observed": true,
+  "sensitivity_analyses_documented_only": {
+    "nonconsecutive_low_values": 2,
+    "inclusive_threshold": 65.0,
+    "thresholds": [60.0, 65.0, 70.0],
+    "consecutive_hours": [1, 2, 3]
+  }
+}

@@ -72,10 +72,11 @@ Oxygen flow is not treated as FiO2 or as a generic supplemental-oxygen indicator
 
 ## Output behavior
 
-`scripts/extract_canonical_vitals.py` accepts `--fhir-dir`, `--output`, and
-`--quality-report`. A `.parquet` request is written as Parquet when `pyarrow` is
-available. Otherwise, the extractor writes a CSV with the same stem and records
-`"output_format": "csv"` in the aggregate quality report.
+`scripts/extract_canonical_vitals.py` accepts `--fhir-dir`, `--output`,
+`--quality-report`, and required `--format {parquet,csv}`. A Parquet request is
+written as Parquet when `pyarrow` is available. Otherwise, the extractor writes a
+CSV with the same stem and records `"output_format": "csv"` in the aggregate
+quality report.
 
 Rows are deterministically sorted by local entity keys, observation time, code, and
 original numeric value. This ordering supports reproducible development artifacts;
