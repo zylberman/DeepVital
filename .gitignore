@@ -45,3 +45,6 @@ artifacts/
 # IDE
 .vscode/
 .idea/
+
+# Generated demo artifacts
+artifacts/
