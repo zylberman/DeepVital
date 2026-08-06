@@ -1,0 +1,21 @@
+{
+  "cohort_definition_version": "administrative-icu-bounds-v1",
+  "configuration_hash": "sha256:39d1a84ab88ada27d70f520292232cf5c5fc2455d48eeb874ea6d31a51b38b33",
+  "confirmatory_test": false,
+  "confirmatory_test_status": "confirmatory_test_pending",
+  "construction_timestamp": "2026-08-06T02:47:48.719004+00:00",
+  "dataset_name": "deepvital_mimic_fhir_demo_canonical",
+  "dataset_version": "phase1b-canonical-v1",
+  "evaluation_role": "development",
+  "git_commit": "cc9222c2f9f7e93526befd696d0e4ca33a0b0b07",
+  "input_fingerprint": "sha256:66e9b444c47eaff2cb49e3c99e2f71e9c2a955b95f75a8750e4747ff91bd3ba2",
+  "number_of_admissions": 128,
+  "number_of_icu_stays": 140,
+  "number_of_patients": 100,
+  "number_of_positive_windows": 1774,
+  "number_of_windows": 8970,
+  "output_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+  "prevalence": 0.19777034559643256,
+  "split_seed": 20260726,
+  "working_tree_dirty": true
+}

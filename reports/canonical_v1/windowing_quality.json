@@ -1,0 +1,18 @@
+{
+  "candidate_prediction_times": 10185,
+  "eligible_windows": 8970,
+  "exclusions": {
+    "incomplete_future_horizon": 803,
+    "insufficient_12_hour_history": 1514,
+    "insufficient_future_map_assessment": 1215,
+    "invalid_or_missing_stay_identifier": 0,
+    "label_indeterminate_other": 0,
+    "minimum_observed_data": 0,
+    "prediction_time_outside_icu_period": 0
+  },
+  "sequence_representation": {
+    "future_predictor_columns": 0,
+    "hours": 12,
+    "ordering": "oldest_to_current"
+  }
+}
