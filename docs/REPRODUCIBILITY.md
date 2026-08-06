@@ -68,6 +68,17 @@ without overwriting historical reports. `reports/canonical_cohort_metadata.json`
 records aggregate counts and SHA-256 fingerprints. Hashes are one-way integrity
 tokens; no clinical identifier is written to public metadata.
 
+`source_code_commit` identifies the checked-out commit at command start.
+`working_tree_dirty_before_run` captures whether that source tree already contained
+uncommitted changes before any output was written. `generation_timestamp` records
+the run time. The metadata can be committed later; it deliberately does not claim
+that its source commit is the same commit that eventually incorporates the report.
+
+Publication regeneration should use `--require-clean-worktree`. In strict mode the
+command captures Git state and aborts before constructing or writing any output if
+`working_tree_dirty_before_run` would be true. The existing dirty-tree metadata is
+retained as historical provenance and is not the definitive publication artifact.
+
 The deprecated `scripts/build_phase_1b_dataset.py` route is observation-bounded and
 requires `--allow-legacy-builder`. It exists only for historical reproduction.
 
@@ -77,7 +88,14 @@ requires `--allow-legacy-builder`. It exists only for historical reproduction.
   recorded access count remains four.
 - `scripts/run_internal_nested_cv.py` performs development-only patient-grouped
   nested cross-validation. Preprocessing and candidate selection occur inside the
-  corresponding training folds; thresholds come from inner predictions.
+  corresponding training folds; thresholds come from inner predictions. Clinical
+  benchmarks use the identical folds and windows. Each outer fold keeps its own
+  inner-selected threshold; pooled threshold-0.5 results are descriptive and no
+  final threshold is frozen.
+- The internal report verifies that each patient belongs to one outer fold, all of
+  that patient's windows remain together, and the OOF prediction count equals the
+  eligible-window count. Ranking-only clinical scores exclude Brier score and log
+  loss and include neutral-risk and complete-case availability analyses.
 - No confirmatory dataset currently exists. `scripts/evaluate_confirmatory.py`
   accepts only `--dataset-role confirmatory-test`, verifies protocol/cohort/model
   hashes, requires frozen model metadata and a private development manifest, and

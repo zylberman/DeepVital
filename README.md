@@ -249,7 +249,7 @@ python -m pytest -q
 python -m ruff check .
 ```
 
-At the current repository state, 69 tests pass, including 18 Phase 2 tests covering
+At the current repository state, 70 tests pass, including 18 Phase 2 tests covering
 feature exclusion, clinical benchmarks, probability metrics, validation-only
 selection behavior, threshold reuse, patient-level bootstrap, deterministic seeds,
 calibration summaries, and aggregate report schemas.
@@ -316,15 +316,31 @@ execution, and is retained only to reproduce historical development artifacts.
   preserved unchanged; the holdout was accessed four times.
 - **Internal validation:** `internal_nested_cross_validation` on the canonical
   cohort, with patient-grouped outer and inner folds. All 92 patients contributing
-  eligible windows receive an outer-fold prediction once. The current descriptive
-  pooled results are AUROC 0.8185, AUPRC 0.5333, and Brier score 0.1354. These are
-  internal development estimates, not external validation.
+  eligible windows are each assigned to exactly one outer fold; all windows from a
+  patient remain together and every eligible window receives exactly one OOF
+  prediction. Clinical benchmarks and the nested ML strategy are evaluated on the
+  same 8,970 windows. The trailing
+  six-hour MAP mean currently has AUPRC 0.6219, versus 0.5333 for the nested ML
+  strategy. These are development comparisons, not a final model selection or
+  external validation.
 - **Confirmatory test:** pending. It requires completely new patients, a frozen
   protocol, cohort fingerprint, serialized model, and threshold.
 - **External validation:** future work on an independently sourced clinical setting.
 
 See `docs/HOLDOUT_REUSE_ASSESSMENT.md`, `docs/PHASE_1B_COHORT_DECISION.md`, and
 `docs/EVALUATION_PROTOCOL.md` for the evidence and frozen rules.
+
+Every outer fold retains the threshold selected solely from its inner folds.
+Pooled metrics at threshold 0.5 are descriptive. No single final threshold is
+currently frozen; it can be estimated only after selecting a model strategy using
+all development data and out-of-fold predictions.
+
+The clinical sigmoid transforms are ranking scores rather than calibrated
+probabilities. Their Brier score and log loss are therefore not reported. The
+constant-prevalence and nested ML outputs are probability estimates, although no
+post-hoc calibration was fitted. Missing clinical scores use neutral 0.5 in the
+primary predeclared analysis and are also reported in complete-case sensitivity
+analyses.
 
 ### 4. Baseline training and validation selection
 

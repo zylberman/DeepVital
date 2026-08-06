@@ -26,26 +26,36 @@ def _read(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _git_commit() -> str:
+def capture_source_state(root: Path = ROOT) -> dict[str, str | bool]:
+    """Capture source provenance before the cohort command writes any output."""
     result = subprocess.run(
         ["git", "rev-parse", "HEAD"],
-        cwd=ROOT,
+        cwd=root,
         check=False,
         capture_output=True,
         text=True,
     )
-    return result.stdout.strip() if result.returncode == 0 else "unavailable"
-
-
-def _working_tree_dirty() -> bool:
-    result = subprocess.run(
+    commit = result.stdout.strip() if result.returncode == 0 else "unavailable"
+    status = subprocess.run(
         ["git", "status", "--porcelain"],
-        cwd=ROOT,
+        cwd=root,
         check=False,
         capture_output=True,
         text=True,
     )
-    return result.returncode != 0 or bool(result.stdout.strip())
+    return {
+        "source_code_commit": commit,
+        "working_tree_dirty_before_run": status.returncode != 0
+        or bool(status.stdout.strip()),
+    }
+
+
+def require_clean_worktree(source_state: dict[str, str | bool]) -> None:
+    """Abort strict publication builds before any output when source is dirty."""
+    if source_state["working_tree_dirty_before_run"]:
+        raise RuntimeError(
+            "Strict canonical generation requires a clean working tree before run"
+        )
 
 
 def build_metadata(
@@ -53,7 +63,8 @@ def build_metadata(
     windows_output: Path,
     report_dir: Path,
     config_paths: list[Path],
-    construction_timestamp: str,
+    generation_timestamp: str,
+    source_state: dict[str, str | bool],
 ) -> dict:
     """Create aggregate-only metadata for an already completed canonical build."""
     hourly = _read(report_dir / "hourly_quality.json")
@@ -65,12 +76,11 @@ def build_metadata(
         "cohort_definition_version": "administrative-icu-bounds-v1",
         "evaluation_role": "development",
         "confirmatory_test": False,
-        "git_commit": _git_commit(),
-        "working_tree_dirty": _working_tree_dirty(),
+        **source_state,
         "configuration_hash": fingerprint_configuration(config_paths),
         "input_fingerprint": fingerprint_file(canonical_input),
         "output_fingerprint": fingerprint_file(windows_output),
-        "construction_timestamp": construction_timestamp,
+        "generation_timestamp": generation_timestamp,
         "number_of_patients": hourly["entities"]["patients"],
         "number_of_admissions": hourly["entities"]["hospital_admissions"],
         "number_of_icu_stays": hourly["entities"]["icu_stays"],
@@ -99,7 +109,16 @@ def main() -> int:
         type=Path,
         default=ROOT / "reports/canonical_cohort_metadata.json",
     )
+    parser.add_argument(
+        "--require-clean-worktree",
+        action="store_true",
+        help="Abort before writing outputs unless the source worktree is clean.",
+    )
     args = parser.parse_args()
+    source_state = capture_source_state()
+    if args.require_clean_worktree:
+        require_clean_worktree(source_state)
+    generation_timestamp = datetime.now(timezone.utc).isoformat()
     config_paths = [
         ROOT / "configs/hourly_aggregation.yaml",
         ROOT / "configs/missingness.yaml",
@@ -134,7 +153,8 @@ def main() -> int:
         windows_output,
         args.report_dir,
         config_paths,
-        datetime.now(timezone.utc).isoformat(),
+        generation_timestamp,
+        source_state,
     )
     args.metadata_output.parent.mkdir(parents=True, exist_ok=True)
     args.metadata_output.write_text(

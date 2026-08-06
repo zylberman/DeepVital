@@ -105,6 +105,61 @@ def evaluate_probabilities(y, p, threshold: float = 0.5, weights=None) -> dict[s
     }
 
 
+def evaluate_with_thresholds(
+    y, p, thresholds, *, probability_output: bool = True
+) -> dict[str, float]:
+    """Evaluate scores using one preregistered threshold per observation.
+
+    Discrimination and probability metrics use the original scores. Classification
+    metrics use fold-specific thresholds selected without the evaluated fold.
+    """
+    if not (len(y) == len(p) == len(thresholds)):
+        raise ValueError("Labels, probabilities, and thresholds must align")
+    result = (
+        evaluate_probabilities(y, p, 0.5)
+        if probability_output
+        else {
+            "prevalence": sum(int(value) for value in y) / len(y),
+            "auroc": roc_auc(y, p),
+            "auprc": average_precision(y, p),
+        }
+    )
+    tp = fp = tn = fn = 0.0
+    for label, score, threshold in zip(y, p, thresholds):
+        predicted = float(score) >= float(threshold)
+        if label and predicted:
+            tp += 1
+        elif label:
+            fn += 1
+        elif predicted:
+            fp += 1
+        else:
+            tn += 1
+    divide = lambda numerator, denominator: (
+        numerator / denominator if denominator else math.nan
+    )
+    sensitivity = divide(tp, tp + fn)
+    specificity = divide(tn, tn + fp)
+    ppv = divide(tp, tp + fp)
+    npv = divide(tn, tn + fn)
+    result.update(
+        {
+            "threshold": None,
+            "threshold_policy": "fold_specific_inner_cv",
+            "sensitivity": sensitivity,
+            "specificity": specificity,
+            "ppv": ppv,
+            "npv": npv,
+            "f1": divide(2 * ppv * sensitivity, ppv + sensitivity),
+            "tp": tp,
+            "fp": fp,
+            "tn": tn,
+            "fn": fn,
+        }
+    )
+    return result
+
+
 def select_thresholds(y, p, target_sensitivity: float = 0.8) -> dict[str, float]:
     candidates = sorted({float(value) for value in p}, reverse=True)
     candidates = [1.0 + 1e-12] + candidates + [0.0]

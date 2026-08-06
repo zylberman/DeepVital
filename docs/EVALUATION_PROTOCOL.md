@@ -41,18 +41,40 @@ regression, Gaussian Naive Bayes, and histogram gradient boosting with configura
 registered hyperparameters. Internal development uses patient-grouped nested cross-
 validation. Hyperparameter or candidate selection occurs in inner folds only.
 
-The primary selection metric is AUPRC. The secondary metric is Brier score, followed
-by model name as deterministic tie-break. The primary threshold is selected by
-Youden index from inner-fold predictions. Fixed 0.5 and target-sensitivity 0.80 are
+The primary comparison metric is AUPRC. The secondary metric is Brier score,
+followed by model name as deterministic tie-break if a later development decision
+uses them. The primary fold-specific threshold is selected by Youden index from
+inner-fold predictions. Fixed 0.5 and target-sensitivity 0.80 are descriptive or
 secondary thresholds. An outer fold is never used to choose its own model or
 threshold.
 
+Clinical benchmarks and ML candidates use the same outer and inner patient groups,
+windows, labels, and patient-cluster bootstrap. Missing clinical scores receive an
+explicit neutral risk of 0.5; no population imputer or scaler is fitted for these
+transparent scores. This comparison does not itself select a final model.
+
+Each outer fold retains its inner-CV threshold. Pooled threshold-0.5 metrics are
+descriptive only. No single threshold is frozen at this stage. After the model
+strategy is chosen using development evidence, its final threshold will be
+estimated from out-of-fold predictions across all development patients, before any
+confirmatory dataset is accessed.
+
 ## Metrics and uncertainty
 
-Primary performance metric: AUPRC. Secondary metrics: AUROC, Brier score, log loss,
-calibration intercept/slope, sensitivity, specificity, PPV, NPV, F1, confusion
-counts, prevalence, and descriptive calibration curves. Confidence intervals use
+Primary performance metric: AUPRC. Secondary metrics include AUROC, sensitivity,
+specificity, PPV, NPV, F1, confusion counts, and prevalence. Brier score, log loss,
+calibration intercept/slope, and calibration curves apply only to interpretable
+probability outputs, never to uncalibrated ranking scores. Confidence intervals use
 patient-cluster bootstrap, retaining every window for each sampled patient.
+
+Every patient is assigned to exactly one outer evaluation fold, all windows from a
+patient remain together, and each eligible window receives exactly one OOF
+prediction. Duplicate external predictions are prohibited and checked at runtime.
+
+The predeclared missing-score primary strategy is neutral risk 0.5. For every
+clinical benchmark, aggregate availability indicators and a complete-case
+sensitivity analysis are also reported. The strategy is not selected after viewing
+which result performs better.
 
 ## Planned sensitivity and subgroup analyses
 
@@ -87,4 +109,3 @@ technical reproductions, not new selections.
 
 Changing the primary metric or selection procedure after access is a protocol
 deviation and must be reported with timing, rationale, and affected analyses.
-

@@ -51,9 +51,9 @@ analysis.
 ```bash
 python scripts/build_canonical_cohort.py \
   --canonical-input data/processed/canonical_vitals.csv \
-  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir
+  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir \
+  --require-clean-worktree
 ```
 
 The command writes new canonical-v1 private outputs and new aggregate reports; it
 does not overwrite historical Phase 1B or Phase 2 results.
-

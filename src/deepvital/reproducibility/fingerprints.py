@@ -17,6 +17,7 @@ FORBIDDEN_PUBLIC_KEYS = {
     "window_id",
     "patient_assignments",
 }
+FORBIDDEN_PUBLIC_FRAGMENTS = ("Patient/", "Encounter/")
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -64,6 +65,9 @@ def assert_public_metadata(metadata: Mapping[str, Any]) -> None:
         elif isinstance(value, list):
             for child in value:
                 visit(child)
+        elif isinstance(value, str) and any(
+            fragment in value for fragment in FORBIDDEN_PUBLIC_FRAGMENTS
+        ):
+            raise ValueError("Public metadata contains a clinical reference")
 
     visit(metadata)
-
