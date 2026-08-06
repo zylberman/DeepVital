@@ -72,7 +72,7 @@
     "forward_filled_cells": 9435,
     "hourly_observed_cells": 76049,
     "hourly_rows": 12502,
-    "invalid_or_missing_stay_identifier": 0,
+    "invalid_or_missing_icu_key": 0,
     "observations_outside_icu_period": 270,
     "unfilled_missing_cells": 14532
   },
