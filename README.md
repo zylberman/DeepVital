@@ -131,6 +131,16 @@ model complexity is not assumed to imply better performance.
 
 ## Results
 
+### Historical development results
+
+The numerical results below belong to the historical 8,872-window cohort and are
+formally named `development_holdout_v1`. They are preserved unchanged for audit
+continuity and are not results from the canonical administrative-bound cohort.
+
+> Estos resultados corresponden a evaluación de desarrollo. El conjunto fue
+> accedido cuatro veces y no debe interpretarse como un holdout confirmatorio
+> intacto.
+
 The table reports the selected benchmark at its validation-selected Youden
 threshold of 0.3775406688. Values are copied from the existing aggregate reports;
 they were not recalculated for this README.
@@ -239,7 +249,7 @@ python -m pytest -q
 python -m ruff check .
 ```
 
-At the current repository state, 53 tests pass, including 18 Phase 2 tests covering
+At the current repository state, 69 tests pass, including 18 Phase 2 tests covering
 feature exclusion, clinical benchmarks, probability metrics, validation-only
 selection behavior, threshold reuse, patient-level bootstrap, deterministic seeds,
 calibration summaries, and aggregate report schemas.
@@ -287,26 +297,34 @@ python scripts/extract_canonical_vitals.py \
   --format csv
 ```
 
-### 3. ICU-bounded hourly and modeling datasets
+### 3. Canonical ICU-bounded cohort
 
 ```bash
-python scripts/build_hourly_dataset.py \
+python scripts/build_canonical_cohort.py \
   --canonical-input data/processed/canonical_vitals.csv \
-  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir \
-  --output data/processed/hourly_vitals.csv \
-  --quality-report reports/hourly_quality.json
-
-python scripts/build_modeling_dataset.py \
-  --hourly-input data/processed/hourly_vitals.csv \
-  --output data/processed/modeling_windows.csv \
-  --split-manifest data/processed/split_manifest.json \
-  --report-dir reports
+  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir
 ```
 
-The repository also contains a legacy combined Phase 1B builder. The separate
-ICU-period-bounded path above better expresses the implemented administrative-bound
-workflow; historical documentation records a second build path with different
-aggregate counts.
+This is the only official cohort command. It produced the canonical v1 aggregate
+counts of 12,502 hourly rows and 8,970 eligible windows. The historical combined
+builder produced 12,309 and 8,872 respectively; it is deprecated, refuses accidental
+execution, and is retained only to reproduce historical development artifacts.
+
+## Evaluation roles after protocol repair
+
+- **Historical development:** `development_holdout_v1`, 8,872 windows; metrics
+  preserved unchanged; the holdout was accessed four times.
+- **Internal validation:** `internal_nested_cross_validation` on the canonical
+  cohort, with patient-grouped outer and inner folds. All 92 patients contributing
+  eligible windows receive an outer-fold prediction once. The current descriptive
+  pooled results are AUROC 0.8185, AUPRC 0.5333, and Brier score 0.1354. These are
+  internal development estimates, not external validation.
+- **Confirmatory test:** pending. It requires completely new patients, a frozen
+  protocol, cohort fingerprint, serialized model, and threshold.
+- **External validation:** future work on an independently sourced clinical setting.
+
+See `docs/HOLDOUT_REUSE_ASSESSMENT.md`, `docs/PHASE_1B_COHORT_DECISION.md`, and
+`docs/EVALUATION_PROTOCOL.md` for the evidence and frozen rules.
 
 ### 4. Baseline training and validation selection
 

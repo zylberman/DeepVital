@@ -1,5 +1,8 @@
 {
   "best_simple_map_benchmark": "map_mean_6h",
+  "confirmatory_holdout": false,
+  "dataset_name": "development_holdout_v1",
+  "evaluation_role": "development",
   "feature_count": 140,
   "feature_names": [
     "heart_rate_current",

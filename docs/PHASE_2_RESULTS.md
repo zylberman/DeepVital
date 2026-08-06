@@ -1,5 +1,10 @@
 # Phase 2 clinical benchmarks and baseline results
 
+> Estos resultados corresponden a evaluación de desarrollo. El conjunto fue
+> accedido cuatro veces y no debe interpretarse como un holdout confirmatorio
+> intacto. La evaluación histórica se denomina `development_holdout_v1` y sus
+> métricas se preservan sin cambios.
+
 ## Completion summary
 
 The Phase 1B gate passed before fitting: the private split manifest matches the

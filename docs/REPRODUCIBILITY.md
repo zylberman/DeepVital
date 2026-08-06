@@ -53,6 +53,38 @@ not reproduced by the public demo:
 - construction of the actual ICU cohort and private split manifest;
 - exact reproduction of the persisted Phase 1 and Phase 2 reports.
 
+## Canonical cohort and historical boundary
+
+The only official Phase 1B construction command is:
+
+```bash
+python scripts/build_canonical_cohort.py \
+  --canonical-input data/processed/canonical_vitals.csv \
+  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir
+```
+
+It uses administrative ICU Encounter periods and writes canonical-v1 artifacts
+without overwriting historical reports. `reports/canonical_cohort_metadata.json`
+records aggregate counts and SHA-256 fingerprints. Hashes are one-way integrity
+tokens; no clinical identifier is written to public metadata.
+
+The deprecated `scripts/build_phase_1b_dataset.py` route is observation-bounded and
+requires `--allow-legacy-builder`. It exists only for historical reproduction.
+
+## Evaluation reproducibility roles
+
+- Historical metrics are `development_holdout_v1`; they remain unchanged and the
+  recorded access count remains four.
+- `scripts/run_internal_nested_cv.py` performs development-only patient-grouped
+  nested cross-validation. Preprocessing and candidate selection occur inside the
+  corresponding training folds; thresholds come from inner predictions.
+- No confirmatory dataset currently exists. `scripts/evaluate_confirmatory.py`
+  accepts only `--dataset-role confirmatory-test`, verifies protocol/cohort/model
+  hashes, requires frozen model metadata and a private development manifest, and
+  rejects patient overlap.
+- The first valid confirmatory run consumes the registered cohort. Identical later
+  runs are recorded as technical reproductions; changed hashes are rejected.
+
 Raw and processed clinical tables remain outside version control. Aggregate
 reports document the completed experiment without redistributing patient-level
 records.
