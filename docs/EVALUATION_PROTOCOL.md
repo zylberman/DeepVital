@@ -1,7 +1,7 @@
 # Frozen evaluation protocol
 
-**Protocol version:** `deepvital-evaluation-v1`  
-**Current state:** `confirmatory_test_pending`  
+**Protocol version:** `deepvital-evaluation-v1`
+**Current state:** `confirmatory_test_pending`
 **Intended use:** research only; not for clinical decision-making
 
 ## Population and cohort

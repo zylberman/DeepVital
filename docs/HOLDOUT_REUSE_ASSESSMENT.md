@@ -1,8 +1,8 @@
 # Holdout reuse assessment
 
-**Assessment date:** 2026-08-05  
-**Historical evaluation name:** `development_holdout_v1`  
-**Evaluation role:** development  
+**Assessment date:** 2026-08-05
+**Historical evaluation name:** `development_holdout_v1`
+**Evaluation role:** development
 **Confirmatory holdout:** no
 
 > Estos resultados corresponden a evaluación de desarrollo. El conjunto fue
@@ -71,4 +71,3 @@ partition is now formally named `development_holdout_v1`, has
 `test_evaluation_count: 4`. A future confirmatory evaluation requires completely
 new patients and a preregistered protocol, frozen cohort definition, model, and
 threshold.
-
