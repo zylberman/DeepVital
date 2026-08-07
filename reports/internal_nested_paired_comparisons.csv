@@ -1,0 +1,17 @@
+comparison_model,reference_model,metric,observed_difference,ci_95_lower,ci_95_upper,proportion_bootstrap_difference_above_zero,number_of_valid_bootstraps,difference_definition,favorable_direction
+constant_prevalence,nested_ml_strategy,delta_auprc,-0.35073917427067514,-0.43864336762596706,-0.25187810828978496,0.0,1000,comparison_minus_reference,positive
+constant_prevalence,nested_ml_strategy,delta_auroc,-0.36202535324334645,-0.44838629144837744,-0.2802455190386037,0.0,1000,comparison_minus_reference,positive
+constant_prevalence,nested_ml_strategy,delta_brier,0.023669670476454074,8.168348571480769e-05,0.047732572727173836,0.975,1000,comparison_minus_reference,negative
+constant_prevalence,nested_ml_strategy,delta_log_loss,0.0756287215502694,0.016677413659100096,0.1371631628449622,0.995,1000,comparison_minus_reference,negative
+last_map,nested_ml_strategy,delta_auprc,0.028000818032682506,-0.041273676325676086,0.09206041851960364,0.751,1000,comparison_minus_reference,positive
+last_map,nested_ml_strategy,delta_auroc,0.0031160051964230773,-0.020848056615507427,0.022997298847818304,0.573,1000,comparison_minus_reference,positive
+map_mean_6h,nested_ml_strategy,delta_auprc,0.08856201884708681,0.020545018382017298,0.14527050623091592,0.996,1000,comparison_minus_reference,positive
+map_mean_6h,nested_ml_strategy,delta_auroc,0.023143063633623284,0.0009924332174394827,0.04191288751141625,0.98,1000,comparison_minus_reference,positive
+map_min_6h,nested_ml_strategy,delta_auprc,-0.0137483416257842,-0.07771934939807504,0.05282422870580043,0.34,1000,comparison_minus_reference,positive
+map_min_6h,nested_ml_strategy,delta_auroc,0.003594788035191754,-0.015627004912198924,0.020482450947241018,0.63,1000,comparison_minus_reference,positive
+map_slope,nested_ml_strategy,delta_auprc,-0.27686987085662157,-0.3803850504771385,-0.17784225954080213,0.0,1000,comparison_minus_reference,positive
+map_slope,nested_ml_strategy,delta_auroc,-0.20105209238754096,-0.25520879077207015,-0.14340840779013742,0.0,1000,comparison_minus_reference,positive
+modified_shock_index,nested_ml_strategy,delta_auprc,-0.1367828145724374,-0.26121828218787696,-0.03832946817089598,0.004,1000,comparison_minus_reference,positive
+modified_shock_index,nested_ml_strategy,delta_auroc,-0.10863674263479717,-0.1660223476951915,-0.06780830949414705,0.0,1000,comparison_minus_reference,positive
+shock_index,nested_ml_strategy,delta_auprc,-0.23463974965712053,-0.35723310997577196,-0.13596487426015808,0.0,1000,comparison_minus_reference,positive
+shock_index,nested_ml_strategy,delta_auroc,-0.17945277440241447,-0.250238578960945,-0.12357736110538581,0.0,1000,comparison_minus_reference,positive

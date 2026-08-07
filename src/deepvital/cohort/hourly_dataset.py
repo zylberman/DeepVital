@@ -111,7 +111,7 @@ def build_hourly_dataset(
         },
         "counts": {
             **dict(sorted(counts.items())),
-            "invalid_or_missing_stay_identifier": invalid_stay_identifier,
+            "invalid_or_missing_icu_key": invalid_stay_identifier,
         },
         "by_variable": {
             variable: dict(sorted(values.items()))

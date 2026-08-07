@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build hourly ICU data, 12-hour windows, and future hypotension labels."""
+"""Legacy Phase 1B builder retained only for historical reproducibility."""
 
 from __future__ import annotations
 
@@ -40,7 +40,18 @@ def main() -> int:
         type=Path,
         default=PROJECT_ROOT / "reports/split_summary.json",
     )
+    parser.add_argument(
+        "--allow-legacy-builder",
+        action="store_true",
+        help="Explicitly acknowledge use of the deprecated observation-bounded route.",
+    )
     args = parser.parse_args()
+    if not args.allow_legacy_builder:
+        parser.error(
+            "This observation-bounded builder is deprecated and is not the canonical "
+            "Phase 1B route. Use scripts/build_canonical_cohort.py. Historical "
+            "reproduction requires --allow-legacy-builder."
+        )
     config = json.loads(args.config.read_text(encoding="utf-8"))
     splitting_config = json.loads(
         args.splitting_config.read_text(encoding="utf-8")

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Evaluate locked Phase 2 models once on the held-out test partition."""
+"""Reproduce the historical development_holdout_v1 evaluation."""
 
 from __future__ import annotations
 
+import argparse
 import json
 
 from phase_2_common import (
@@ -38,11 +39,25 @@ def _curve(y, p, kind):
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--allow-overwrite-historical-development-artifacts",
+        action="store_true",
+        help="Acknowledge that this legacy reproduction overwrites historical reports.",
+    )
+    args = parser.parse_args()
+    if not args.allow_overwrite_historical_development_artifacts:
+        parser.error(
+            "Historical development artifacts are preserved by default. Use the "
+            "synthetic or nested-CV workflow for validation."
+        )
     import joblib
 
     model_config = read_json(ROOT / "configs/modeling_baselines.yaml")
     evaluation = read_json(ROOT / "configs/evaluation.yaml")
     lock = read_json(ROOT / "models/baselines/model_selection.json")
+    if lock.get("evaluation_role") not in {None, "development"}:
+        raise ValueError("Historical evaluator accepts development data only")
     assert lock["status"] == "locked_before_test" and lock["test_accessed"] is False
     dataset = ROOT / "data/processed/modeling_windows.csv"
     x_test, y_test, features, test_rows = load_split(dataset, "test")

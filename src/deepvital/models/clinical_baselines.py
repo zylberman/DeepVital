@@ -95,3 +95,21 @@ def predict_clinical_benchmarks(
             current is not None and current < float(threshold)
         )
     return predictions
+
+
+def clinical_benchmark_availability(row: Mapping[str, str]) -> dict[str, bool]:
+    """Report whether each requested clinical score is directly calculable."""
+    current = _number(row, "mean_arterial_pressure_current")
+    slope = _number(row, "mean_arterial_pressure_rolling_slope")
+    map6 = _values(row, "mean_arterial_pressure", 6)
+    hr = _number(row, "heart_rate_current")
+    sbp = _number(row, "systolic_bp_current")
+    return {
+        "constant_prevalence": True,
+        "last_map": current is not None,
+        "map_mean_6h": bool(map6),
+        "map_min_6h": bool(map6),
+        "map_slope": slope is not None,
+        "shock_index": safe_ratio(hr, sbp) is not None,
+        "modified_shock_index": safe_ratio(hr, current) is not None,
+    }

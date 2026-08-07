@@ -6,6 +6,10 @@ Research-only benchmarking of sustained hypotension prediction in the MIMIC-IV
 FHIR demo cohort. DeepVital is not a medical device and these outputs are not
 validated for clinical care or patient-level decisions.
 
+The recorded Phase 2 result is `development_holdout_v1` with
+`evaluation_role: development` and `confirmatory_holdout: false`. The partition was
+accessed four times and is not an intact confirmatory holdout.
+
 ## Frozen prediction task
 
 Predictors cover the 12 hours ending at prediction time `t`. The outcome is MAP

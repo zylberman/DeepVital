@@ -150,7 +150,7 @@ def build_modeling_dataset(
             "windows_excluded_minimum_observed_data"
         ],
         "prediction_time_outside_icu_period": 0,
-        "invalid_or_missing_stay_identifier": 0,
+        "invalid_or_missing_icu_key": 0,
         "label_indeterminate_other": 0,
     }
     windowing_quality = {

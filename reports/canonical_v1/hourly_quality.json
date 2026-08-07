@@ -1,0 +1,85 @@
+{
+  "by_variable": {
+    "diastolic_bp": {
+      "forward_filled": 379,
+      "hours_observed": 11844,
+      "missing_after_forward_fill": 279,
+      "real_measurements": 14325
+    },
+    "heart_rate": {
+      "forward_filled": 267,
+      "hours_observed": 12010,
+      "missing_after_forward_fill": 225,
+      "real_measurements": 13860
+    },
+    "mean_arterial_pressure": {
+      "forward_filled": 381,
+      "hours_observed": 11835,
+      "missing_after_forward_fill": 286,
+      "real_measurements": 14335
+    },
+    "oxygen_flow": {
+      "forward_filled": 1777,
+      "hours_observed": 1135,
+      "missing_after_forward_fill": 9590,
+      "real_measurements": 1241
+    },
+    "oxygen_saturation": {
+      "forward_filled": 395,
+      "hours_observed": 11819,
+      "missing_after_forward_fill": 288,
+      "real_measurements": 13496
+    },
+    "respiratory_rate": {
+      "forward_filled": 315,
+      "hours_observed": 11982,
+      "missing_after_forward_fill": 205,
+      "real_measurements": 13815
+    },
+    "systolic_bp": {
+      "forward_filled": 380,
+      "hours_observed": 11842,
+      "missing_after_forward_fill": 280,
+      "real_measurements": 14323
+    },
+    "temperature": {
+      "forward_filled": 5541,
+      "hours_observed": 3582,
+      "missing_after_forward_fill": 3379,
+      "real_measurements": 3750
+    }
+  },
+  "configuration": {
+    "aggregation_method": "median",
+    "backward_fill": false,
+    "forward_fill_max_hours": {
+      "diastolic_bp": 2,
+      "heart_rate": 2,
+      "mean_arterial_pressure": 2,
+      "oxygen_flow": 2,
+      "oxygen_saturation": 2,
+      "respiratory_rate": 2,
+      "systolic_bp": 2,
+      "temperature": 2
+    },
+    "frequency_hours": 1,
+    "interpolation": false,
+    "uses_confirmed_icu_period": true
+  },
+  "counts": {
+    "canonical_rows": 89415,
+    "duplicate_values_collapsed": 13096,
+    "forward_filled_cells": 9435,
+    "hourly_observed_cells": 76049,
+    "hourly_rows": 12502,
+    "invalid_or_missing_icu_key": 0,
+    "observations_outside_icu_period": 270,
+    "unfilled_missing_cells": 14532
+  },
+  "entities": {
+    "hospital_admissions": 128,
+    "icu_stays": 140,
+    "patients": 100
+  },
+  "output_format": "csv"
+}

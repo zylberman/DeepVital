@@ -113,6 +113,9 @@ def main() -> int:
         secondary_metric,
     )
     lock = {
+        "dataset_name": "development_holdout_v1",
+        "evaluation_role": "development",
+        "confirmatory_holdout": False,
         "status": "locked_before_test",
         "phase_1b_gate": gate,
         "random_seed": model_config["random_seed"],
