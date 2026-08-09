@@ -37,6 +37,7 @@ documentation when a discrepancy is found.
 | Document | Purpose | Audience | Status |
 | --- | --- | --- | --- |
 | `RESULTS_CURRENT.md` | Current canonical internal-development results | Manuscript readers | Current |
+| `PHASE_3_CLOSURE.md` | Immutable Phase 3 result, provenance, decision, and closure boundary | Auditors and investigators | Current closure record |
 | `CLINICAL_BENCHMARK_AUDIT.md` | Ranking/probability semantics and missing-score policy | Methodologists | Current |
 | `EXPERIMENT_REGISTRY.md` | Separation of historical, internal, and future confirmatory experiments | Auditors | Current |
 | `VALIDATION_STRATEGY.md` | Development-to-prospective validation hierarchy | Investigators | Current plan |
@@ -88,4 +89,5 @@ The principal machine-readable sources are:
 - `../reports/phase3_paired_comparisons.csv`;
 - `../reports/phase3_sensitivity_analysis.json`;
 - `../reports/phase3_protocol_deviations.json`;
+- `../reports/archive/phase3_protocol_registration_v1.json` (archived preregistration);
 - `../models/baselines/model_selection.json` for the historical holdout record.

@@ -18,6 +18,12 @@ Database Demo on FHIR 2.1.0 are treated as development data. The current evidenc
 is internal validation only; the confirmatory test is pending, and no external or
 prospective validation has been performed.
 
+The prespecified Phase 3 incremental-value analysis is complete. The frozen
+18-predictor L2 logistic candidate showed a small positive incremental AUPRC over
+six-hour mean MAP, but the gain did not reach the prespecified `+0.020` development
+relevance margin. Six-hour mean MAP is retained as the parsimonious development
+strategy; neither strategy is clinically validated.
+
 The canonical cohort contains 100 patients, 128 represented hospital admissions,
 140 ICU stays, and 8,970 eligible prediction windows from 92 patients. It includes
 1,774 positive windows (19.78%). These overlapping windows are not independent
@@ -136,8 +142,30 @@ summaries and MAP slope were calculable for all eligible windows.
 All uncertainty intervals use 1,000 patient-cluster bootstrap replicates. Patients,
 not windows, are resampled, and all windows for a sampled patient remain together.
 Each outer fold retains the threshold selected from its inner folds. Results at a
-threshold of 0.5 are descriptive. The model-selection status is `not_final`, and
-the final-threshold status is `not_frozen`.
+threshold of 0.5 are descriptive. This earlier broad nested comparison informed the
+later frozen Phase 3 analysis; it was not itself the final strategy decision.
+
+## Phase 3 incremental-value result
+
+Phase 3 used the same 92 patients and 8,970 windows with five outer and three inner
+patient-grouped folds, zero patient overlap, and one outer OOF prediction per
+window. There was one formal preregistered development execution and no rerun after
+results were observed.
+
+| Strategy | AUROC | AUPRC |
+| --- | ---: | ---: |
+| Six-hour mean MAP | 0.8416282800 | 0.6218694691 |
+| Frozen 18-predictor L2 logistic candidate | 0.8447827084 | 0.6293981556 |
+
+Primary delta AUPRC was `+0.0075286864` (paired patient-bootstrap 95% interval
+`+0.0004996287` to `+0.0171297719`). The positive gain did not reach the
+prespecified `+0.020` development relevance margin, so the logistic candidate did
+not advance and `map_mean_6h` remains the parsimonious development strategy. The
+margin is not a p-value or a clinically validated minimal important difference.
+
+The two incomplete-future-MAP sensitivities failed because their datasets contained
+patients absent from the frozen fold manifest. The failure was disclosed, did not
+alter the primary decision, and did not trigger a rerun.
 
 ## Historical development holdout
 
@@ -184,11 +212,9 @@ python -m pip install -r requirements-dev.txt
 make check
 ```
 
-The current baseline verification at merge commit `0b7ce15` completed with 70
-passing tests and Ruff reporting no violations. Twelve Joblib/NumPy
-`DeprecationWarning` messages arose inside an external dependency; no functional
-failure was observed. Runtime dependencies are not fully pinned, so exact
-environment capture remains technical debt.
+Phase 3 implementation and results passed repository CI before merge through PR #5.
+Runtime dependencies are not fully pinned, so exact environment reproduction
+continues to require recorded package metadata and matching private inputs.
 
 The public synthetic demonstration can be run with `make demo`. It does not
 reproduce the clinical experiment or provide clinical evidence.
@@ -238,8 +264,12 @@ recompute or validate clinical results.
 - Complete future MAP ascertainment may introduce selection bias.
 - Missingness may be clinically and operationally informative.
 - Blood-pressure source pooling lacks a validated source-precedence analysis.
-- Outcome-threshold and duration sensitivity analyses remain planned.
-- No post-hoc probability calibration has been fitted.
+- The `+0.020` margin was a prespecified development relevance rule, not a
+  clinically validated effect threshold.
+- Two incomplete-future-MAP sensitivities failed because their datasets contained
+  patients absent from the frozen fold manifest.
+- Logistic calibration and operating points are development outputs only; they are
+  not validated clinical thresholds.
 - No transportability, decision-curve, workflow, prospective alerting, impact, or
   clinical-benefit evaluation has been completed.
 - Future restricted confirmatory or external datasets may require additional

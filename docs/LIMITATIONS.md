@@ -17,8 +17,12 @@ priority rule. Oxygen flow does not represent FiO2.
 
 Complete observation of all six future MAP hours is required for the primary
 outcome. This rule may preferentially retain more intensively monitored periods.
-Alternative MAP thresholds, duration requirements, source-pooling rules, and
-incomplete-horizon strategies remain planned sensitivity analyses.
+Phase 3 evaluated prespecified MAP thresholds, duration requirements, and two BP-
+source alternatives. However, the `missing_as_low` and `missing_as_not_low`
+incomplete-future-MAP sensitivities failed because their datasets contained patients
+absent from the frozen fold manifest. The formal run was not repeated to repair
+them. Any later investigation is post-Phase-3 supplementary technical work and
+cannot replace the original preregistered result.
 
 Forward filling is limited and explicitly represented, but missingness may be
 clinically and operationally informative. A neutral score of 0.5 for uncalculable
@@ -28,16 +32,23 @@ limitation.
 
 ## Statistical limitations
 
-Patients contribute multiple overlapping windows. Patient-grouped folds and
-patient-cluster bootstrap preserve patient-level clustering, but they do not make
-windows independent or create additional patients. Confidence intervals may remain
-unstable in this small cohort, and window-weighted metrics give greater influence
-to patients contributing more windows.
+The 92 eligible patients contribute 8,970 multiple, overlapping windows. These are
+patient-clustered repeated observations, not 8,970 independent patients.
+Patient-grouped folds and patient-cluster bootstrap preserve patient-level
+clustering, but they do not make windows independent or create additional patients.
+Confidence intervals may remain unstable in this small cohort, and window-weighted
+metrics give greater influence to patients contributing more windows.
 
 Several models and benchmarks are compared. The paired bootstrap estimates
 uncertainty in prespecified differences but is not a multiplicity-adjusted formal
 confirmatory testing framework. Proportions of bootstrap differences above zero are
 descriptive, not posterior probabilities or adjusted p-values.
+
+The Phase 3 `+0.020` delta-AUPRC advancement margin was a prespecified development
+relevance rule. It is not a p-value threshold and is not a clinically validated
+minimal important difference. Failure to reach it supports parsimony under this
+development protocol; it does not show that the logistic candidate was useless or
+had no incremental signal.
 
 ## Clinical limitations
 
@@ -54,16 +65,18 @@ benefit. DeepVital must not be used for direct care.
 
 All 100 demo patients are development data. The original holdout was accessed four
 times and is historical development evidence, not an untouched confirmatory test.
-The present nested cross-validation is internal validation. No independent
+The nested and Phase 3 cross-validation results are internal development evidence.
+No independent
 confirmatory test, external dataset, other institution, temporal validation cohort,
 or prospective evaluation has been completed. Transportability cannot be inferred.
 
 ## Calibration limitations
 
-The clinical sigmoid outputs are ranking scores rather than calibrated
-probabilities; Brier score and log loss do not apply to them. The nested ML outputs
-are probabilities but have not undergone post-hoc calibration. Calibration
-strategy and sample-size requirements remain unresolved before freezing a model.
+The retained `map_mean_6h` sigmoid output is a ranking score rather than a calibrated
+probability; Brier score and log loss do not apply to it. Phase 3 fitted the sole
+allowed Platt development recalibration for the logistic candidate, but the
+candidate did not advance. Its calibrated metrics and operating points are not
+evidence of deployment calibration or clinical threshold validity.
 
 ## Reproducibility limitations
 

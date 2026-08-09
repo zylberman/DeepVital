@@ -36,8 +36,28 @@ cannot be reconstructed from Git.
 | Interpretation | Internal development comparison; no final strategy selected |
 | Reports | `reports/internal_nested_cross_validation.json`, `reports/internal_nested_model_comparison.csv`, `reports/internal_nested_paired_comparisons.csv` |
 
-The status is `model_selection_status: not_final` and
-`final_threshold_status: not_frozen`.
+Those status fields describe the earlier nested-CV report before the later Phase 3
+strategy decision.
+
+## Prespecified Phase 3 development experiment
+
+| Field | Value |
+| --- | --- |
+| Name | `deepvital-phase3-incremental-value-v1` |
+| Role | Prespecified internal development comparison |
+| Cohort | Canonical administrative ICU-bounds cohort; 92 patients, 8,970 windows |
+| Execution count | One formal preregistered execution; no result-driven rerun |
+| Comparison | Frozen 18-predictor L2 logistic candidate minus `map_mean_6h` |
+| Primary result | Delta AUPRC +0.0075286864; paired 95% CI +0.0004996287 to +0.0171297719 |
+| Advancement rule | Failed because observed delta was below the prespecified +0.020 margin |
+| Development decision | Retain `map_mean_6h` as the parsimonious strategy |
+| Interpretation | Development evidence only; not external, confirmatory, or clinical validation |
+| Reports | `reports/phase3_incremental_value.json` and associated Phase 3 result files |
+
+The two incomplete-future-MAP sensitivities failed because their datasets contained
+patients absent from the frozen fold manifest. This was disclosed without rerunning
+Phase 3 and did not change the primary decision. The formal report records no
+primary protocol deviation.
 
 ## Future confirmatory evaluation
 

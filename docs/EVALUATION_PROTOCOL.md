@@ -1,5 +1,11 @@
 # Frozen evaluation protocol
 
+> **Pre-Phase-3 methodological record.** This frozen v1 document preserves the
+> evaluation-role and leakage rules used before the prespecified Phase 3 strategy
+> decision. Its future-tense sensitivity and threshold statements describe that
+> earlier state. See `PHASE_3_PROTOCOL.md`, `RESULTS_CURRENT.md`, and
+> `PROJECT_STATUS.md` for the completed Phase 3 state.
+
 **Protocol version:** `deepvital-evaluation-v1`
 **Current state:** `confirmatory_test_pending`
 **Intended use:** research only; not for clinical decision-making
