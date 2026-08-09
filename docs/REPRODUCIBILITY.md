@@ -76,8 +76,9 @@ that its source commit is the same commit that eventually incorporates the repor
 
 Publication regeneration should use `--require-clean-worktree`. In strict mode the
 command captures Git state and aborts before constructing or writing any output if
-`working_tree_dirty_before_run` would be true. The existing dirty-tree metadata is
-retained as historical provenance and is not the definitive publication artifact.
+`working_tree_dirty_before_run` would be true. The current canonical metadata
+records `working_tree_dirty_before_run: false` and source commit
+`79bb0564f75382eb787e3ccfb298733bdd31d9f2`.
 
 The deprecated `scripts/build_phase_1b_dataset.py` route is observation-bounded and
 requires `--allow-legacy-builder`. It exists only for historical reproduction.

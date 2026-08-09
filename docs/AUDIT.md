@@ -1,5 +1,10 @@
 # DeepVital Phase 0 Audit
 
+> **Historical document.** This Phase 0 audit describes the repository before the
+> implemented Phase 1 and Phase 2 work. It is preserved as an audit trail and must
+> not be read as the current project state. See `PROJECT_STATUS.md` and
+> `RESEARCH_PROTOCOL.md`.
+
 **Audit date:** 2026-07-26  
 **Scope:** Repository state at commit `3d7a92a` plus the uncommitted project
 instructions present in the working tree.  

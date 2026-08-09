@@ -77,19 +77,19 @@ Only aggregate reason counts are reported.
 - Physiological bounds are provisional and require clinical/data-dictionary review.
 - The mapping is confirmed against the aggregate FHIR inventory, not yet against an
   independently versioned official D_ITEMS dictionary.
-- Direct ICU Encounter references are Patient-validated but not rejected solely
-  because an observation timestamp lies outside the recorded ICU period. The next
-  cohort-validity phase must quantify and decide how to handle such discrepancies.
+- Canonical extraction validates direct ICU Encounter references against the
+  patient relationship. The subsequent canonical cohort stage applies exact ICU
+  administrative periods and reports 270 observations outside those periods.
 - Observation `issued` is not substituted for missing `effectiveDateTime`.
 - No timezone sensitivity analysis has been performed beyond parsing timestamps and
   normalizing them to UTC.
 - Oxygen-flow measurements do not identify FiO2 and do not prove that oxygen was
   delivered continuously.
 
-## Next phase
+## Current follow-up priorities
 
-The recommended next phase is canonical-data validation and cohort preparation:
-review code/range choices, quantify direct-reference time-bound discrepancies,
-define duplicate/source precedence, and add cohort-flow checks. Hourly aggregation,
-missing-data processing, prediction windows, and future-only outcome labeling should
-begin only after those decisions are documented and tested.
+Canonical cohort preparation, hourly aggregation, missing-data representation,
+windowing, and future-only labeling are now implemented. Remaining priorities are
+independent review of code and range choices, a clinically justified arterial-
+pressure source-precedence analysis, timezone sensitivity, and outcome/missingness
+sensitivity analyses. See `PROJECT_STATUS.md` and `ROADMAP.md`.

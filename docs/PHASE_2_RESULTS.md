@@ -1,9 +1,12 @@
 # Phase 2 clinical benchmarks and baseline results
 
-> Estos resultados corresponden a evaluación de desarrollo. El conjunto fue
-> accedido cuatro veces y no debe interpretarse como un holdout confirmatorio
-> intacto. La evaluación histórica se denomina `development_holdout_v1` y sus
-> métricas se preservan sin cambios.
+> **Historical results.** These values belong to the legacy 8,872-window cohort and
+> `development_holdout_v1`. They must not be combined with canonical nested-CV
+> results in `RESULTS_CURRENT.md`.
+
+These results are development evidence. The partition was accessed four times and
+must not be interpreted as an intact confirmatory holdout. The historical
+evaluation is named `development_holdout_v1`, and its metrics are preserved.
 
 ## Completion summary
 

@@ -1,60 +1,82 @@
-# DeepVital: estado de Fase 1 y transición al protocolo reparado
+# DeepVital: current methodological report
 
-DeepVital es un prototipo retrospectivo de investigación y no un dispositivo
-médico. No debe utilizarse para decisiones clínicas.
+> This filename is retained for repository history. The document now summarizes
+> the project beyond Phase 1 and should be read with `docs/RESEARCH_PROTOCOL.md`,
+> `docs/METHODS_CURRENT.md`, and `docs/RESULTS_CURRENT.md`.
 
-## Resultados históricos de desarrollo
+DeepVital is a research-only methodological pipeline for early prediction of
+sustained hypotension using longitudinal ICU vital signs represented through
+FHIR-compatible resources. It is not a medical device and has not been validated
+for clinical decision-making.
 
-La construcción histórica de Fase 1B produjo 12.309 filas horarias y 8.872 ventanas
-(1.759 positivas; prevalencia 19,83%). Estos datos sustentan los resultados de Fase
-2 previamente publicados en el repositorio. El antiguo test se denomina ahora
-`development_holdout_v1`: fue accedido cuatro veces y no es un holdout confirmatorio
-intacto. Sus métricas no se han modificado ni eliminado.
+## Data processing and canonical cohort
 
-## Cohorte canónica
+The project uses the MIMIC-IV Clinical Database Demo on FHIR 2.1.0. Streaming FHIR
+extraction retained 89,415 supported observations representing 100 patients, 128
+hospital admissions, and 140 ICU stays. The current canonical Phase 1B route uses
+FHIR ICU Encounter periods to define hourly time at risk. It produced 12,502 hourly
+rows and 8,970 eligible windows, of which 1,774 were positive (19.78%).
 
-La cohorte canónica utiliza los límites administrativos FHIR de cada estancia de
-UCI. Su construcción registrada produce 12.502 filas horarias y 8.970 ventanas
-(1.774 positivas; prevalencia 19,78%). Esta diferencia procede de representar todo
-el periodo clínico de riesgo y excluir 270 observaciones fuera de sus límites, no de
-optimizar métricas.
+A historical observation-bounded route produced 12,309 hourly rows and 8,872
+windows, including 1,759 positive windows. Those artifacts remain part of the
+historical development record. The administrative route was selected as canonical
+because its boundaries are explicit, encounter-consistent, auditable, and
+independent of vital-sign recording onset and cessation.
 
-## Validación interna
+Each ICU stay is processed independently. Within-hour duplicates are summarized by
+the median. Forward fill is limited to two hours; backward fill and future-based
+interpolation are prohibited. Predictors use a closed 12-hour history ending at
+time \(t\). The outcome begins at \(t+1\) and requires observed MAP strictly below
+65 mmHg for at least two consecutive hours within the following six hours. All six
+future MAP hours are required in the primary analysis.
 
-La evaluación interna prevista es validación cruzada anidada agrupada por paciente.
-Modelo, hiperparámetros y threshold se seleccionan exclusivamente dentro del ciclo
-interno. Cada paciente se asigna a un solo fold externo, todas sus ventanas se
-mantienen juntas y cada ventana elegible recibe exactamente una predicción OOF. Esta evaluación
-se denomina `internal_nested_cross_validation`, no validación externa.
+## Internal development validation
 
-La ejecución canónica actual incluyó 8.970 ventanas de 92 pacientes con ventanas
-elegibles. Los benchmarks clínicos y la estrategia ML usaron los mismos folds y
-ventanas. La media de MAP de las seis horas previas obtuvo AUPRC 0,6219, frente a
-0,5333 para la estrategia ML anidada; la última MAP obtuvo 0,5613. Esto es una
-comparación de desarrollo y no selecciona todavía un modelo definitivo.
+The canonical cohort was evaluated by five-outer-fold, three-inner-fold nested
+cross-validation grouped by patient. Ninety-two patients contributed eligible
+windows. Every patient belonged to one outer fold, all windows from a patient
+remained together, and every one of the 8,970 windows received exactly one
+out-of-fold prediction. Model, hyperparameter, and threshold selection were
+restricted to inner cross-validation. Training-dependent preprocessing remained
+within the corresponding training folds.
 
-Cada fold externo conserva el threshold derivado exclusivamente de sus folds
-internos. Las métricas pooled a threshold 0,5 son descriptivas. Todavía no existe
-un único threshold final congelado; se estimará con predicciones out-of-fold de
-todos los datos de desarrollo sólo después de elegir la estrategia de modelo.
+The comparison included a nested conventional machine-learning strategy and seven
+simple benchmarks: training prevalence, last MAP, six-hour mean MAP, six-hour
+minimum MAP, MAP slope, shock index, and modified shock index. Clinical sigmoid
+transforms are ranking scores rather than calibrated probabilities; Brier score and
+log loss are therefore not reported for those scores.
 
-Las transformaciones clínicas sigmoidales se consideran scores de ranking no
-calibrados; para ellas no se reportan Brier ni log loss. La estrategia principal
-asigna 0,5 cuando un score no es calculable y se acompaña de sensibilidad
-complete-case y conteos agregados de disponibilidad.
+| Strategy | AUROC | AUPRC | Brier score | Log loss |
+| --- | ---: | ---: | ---: | ---: |
+| Six-hour mean MAP | 0.8416 | 0.6219 | Not applicable | Not applicable |
+| Last MAP | 0.8216 | 0.5613 | Not applicable | Not applicable |
+| Nested ML strategy | 0.8185 | 0.5333 | 0.1354 | 0.4228 |
 
-La comparación pareada remuestreó pacientes y conservó todas sus ventanas. Para la
-media de MAP de seis horas frente a la estrategia ML, delta AUPRC fue 0,0886
-(IC95% pareado 0,0205–0,1453) y delta AUROC 0,0231 (0,0010–0,0419). Estas cifras de
-desarrollo no constituyen por sí solas selección definitiva ni superioridad clínica.
+In a paired patient bootstrap, the six-hour mean MAP minus nested ML difference was
+0.0231 for AUROC (95% interval 0.0010–0.0419) and 0.0886 for AUPRC
+(0.0205–0.1453). These results indicate higher discrimination for the six-hour mean
+MAP benchmark in the present internal analysis, but they do not establish clinical
+superiority, a final strategy, or generalizability. The model status remains
+`not_final`, and no final threshold is frozen.
 
-## Evaluación confirmatoria y externa futuras
+## Historical holdout and confirmatory status
 
-No existe actualmente un test confirmatorio. Todos los 100 pacientes disponibles
-son datos de desarrollo. Una evaluación confirmatoria futura exige pacientes
-completamente nuevos, protocolo, cohorte, modelo y threshold congelados. La
-validación externa requerirá además un entorno o fuente de datos independiente.
+The historical 8,872-window holdout is formally `development_holdout_v1`. Its role
+is development, it is not confirmatory, and its recorded evaluation count remains
+four. Its metrics have been preserved, but repeated access prevents interpretation
+as an untouched confirmatory assessment.
 
-Las definiciones completas están en `docs/EVALUATION_PROTOCOL.md`, la decisión de
-cohorte en `docs/PHASE_1B_COHORT_DECISION.md` y el incidente histórico en
-`docs/HOLDOUT_REUSE_ASSESSMENT.md`.
+All 100 demo patients are now development data. `confirmatory_test_pending` remains
+the current state. A confirmatory evaluation will require entirely new patients and
+a frozen protocol, cohort, model, feature schema, and threshold. No confirmatory or
+external evaluation has been executed.
+
+## Interpretation and limitations
+
+DeepVital currently demonstrates a reproducible, leakage-aware research workflow
+and internal comparison of transparent clinical benchmarks with conventional
+machine learning. It does not demonstrate clinical utility, prospective
+performance, transportability, regulatory readiness, or benefit to patients.
+Interpretation is limited by the small demo cohort, overlapping windows, potentially
+informative missingness, complete-future-MAP selection, provisional blood-pressure
+source pooling, absence of post-hoc calibration, and lack of independent data.
