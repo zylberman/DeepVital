@@ -1,45 +1,56 @@
 # DeepVital academic roadmap
 
-The roadmap is evidence-gated. Progress to a later stage does not follow solely
-from software completion and must not be interpreted as clinical readiness.
+The roadmap is evidence-gated. Software completion and internal development results
+do not establish clinical readiness.
 
-## Immediate scientific decision
+## Current decision
 
-Determine whether the six-hour mean MAP benchmark should remain the preferred
-parsimonious development strategy or whether additional multivariable modeling can
-demonstrate reproducible added value. Complexity is not an objective in itself.
+Phase 3 is complete. The frozen logistic candidate showed a small positive
+incremental AUPRC over `map_mean_6h`, but the gain did not reach the prespecified
+`+0.020` development relevance margin. `map_mean_6h` is therefore retained as the
+parsimonious development strategy.
 
-## Milestones
+The immediate next step is not to try additional models until one wins on the same
+cohort. Such model shopping would weaken the interpretation of the completed
+prespecified analysis.
 
-1. **Model-strategy decision.** Review nested-CV discrimination, availability,
-   interpretability, and limitations; document the development decision without
-   accessing confirmatory data.
-2. **Calibration strategy.** If the selected strategy produces probabilities,
-   specify training-only calibration and sample-size requirements. If it remains a
-   ranking score, define whether and how calibration will be developed.
-3. **Outcome sensitivity.** Evaluate prespecified MAP thresholds, duration rules,
-   and incomplete-future-MAP handling without replacing the primary definition.
-4. **Blood-pressure-source analysis.** Quantify invasive/non-invasive source
-   composition, simultaneous measurements, and alternative precedence rules.
-5. **Missingness sensitivity.** Assess neutral-score handling, complete cases,
-   charting frequency, and informative missingness.
-6. **Subgroup planning.** Define supportable exploratory strata and minimum sample
-   requirements before a larger dataset is accessed.
-7. **Environment reproducibility.** Pin or lock runtime dependencies, record Python
-   and package versions, and resolve or document Joblib/NumPy compatibility.
-8. **Restricted dataset application.** Establish purpose, permissions, ethics and
-   data-use statements, storage, retention, and publication controls for new data.
-9. **Frozen confirmatory protocol.** Freeze cohort, features, strategy, calibration,
-   threshold, primary estimand, and fingerprints.
-10. **Independent confirmatory evaluation.** Execute once on entirely new patients;
-    record first consumption and disclose deviations.
-11. **External validation.** Evaluate an independently sourced clinical setting.
-12. **Prospective planning.** Consider silent evaluation only after adequate
-    confirmatory and external evidence and governance review.
+## Next-stage priorities
+
+1. **Consolidate Phase 3 evidence.** Complete documentation and manuscript-ready
+   reporting without changing the frozen decision rule or result.
+2. **Investigate the incomplete-future-MAP failure.** Diagnose the fold-manifest
+   mismatch as explicitly post-Phase-3 technical or supplementary work. Preserve
+   the failed original sensitivity outputs and do not present later work as a rerun
+   or replacement of the preregistered analysis.
+3. **Secure a genuinely independent cohort.** Establish permissions, governance,
+   ethics, storage, retention, and publication controls before access.
+4. **Reproduce the parsimonious benchmark externally.** Evaluate `map_mean_6h` in
+   new patients and a distinct setting. If scientifically justified in advance,
+   also reproduce the frozen 18-predictor logistic candidate without adapting it to
+   the new outcomes.
+5. **Assess transportability and calibration.** Examine cohort shift, BP-source and
+   charting differences, discrimination, calibration, and operating-point behavior
+   without describing development thresholds as clinically validated.
+6. **Reconsider model development only after independent evidence.** Decide whether
+   further feature or model work is scientifically warranted from transportability
+   findings, not by continued optimization on the 92-patient development cohort.
+7. **Preserve the confirmatory boundary.** Keep confirmatory outcomes isolated until
+   a future confirmatory protocol, strategy, calibration and threshold are frozen.
+8. **Consider prospective work only after adequate independent evidence.** Silent
+   evaluation, workflow studies, impact evaluation and deployment remain later
+   evidence stages.
+
+## Continuing technical priorities
+
+- lock or constrain the runtime environment and preserve provenance;
+- maintain privacy-safe aggregate reporting and private patient-level artifacts;
+- document data-source and charting differences before cross-site comparisons;
+- define supportable subgroup analyses before accessing larger datasets;
+- retain human review for any drift or model-update decision.
 
 ## Deferred work
 
-Temporal neural networks, explainability dashboards, drift monitoring, workflow
-integration, and deployment should be pursued only when they address a defined
-scientific question and can be compared fairly with the parsimonious benchmark.
-They are not prerequisites for a valid current development conclusion.
+Deep learning, new model families, explainability dashboards, drift monitoring,
+workflow integration and deployment are not immediate next steps. They should be
+considered only for a prospectively defined scientific question and after the
+parsimonious strategy has been evaluated independently.

@@ -1,0 +1,16 @@
+{
+  "canonical_cohort_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+  "configuration_fingerprint": "sha256:4407c822d14d8a8fe1acb02809c50b05ea6fd022346bdf8c6669dd31ecc39631",
+  "execution_timestamp": "2026-08-09T04:11:21.069920+00:00",
+  "fold_manifest_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+  "frozen_protocol_git_commit": "158656304a96a4229208aad7e07fe45959672bfe",
+  "frozen_protocol_sha256": "sha256:c0b2e69ee468fed8f257ee65bfc46ff396db2bc6a29dab9e2dd898e15fa27eb5",
+  "outcome_input_fingerprints": {
+    "bp_invasive_preferred": "sha256:19d28bcf84e0f26bfe0e093ded9d15a56d55165d8c9f8b1ddd1f8c9aa103985e",
+    "bp_non_invasive_only": "sha256:a653392e214fdf1d59c7c6c7fec64280508de1ed65973498b0b5c0b820e11a10",
+    "canonical_modeling_windows": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "future_map_sensitivity": "sha256:7020b93787a6c520f61e35a2dc2f159797f4814056df1fb7280a3d7716a51b8f"
+  },
+  "registration_version": "deepvital-phase3-registration-v1",
+  "source_commit": "54414fae32cc1c8b7cece36b2f1a96d81a48db35"
+}

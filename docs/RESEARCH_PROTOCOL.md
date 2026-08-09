@@ -56,9 +56,9 @@ temperature, and oxygen flow. Fahrenheit is converted to degrees Celsius only wh
 the source unit explicitly identifies Fahrenheit. Original numeric values and units
 are retained alongside normalized values. Oxygen flow is not interpreted as FiO2.
 
-Invasive, non-invasive, and alternate arterial-pressure codes currently map to
-shared variables. Their within-hour median is a provisional pooling rule requiring
-future source-specific sensitivity analysis.
+Invasive, non-invasive, and alternate arterial-pressure codes map to shared
+variables in the primary cohort. Phase 3 additionally evaluated the prespecified
+invasive-preferred and non-invasive-only development alternatives.
 
 ## 6. Temporal aggregation
 
@@ -104,8 +104,10 @@ outcome, MAP equal to 65 mmHg does not qualify, and forward-filled MAP is not ou
 evidence. All six future MAP hours must be observed. This complete-ascertainment
 rule may select periods with more intensive monitoring.
 
-Alternative thresholds, durations, and missing-horizon rules are documented as
-planned sensitivity analyses; they are not completed primary analyses.
+Phase 3 evaluated the prespecified threshold and duration grid as sensitivity
+analyses. The two incomplete-horizon bounds failed during execution because their
+datasets contained patients absent from the frozen fold manifest; the formal run
+was not repeated and those failures do not replace the primary analysis.
 
 ## 10. Leakage safeguards
 
@@ -140,9 +142,8 @@ prediction. Candidate selection prioritizes inner AUPRC, followed by inner Brier
 score and model name as deterministic tie-breakers. Thresholds are selected from
 inner out-of-fold scores only.
 
-The current status is `model_selection_status: not_final` and
-`final_threshold_status: not_frozen`. Nested-CV comparison does not itself select a
-final model strategy.
+This earlier nested-CV comparison did not itself select a final strategy. The later
+prespecified Phase 3 analysis completed the development strategy decision.
 
 ## 13. Clinical benchmarks
 
@@ -179,13 +180,18 @@ the comparison for AUROC/AUPRC; negative differences favor the comparison for
 Brier score/log loss. Separate confidence-interval overlap is not used to infer
 equivalence or superiority.
 
-## 16. Model and threshold selection policy
+## 16. Phase 3 development strategy decision
 
-No final model or threshold currently exists. The next development decision is
-whether to retain six-hour mean MAP as a parsimonious strategy or pursue additional
-multivariable modeling. Only after choosing the strategy may a final threshold be
-estimated from out-of-fold predictions across all development patients and frozen
-before confirmatory access.
+Phase 3 compared `map_mean_6h` with one frozen 18-predictor L2 logistic candidate.
+Candidate AUPRC was 0.6293981556 versus 0.6218694691 for the benchmark, for delta
+AUPRC `+0.0075286864` (paired patient-bootstrap 95% interval `+0.0004996287` to
+`+0.0171297719`). The gain was positive but did not reach the prespecified `+0.020`
+development relevance margin. The logistic candidate therefore did not advance,
+and `map_mean_6h` remains the parsimonious development strategy.
+
+The margin is not a p-value or a clinically validated minimal important difference.
+Recorded calibrated-candidate operating points remain development summaries, not
+validated clinical thresholds.
 
 ## 17. Confirmatory evaluation policy
 
@@ -212,6 +218,16 @@ aborts before input processing or output writing if the source tree is dirty.
 Software verification uses Python 3.12 in CI, Ruff, and pytest. Clinical report
 regeneration is not part of CI.
 
+The Phase 3 provenance chain is: frozen protocol commit
+`158656304a96a4229208aad7e07fe45959672bfe`; preregistered implementation source
+`54414fae32cc1c8b7cece36b2f1a96d81a48db35`; preregistration tag
+`phase3-preregistered-v1`; original formal result commit `c7db731`; and CSV
+line-ending normalization commit `d3c6915`, merged through PR #5. The normalization
+changed line endings only, not scientific values. The preregistration JSON itself
+was not committed before execution; its SHA-256
+`03bf1ce0efa6eb5e431b1e76654a878e9059353c8f6d11cdd0d6d09f6632a7c1` was
+published in the preregistration tag before execution.
+
 ## 19. Privacy and governance
 
 Raw and identifier-bearing derived data are local-only and ignored by Git. Public
@@ -224,8 +240,11 @@ of the underlying dataset and the intended venue.
 
 ## 20. Planned future validation
 
-Planned work includes model-strategy selection, calibration design, outcome and
-missingness sensitivity analyses, blood-pressure source review, subgroup planning,
-environment locking, acquisition of appropriately governed independent patients,
-frozen confirmatory evaluation, external validation in an independent setting, and
-only thereafter consideration of prospective evaluation.
+Planned work prioritizes consolidation of Phase 3, transparent post-Phase-3
+technical investigation of the failed incomplete-future-MAP inputs, environment
+locking, and acquisition of appropriately governed independent patients. External
+work should reproduce `map_mean_6h` and, if justified in advance, the frozen
+logistic candidate, then assess transportability and calibration. Further model
+development should be considered only after independent evidence rather than by
+continued optimization on the same development cohort. Confirmatory outcomes must
+remain isolated until a future confirmatory protocol is frozen.

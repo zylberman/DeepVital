@@ -1,53 +1,85 @@
-# DeepVital Phase 2 baseline model card
+# DeepVital current development-strategy model card
 
-> **Historical model card.** This document records the earlier 8,872-window
-> `development_holdout_v1` experiment. It does not describe a current final model.
-> See `RESULTS_CURRENT.md` and `EXPERIMENT_REGISTRY.md`.
+## Status and intended use
 
-## Intended use
+This card describes the strategy decision after the completed prespecified Phase 3
+development analysis. DeepVital is a retrospective research project, not a medical
+device, production model, or clinical decision-support system. No strategy in this
+repository is validated for patient-care decisions.
 
-Research-only benchmarking of sustained hypotension prediction in the MIMIC-IV
-FHIR demo cohort. DeepVital is not a medical device and these outputs are not
-validated for clinical care or patient-level decisions.
+## Prediction task
 
-The recorded Phase 2 result is `development_holdout_v1` with
-`evaluation_role: development` and `confirmatory_holdout: false`. The partition was
-accessed four times and is not an intact confirmatory holdout.
+At prediction time `t`, the task uses information from `t-11` through `t` to predict
+observed hourly MAP strictly below 65 mmHg for at least two consecutive hours in
+`t+1` through `t+6`. MAP at `t` is not part of the outcome. Primary windows require
+all six future MAP hours and cannot cross a patient, admission, or ICU stay.
 
-## Frozen prediction task
+## Retained parsimonious development strategy
 
-Predictors cover the 12 hours ending at prediction time `t`. The outcome is MAP
-below 65 mmHg for at least two consecutive hourly observations in `t+1` through
-`t+6`; MAP at `t` is not part of the outcome. Windows require complete future
-MAP and never cross ICU stays. The existing deterministic patient split is
-70%/15%/15% for train/validation/test.
+`map_mean_6h` is the arithmetic mean of calculable MAP values in the six predictor
+hours ending at `t`, mapped through the existing monotonically decreasing sigmoid
+risk score. It is an uncalibrated ranking score, not a probability.
 
-## Models
+Phase 3 retained `map_mean_6h` because the sole multivariable candidate did not meet
+the frozen advancement rule. Retention means preferred parsimony for subsequent
+development and independent evaluation; it does not establish clinical validity,
+optimality, causal importance, or transportability.
 
-Clinical comparators include training prevalence, current and previous MAP,
-three- and six-hour MAP minima and means, MAP change and slope, shock index, and
-modified shock index. Conventional baselines are prior dummy classification,
-logistic regression, Gaussian Naive Bayes, and histogram gradient boosting.
+## Non-advancing multivariable candidate
 
-Logistic regression and Gaussian Naive Bayes use median imputation and scaling
-inside pipelines fitted on train only. Histogram gradient boosting handles
-missing values natively. No post-hoc calibration model was fitted.
+The sole Phase 3 candidate was L2 logistic regression with 18 locked predictors,
+`solver="lbfgs"`, `class_weight="balanced"`, `max_iter=1000`, and inner-CV selection
+between `C ∈ {0.1, 1.0}`. Continuous inputs underwent training-fold median
+imputation and scaling. Five binary current-hour missingness indicators passed
+through structurally complete.
 
-## Selection and evaluation
+The candidate increased raw AUPRC from 0.6218694691 to 0.6293981556. Delta AUPRC
+was `+0.0075286864`, with paired patient-bootstrap 95% interval `+0.0004996287` to
+`+0.0171297719`. This is evidence of a small positive incremental signal, not of no
+incremental value or inferiority.
 
-Selection used validation AUPRC, with Brier score as the tie-breaker. Thresholds
-were locked on validation: 0.5, Youden index, and a sensitivity target near
-0.80. Model name is the deterministic final tie-break if both metrics are equal.
-Test was opened only after the selection record was written. Confidence
-intervals use 1,000 deterministic patient-cluster bootstrap replicates.
+The observed gain was below the prespecified `+0.020` development relevance margin,
+so the candidate did not advance. The margin is not a p-value and is not a
+clinically validated minimal important difference.
 
-## Limitations
+## Calibration and thresholds
 
-- The demo cohort has only 100 patients and the test set has 15 patients.
-- Repeated windows within a stay are correlated; patient bootstrap addresses
-  clustering but uncertainty remains wide.
-- Validation and test prevalence differ materially.
-- Neutral risk 0.5 is used when a transparent clinical score is unavailable.
-- Results are historical development evidence on a demo dataset, not confirmatory
-  or external validation.
-- Association and predictive utility do not imply causal importance.
+Platt recalibration was fitted through the frozen leakage-controlled development
+procedure. The calibrated candidate had Brier score 0.1114882686 and log loss
+0.3619400064. Recorded development operating points were:
+
+- fixed 0.5: `0.5`;
+- target sensitivity 0.80: `0.3208213008`;
+- Youden: `0.3775406688`.
+
+These thresholds are development operating points only. They are not deployment
+thresholds, clinically optimal thresholds, or evidence of clinical utility.
+
+## Evaluation data and safeguards
+
+The evaluation used 8,970 windows from 92 eligible development patients in five
+outer and three inner patient-grouped folds. All windows from a patient stayed
+together, patient overlap was zero, and each window received one outer OOF
+prediction. The 8,970 windows are correlated observations, not independent people.
+
+There was one formal preregistered Phase 3 development execution. The run was not
+repeated after results were observed. The confirmatory state remains
+`confirmatory_test_pending`.
+
+## Key limitations
+
+- The source is the small MIMIC-IV-on-FHIR demonstration environment.
+- Evidence is retrospective and development-only.
+- No external, prospective, confirmatory, workflow, or clinical-impact evaluation
+  has been completed.
+- The two incomplete-future-MAP sensitivity analyses failed because their datasets
+  contained patients absent from the frozen fold manifest.
+- Predictive performance and coefficients do not imply causality.
+- Neither the retained benchmark nor the logistic candidate is ready for clinical
+  deployment.
+
+## Historical Phase 2 record
+
+The earlier 8,872-window `development_holdout_v1` model card state is preserved in
+the Phase 2 reports and Git history. That partition was accessed four times and is
+development evidence, not an untouched confirmatory holdout.

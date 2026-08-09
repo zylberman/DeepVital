@@ -1,5 +1,9 @@
 # Statistical analysis plan
 
+> **Pre-Phase-3 internal-analysis record.** This document describes the earlier
+> broad nested-CV analysis. The frozen Phase 3 estimand and advancement rule are in
+> `PHASE_3_PROTOCOL.md`; completed estimates are in `RESULTS_CURRENT.md`.
+
 ## Analysis population and unit structure
 
 The canonical development population comprises 92 patients with 8,970 eligible
