@@ -18,8 +18,8 @@ documentation when a discrepancy is found.
 | --- | --- | --- | --- |
 | `RESEARCH_PROTOCOL.md` | Manuscript-grade protocol separating completed and planned work | Investigators and access reviewers | Current |
 | `METHODS_CURRENT.md` | Continuous manuscript-ready methods | Manuscript authors | Current |
-| `STATISTICAL_ANALYSIS_PLAN.md` | Statistical estimands, metrics, clustered inference, and interpretation | Methodologists and statisticians | Current |
-| `EVALUATION_PROTOCOL.md` | Frozen evaluation-role and leakage rules | Reproducibility reviewers | Current source of truth |
+| `STATISTICAL_ANALYSIS_PLAN.md` | Pre-Phase-3 nested-CV estimands and reporting rules | Methodologists and statisticians | Historical methodological record |
+| `EVALUATION_PROTOCOL.md` | Pre-Phase-3 frozen evaluation-role and leakage rules | Reproducibility reviewers | Historical methodological record |
 
 ## Data and cohort
 
@@ -56,7 +56,7 @@ documentation when a discrepancy is found.
 | Document | Purpose | Audience | Status |
 | --- | --- | --- | --- |
 | `LIMITATIONS.md` | Data, methodological, statistical, clinical, and deployment limitations | All scientific readers | Current |
-| `MODEL_CARD.md` | Historical Phase 2 baseline record | Model reviewers | Historical; not current selection |
+| `MODEL_CARD.md` | Current retained strategy and non-advancing Phase 3 candidate | Model reviewers | Current |
 
 ## Historical documentation
 
@@ -83,4 +83,9 @@ The principal machine-readable sources are:
 - `../reports/internal_nested_cross_validation.json`;
 - `../reports/internal_nested_model_comparison.csv`;
 - `../reports/internal_nested_paired_comparisons.csv`;
+- `../reports/phase3_incremental_value.json`;
+- `../reports/phase3_model_comparison.csv`;
+- `../reports/phase3_paired_comparisons.csv`;
+- `../reports/phase3_sensitivity_analysis.json`;
+- `../reports/phase3_protocol_deviations.json`;
 - `../models/baselines/model_selection.json` for the historical holdout record.

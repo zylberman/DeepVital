@@ -50,8 +50,8 @@ The following steps require authorized local access to MIMIC-IV-on-FHIR and are
 not reproduced by the public demo:
 
 - extraction of MIMIC-IV FHIR resources;
-- construction of the actual ICU cohort and private split manifest;
-- exact reproduction of the persisted Phase 1 and Phase 2 reports.
+- construction of the actual ICU cohort and private split/fold manifests;
+- exact reproduction of persisted Phase 1, Phase 2, and Phase 3 reports.
 
 ## Canonical cohort and historical boundary
 
@@ -97,6 +97,10 @@ requires `--allow-legacy-builder`. It exists only for historical reproduction.
   that patient's windows remain together, and the OOF prediction count equals the
   eligible-window count. Ranking-only clinical scores exclude Brier score and log
   loss and include neutral-risk and complete-case availability analyses.
+- Phase 3 was a single formal preregistered development execution comparing
+  `map_mean_6h` with the frozen 18-predictor L2 logistic candidate. It was not rerun
+  after results were observed. The five outer/three inner assignments had zero
+  patient overlap and produced one OOF prediction per eligible window.
 - No confirmatory dataset currently exists. `scripts/evaluate_confirmatory.py`
   accepts only `--dataset-role confirmatory-test`, verifies protocol/cohort/model
   hashes, requires frozen model metadata and a private development manifest, and
@@ -107,6 +111,25 @@ requires `--allow-legacy-builder`. It exists only for historical reproduction.
 Raw and processed clinical tables remain outside version control. Aggregate
 reports document the completed experiment without redistributing patient-level
 records.
+
+## Phase 3 provenance chain
+
+| Provenance item | Identifier |
+| --- | --- |
+| Frozen protocol | `158656304a96a4229208aad7e07fe45959672bfe` |
+| Frozen protocol SHA-256 | `sha256:c0b2e69ee468fed8f257ee65bfc46ff396db2bc6a29dab9e2dd898e15fa27eb5` |
+| Implementation/preregistered source | `54414fae32cc1c8b7cece36b2f1a96d81a48db35` |
+| Preregistration tag | `phase3-preregistered-v1` |
+| Preregistration JSON SHA-256 | `03bf1ce0efa6eb5e431b1e76654a878e9059353c8f6d11cdd0d6d09f6632a7c1` |
+| Original formal result commit | `c7db731` |
+| CSV line-ending normalization | `d3c6915` |
+| Result integration | PR #5 |
+
+The preregistration JSON itself was not committed before execution. Its SHA-256 was
+published in the preregistration tag before the formal run. Commit `d3c6915`
+normalized CSV line endings only; it did not change scientific values. The formal
+reports disclose the two failed incomplete-future-MAP sensitivity analyses and an
+empty primary protocol-deviation list.
 
 ## What should not be repeated casually
 

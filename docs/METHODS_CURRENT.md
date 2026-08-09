@@ -102,6 +102,36 @@ by Brier score and model name as deterministic tie-breakers. Each outer fold ret
 its inner-selected threshold. Pooled threshold-0.5 summaries were descriptive. The
 procedure did not select a final model or final threshold.
 
+## Prespecified Phase 3 incremental-value analysis
+
+After the benchmark audit and holdout-protocol repair, Phase 3 addressed one frozen
+question: whether a single interpretable multivariable strategy provided sufficient
+incremental value over `map_mean_6h`. The sole candidate was L2 logistic regression
+with 18 locked predictors, `solver="lbfgs"`, `class_weight="balanced"`,
+`max_iter=1000`, and inner-fold selection between `C=0.1` and `C=1.0`.
+
+The analysis reused the registered five outer and three inner patient-grouped folds.
+Continuous inputs underwent median imputation and scaling within the applicable
+training scope; binary missingness indicators passed through structurally complete.
+Each eligible window received one outer OOF prediction, and patient overlap was
+zero. Platt recalibration used inner OOF predictions from outer-training patients
+only. Youden and target-sensitivity operating points were selected without using
+outer-fold outcomes.
+
+The primary estimand was candidate-minus-`map_mean_6h` AUPRC. Uncertainty used 1,000
+paired patient-bootstrap replicates, retaining every window for each sampled
+patient. Advancement required observed delta AUPRC of at least `+0.020`, a paired
+interval lower bound above zero, valid OOF accounting, and no primary protocol
+deviation. The `+0.020` value was a development relevance margin, not a p-value or
+a clinically validated minimal important difference.
+
+Prespecified secondary and robustness analyses covered AUROC, probability losses,
+calibration, threshold metrics, patient-equal weighting, the 60/65/70-mmHg by
+one/two/three-hour outcome grid, BP-source alternatives, benchmark availability,
+and charting patterns. The two incomplete-future-MAP bounds failed because their
+datasets included patients absent from the frozen fold manifest. The run was not
+repeated to repair this disclosed sensitivity-analysis failure.
+
 ## Metrics and statistical analysis
 
 Discrimination was summarized using AUROC and AUPRC. Brier score and log loss were

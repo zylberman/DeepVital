@@ -3,7 +3,7 @@
 ```mermaid
 flowchart TD
     A["Development — completed"] --> B["Internal patient-grouped validation — completed"]
-    B --> C["Frozen strategy — in progress"]
+    B --> C["Phase 3 strategy decision — completed"]
     C --> D["Independent confirmatory test — pending"]
     D --> E["External validation — not started"]
     E --> F["Prospective evaluation — not started"]
@@ -23,12 +23,17 @@ eligible window, with patients grouped across all folds. Results quantify intern
 development performance and paired benchmark differences. They do not provide an
 independent estimate of generalizability.
 
-## Frozen strategy — in progress
+## Phase 3 strategy decision — completed
 
-The model strategy and final threshold are not frozen. The immediate decision is
-whether six-hour mean MAP should remain the parsimonious development strategy or
-whether further multivariable work demonstrates reproducible added value. Any
-calibration method must be selected and fitted using development data only.
+The single formal preregistered Phase 3 execution compared six-hour mean MAP with
+the frozen 18-predictor L2 logistic candidate. Delta AUPRC was `+0.0075286864`,
+below the prespecified `+0.020` development relevance margin. The candidate did not
+advance, and `map_mean_6h` remains the parsimonious development strategy. This is an
+internal development decision, not clinical validation.
+
+The next evidence stage should seek independent patients and evaluate
+transportability and calibration. Additional model shopping on the same cohort is
+not the next milestone.
 
 ## Independent confirmatory test — pending
 

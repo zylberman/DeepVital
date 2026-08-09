@@ -89,7 +89,67 @@ has the role `development`, and is not confirmatory. The repeated access has hig
 impact on confirmatory interpretation; Git history does not support reconstructing
 every execution with complete certainty.
 
-## Selection status
+## Prespecified Phase 3 incremental-value analysis
 
-The versioned nested-CV report records `model_selection_status: not_final` and
-`final_threshold_status: not_frozen`. No confirmatory evaluation report exists.
+Phase 3 compared `map_mean_6h` with one frozen 18-predictor L2 logistic strategy in
+the same 92-patient, 8,970-window development cohort. It used five outer and three
+inner patient-grouped folds, zero patient overlap, exactly one OOF prediction per
+eligible window, and 1,000 paired patient-bootstrap replicates. There was one formal
+preregistered execution, with no result-driven rerun.
+
+| Quantity | `map_mean_6h` | Raw logistic candidate | Candidate minus benchmark |
+| --- | ---: | ---: | ---: |
+| AUPRC | 0.6218694691 | 0.6293981556 | +0.0075286864 |
+| AUROC | 0.8416282800 | 0.8447827084 | +0.0031544285 |
+
+The primary delta-AUPRC paired 95% interval was `+0.0004996287` to
+`+0.0171297719`; all 1,000 replicates were valid and 0.987 of bootstrap differences
+were above zero. The secondary delta-AUROC interval was `-0.0002853698` to
+`+0.0066426853`.
+
+The logistic candidate therefore showed a small positive incremental AUPRC, but its
+`+0.0075` gain did not reach the prespecified `+0.020` development relevance margin.
+The candidate failed the frozen advancement rule, and `map_mean_6h` remains the
+parsimonious development strategy. The `+0.020` margin is neither a p-value nor a
+clinically validated minimal important difference.
+
+## Calibration and development operating points
+
+The calibrated candidate had AUPRC 0.6255061186, AUROC 0.8434693457, Brier score
+0.1114882686, and log loss 0.3619400064. Its recorded development operating points
+were 0.5 fixed, 0.3208213008 for target sensitivity 0.80, and 0.3775406688 by the
+Youden procedure. These are development summaries, not validated clinical or
+deployment thresholds.
+
+## Phase 3 robustness and sensitivity results
+
+Patient-equal delta AUPRC was `+0.0156094374`. Invasive-preferred BP construction
+yielded delta AUPRC `+0.0066575655` (95% interval `-0.0024251482` to
+`+0.0179764767`); non-invasive-only yielded `-0.0004748683`
+(`-0.0110530349` to `+0.0135345370`). Both met the frozen robustness condition of
+not falling below `-0.020`.
+
+The prespecified outcome-grid delta AUPRC values were:
+
+| Strict MAP threshold | 1 hour | 2 consecutive hours | 3 consecutive hours |
+| --- | ---: | ---: | ---: |
+| <60 mmHg | +0.0024470062 | +0.0027222423 | +0.0199924643 |
+| <65 mmHg | +0.0062732192 | +0.0075286864 (primary) | +0.0139717236 |
+| <70 mmHg | +0.0034531672 | +0.0053589107 | +0.0010087804 |
+
+These are sensitivity analyses and do not redefine the primary endpoint. In
+particular, the `<60 mmHg × 3 hours` result was not selected post hoc.
+
+The two incomplete-future-MAP sensitivities, `missing_as_low` and
+`missing_as_not_low`, failed with `ValueError: Dataset contains patients absent
+from private fold manifest`. The failure was disclosed, Phase 3 was not rerun to
+repair it, and the primary advancement result was unchanged. The formal deviation
+report records `protocol_deviations = []`; this was reported as a sensitivity-
+analysis execution failure rather than a primary protocol deviation.
+
+## Current selection status
+
+Phase 3 is complete. `map_mean_6h` is retained as the parsimonious development
+strategy. The logistic candidate remains a documented non-advancing development
+candidate. No confirmatory evaluation report exists, and neither strategy is
+clinically validated.
