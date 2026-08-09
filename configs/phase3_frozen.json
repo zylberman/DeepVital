@@ -1,0 +1,65 @@
+{
+  "protocol": {
+    "identifier": "deepvital-phase3-incremental-value-v1",
+    "git_commit": "158656304a96a4229208aad7e07fe45959672bfe",
+    "sha256": "sha256:c0b2e69ee468fed8f257ee65bfc46ff396db2bc6a29dab9e2dd898e15fa27eb5"
+  },
+  "canonical_cohort": {
+    "metadata_path": "reports/canonical_cohort_metadata.json",
+    "fingerprint_field": "output_fingerprint",
+    "expected_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "expected_patients_with_windows": 92,
+    "expected_windows": 8970
+  },
+  "fold_manifest": {
+    "path": "data/processed/phase3/fold_manifest.json",
+    "expected_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+    "seed": 20260726,
+    "outer_folds": 5,
+    "inner_folds": 3
+  },
+  "candidate": {
+    "model": "logistic_regression",
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "C_values": [0.1, 1.0]
+  },
+  "benchmark": {
+    "name": "map_mean_6h",
+    "risk_center_map": 65.0,
+    "risk_scale_map": 10.0,
+    "uncalculable_primary_score": 0.5
+  },
+  "validation": {
+    "primary_metric": "delta_auprc",
+    "bootstrap_replicates": 1000,
+    "bootstrap_confidence": 0.95,
+    "advancement_margin": 0.02,
+    "patient_equal_robustness_floor": -0.02,
+    "bp_source_robustness_floor": -0.02
+  },
+  "calibration": {
+    "method": "platt_logistic",
+    "training_scope": "outer_training_inner_oof_only"
+  },
+  "thresholds": {
+    "primary": "youden",
+    "secondary": "target_sensitivity_0.80",
+    "target_sensitivity": 0.8,
+    "youden_tie_break": "higher_threshold"
+  },
+  "sensitivities": {
+    "map_thresholds": [60.0, 65.0, 70.0],
+    "consecutive_hours": [1, 2, 3],
+    "future_map_missing_bounds": ["missing_as_not_low", "missing_as_low"],
+    "bp_source_alternatives": ["invasive_preferred", "non_invasive_only"],
+    "invasive_systolic_codes": ["220050", "225309"],
+    "invasive_map_codes": ["220052", "225312"],
+    "non_invasive_systolic_codes": ["220179"],
+    "non_invasive_map_codes": ["220181"],
+    "benchmark_missingness": ["neutral_score_0.5", "complete_case"],
+    "evaluation_weighting": ["window_weighted", "patient_equal"]
+  }
+}

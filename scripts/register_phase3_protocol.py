@@ -22,6 +22,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--private-fold-manifest", type=Path, required=True)
     parser.add_argument("--source-commit", required=True)
     parser.add_argument("--configuration", type=Path, action="append", required=True)
+    parser.add_argument("--canonical-modeling-windows", type=Path, required=True)
+    parser.add_argument("--future-map-sensitivity-input", type=Path, required=True)
+    parser.add_argument("--bp-invasive-preferred-input", type=Path, required=True)
+    parser.add_argument("--bp-non-invasive-only-input", type=Path, required=True)
     parser.add_argument(
         "--output",
         type=Path,
@@ -44,6 +48,12 @@ def main() -> None:
         source_commit=args.source_commit,
         configuration_paths=args.configuration,
         execution_timestamp=datetime.now(UTC).isoformat(),
+        outcome_input_paths={
+            "canonical_modeling_windows": args.canonical_modeling_windows,
+            "future_map_sensitivity": args.future_map_sensitivity_input,
+            "bp_invasive_preferred": args.bp_invasive_preferred_input,
+            "bp_non_invasive_only": args.bp_non_invasive_only_input,
+        },
     )
     write_registration_exclusively(args.output, registration)
     print(json.dumps(registration, indent=2, sort_keys=True))

@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import subprocess
 from collections.abc import Mapping, Sequence
 from dataclasses import asdict, dataclass
 from datetime import datetime
@@ -60,6 +61,14 @@ REGISTRATION_MATCH_FIELDS = (
     "canonical_cohort_fingerprint",
     "fold_manifest_fingerprint",
     "configuration_fingerprint",
+    "source_commit",
+    "outcome_input_fingerprints",
+)
+OUTCOME_INPUT_NAMES = (
+    "canonical_modeling_windows",
+    "future_map_sensitivity",
+    "bp_invasive_preferred",
+    "bp_non_invasive_only",
 )
 
 BP_SOURCE_CODES = {
@@ -425,6 +434,59 @@ def assert_registration_matches(
     return existing
 
 
+def validate_registered_source_state(
+    *, registered_source_commit: str, current_head: str, working_tree_dirty: bool
+) -> None:
+    """Reject code that differs from the clean implementation commit registered."""
+    if current_head != registered_source_commit:
+        raise RuntimeError(
+            "Git HEAD does not match registered Phase 3 source_commit"
+        )
+    if working_tree_dirty:
+        raise RuntimeError("Phase 3 formal execution requires a clean Git working tree")
+
+
+def capture_git_source_state(repository_root: Path) -> tuple[str, bool]:
+    """Capture HEAD and tracked/untracked status without touching analysis inputs."""
+    head = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=repository_root,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    status = subprocess.run(
+        ["git", "status", "--porcelain"],
+        cwd=repository_root,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    return head, bool(status.strip())
+
+
+def assert_registered_source_state(
+    repository_root: Path, registration: Mapping[str, Any]
+) -> str:
+    """Mechanically enforce registered HEAD and a clean tree before data access."""
+    current_head, dirty = capture_git_source_state(repository_root)
+    validate_registered_source_state(
+        registered_source_commit=str(registration.get("source_commit", "")),
+        current_head=current_head,
+        working_tree_dirty=dirty,
+    )
+    return current_head
+
+
+def fingerprint_outcome_inputs(paths: Mapping[str, Path]) -> dict[str, str]:
+    """Fingerprint the four exact private development inputs without exposing rows."""
+    if set(paths) != set(OUTCOME_INPUT_NAMES):
+        raise ValueError(
+            "Outcome input paths must be exactly: " + ", ".join(OUTCOME_INPUT_NAMES)
+        )
+    return {name: fingerprint_file(paths[name]) for name in OUTCOME_INPUT_NAMES}
+
+
 def assert_phase3_prerun_ready(
     repository_root: Path, expected_registration: Mapping[str, Any]
 ) -> dict[str, Any]:
@@ -450,6 +512,7 @@ def build_protocol_registration(
     source_commit: str,
     configuration_paths: Sequence[Path],
     execution_timestamp: str,
+    outcome_input_paths: Mapping[str, Path] | None = None,
 ) -> dict[str, Any]:
     """Build separate public registration metadata without changing the protocol."""
     datetime.fromisoformat(execution_timestamp.replace("Z", "+00:00"))
@@ -461,6 +524,11 @@ def build_protocol_registration(
         "fold_manifest_fingerprint": fold_manifest_fingerprint(private_fold_manifest),
         "source_commit": source_commit,
         "configuration_fingerprint": fingerprint_configuration(configuration_paths),
+        "outcome_input_fingerprints": (
+            fingerprint_outcome_inputs(outcome_input_paths)
+            if outcome_input_paths is not None
+            else None
+        ),
         "execution_timestamp": execution_timestamp,
     }
     assert_public_metadata(registration)
