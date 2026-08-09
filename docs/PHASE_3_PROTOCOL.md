@@ -3,7 +3,7 @@
 ## Prespecified Incremental-Value and Robustness Analysis
 
 **Protocol identifier:** `deepvital-phase3-incremental-value-v1`
-**Status:** freeze candidate; no Phase 3 analysis has been executed
+**Status:** FROZEN; no Phase 3 performance analysis has been executed
 **Data role:** development only
 **Confirmatory status:** `confirmatory_test_pending`
 **Intended use:** retrospective methodological research only
@@ -440,23 +440,42 @@ be overwritten.
 
 ## 16. Freeze checklist
 
-The protocol is freeze-ready only after all items are affirmatively reviewed:
+The investigator formally ratified the scientific specification exactly as written,
+including the development relevance margin of absolute delta AUPRC `0.02`. This
+margin is neither a p-value threshold nor a clinically validated minimal important
+difference. The BP-source assignments are accepted for this development protocol;
+this investigator review is not independent clinical validation.
 
-- [ ] scientific reviewers ratify absolute minimum delta AUPRC `0.02`;
-- [ ] the 18-feature set is confirmed derivable exactly from the canonical schema;
-- [ ] the locked logistic specification, including `solver="lbfgs"`, is accepted;
-- [ ] the enumerated invasive and non-invasive BP source assignments are reviewed
-      clinically;
-- [ ] the specified missing-as-not-low and missing-as-low bound algorithms are
-      implemented in synthetic boundary tests without using clinical results;
-- [ ] nested folds and private fold-manifest handling are fixed;
-- [ ] Platt calibration and threshold tie rules are accepted;
-- [ ] the reserved Phase 3 output paths are confirmed not to overwrite existing
-      reports;
-- [ ] protocol hash, Git commit, and canonical cohort fingerprint registration is
-      implemented;
-- [ ] no confirmatory dataset has been accessed;
-- [ ] the Git working tree is clean at freeze.
+- [x] the investigator ratified absolute minimum delta AUPRC `0.02`;
+- [x] the 18-feature set is confirmed derivable exactly from the canonical schema
+      without information after `t`;
+- [x] `map_mean_6h` is confirmed equivalent to the existing canonical benchmark;
+- [x] the locked logistic specification, including `solver="lbfgs"`,
+      `class_weight="balanced"`, `max_iter=1000`, and `C ∈ {0.1, 1.0}`, is accepted;
+- [x] the enumerated invasive and non-invasive BP source assignments are accepted
+      by the investigator for this development protocol;
+- [x] the specified missing-as-not-low and missing-as-low bound algorithms are
+      implemented in passing synthetic boundary tests without using clinical results;
+- [x] deterministic five-outer/three-inner patient-grouped folds and private
+      fold-manifest handling are fixed;
+- [x] the private fold manifest accounts for 92 patients and 8,970 windows, has zero
+      patient overlap, is ignored by Git, and is stored with mode `0600`;
+- [x] the private fold-manifest fingerprint is
+      `sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99`;
+- [x] Platt calibration as the sole development calibration method and the
+      prespecified development threshold and tie rules are accepted;
+- [x] preregistration and result paths have distinct safeguards: a matching
+      preregistration may exist before execution, while existing result files cause
+      a hard failure and no reserved artifact may be overwritten;
+- [x] separate protocol-hash, Git-commit, canonical-cohort, fold-manifest, source,
+      and configuration fingerprint registration is implemented;
+- [x] no confirmatory dataset has been accessed;
+- [x] Ruff, pytest, and `git diff --check` passed during technical pre-freeze
+      validation.
 
-Until every item is resolved, this document is a freeze candidate rather than a
-frozen protocol, and Phase 3 must not run.
+The scientific protocol is frozen. Its own SHA-256 and frozen Git commit are
+intentionally not embedded in this file: they will be calculated after the freeze
+commit and recorded separately in `reports/phase3_protocol_registration.json`.
+Formal Phase 3 performance analysis has not yet been executed and must not begin
+until that preregistration matches the frozen protocol, cohort, fold manifest, and
+configuration fingerprints.
