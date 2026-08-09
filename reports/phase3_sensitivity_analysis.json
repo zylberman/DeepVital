@@ -1,0 +1,575 @@
+{
+  "benchmark_missingness": {
+    "complete_case": {
+      "delta_auprc": 0.0075286864432581035,
+      "delta_auroc": 0.003154428459253067
+    },
+    "neutral_score_0.5": {
+      "delta_auprc": 0.0075286864432581035,
+      "delta_auroc": 0.003154428459253067
+    }
+  },
+  "bp_source_alternatives": {
+    "invasive_preferred": {
+      "delta_auprc": 0.006657565477214078,
+      "delta_auprc_ci_95_lower": -0.0024251481794628875,
+      "delta_auprc_ci_95_upper": 0.01797647666299435,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "non_invasive_only": {
+      "delta_auprc": -0.0004748683148032562,
+      "delta_auprc_ci_95_lower": -0.011053034932439771,
+      "delta_auprc_ci_95_upper": 0.013534537024808382,
+      "number_of_patients": 84,
+      "number_of_windows": 5180,
+      "status": "completed"
+    }
+  },
+  "definitions": {
+    "benchmark_missingness": [
+      "neutral_score_0.5",
+      "complete_case"
+    ],
+    "bp_source_alternatives": [
+      "invasive_preferred",
+      "non_invasive_only"
+    ],
+    "evaluation_weighting": [
+      "window_weighted",
+      "patient_equal"
+    ],
+    "incomplete_future_map": [
+      "missing_as_not_low",
+      "missing_as_low"
+    ],
+    "missingness_charting_frequency": true,
+    "outcome_grid": [
+      {
+        "consecutive_hours": 1,
+        "map_threshold": 60.0
+      },
+      {
+        "consecutive_hours": 2,
+        "map_threshold": 60.0
+      },
+      {
+        "consecutive_hours": 3,
+        "map_threshold": 60.0
+      },
+      {
+        "consecutive_hours": 1,
+        "map_threshold": 65.0
+      },
+      {
+        "consecutive_hours": 2,
+        "map_threshold": 65.0
+      },
+      {
+        "consecutive_hours": 3,
+        "map_threshold": 65.0
+      },
+      {
+        "consecutive_hours": 1,
+        "map_threshold": 70.0
+      },
+      {
+        "consecutive_hours": 2,
+        "map_threshold": 70.0
+      },
+      {
+        "consecutive_hours": 3,
+        "map_threshold": 70.0
+      }
+    ]
+  },
+  "incomplete_future_map": {
+    "missing_as_low": {
+      "failure": "ValueError",
+      "message": "Dataset contains patients absent from private fold manifest",
+      "status": "failed"
+    },
+    "missing_as_not_low": {
+      "failure": "ValueError",
+      "message": "Dataset contains patients absent from private fold manifest",
+      "status": "failed"
+    }
+  },
+  "missingness_charting_frequency": {
+    "by_outer_fold_and_outcome": {
+      "outer_fold_1_outcome_0": {
+        "heart_rate": {
+          "current_missing_windows": 20,
+          "mean_hours_since_last_observation": 0.021247429746401644,
+          "mean_observed_hours": 11.739547635366689,
+          "mean_proportion_missing": 0.021704363719442545,
+          "windows": 1459
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 24,
+          "mean_hours_since_last_observation": 0.02467443454420836,
+          "mean_observed_hours": 11.692940370116519,
+          "mean_proportion_missing": 0.025588302490290156,
+          "windows": 1459
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 37,
+          "mean_hours_since_last_observation": 0.03495544893762851,
+          "mean_observed_hours": 11.583961617546265,
+          "mean_proportion_missing": 0.034669865204477956,
+          "windows": 1459
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 25,
+          "mean_hours_since_last_observation": 0.02467443454420836,
+          "mean_observed_hours": 11.685400959561344,
+          "mean_proportion_missing": 0.026216586703221387,
+          "windows": 1459
+        },
+        "systolic_bp": {
+          "current_missing_windows": 23,
+          "mean_hours_since_last_observation": 0.023989033584647018,
+          "mean_observed_hours": 11.701165181631254,
+          "mean_proportion_missing": 0.02490290153072881,
+          "windows": 1459
+        }
+      },
+      "outer_fold_1_outcome_1": {
+        "heart_rate": {
+          "current_missing_windows": 2,
+          "mean_hours_since_last_observation": 0.005970149253731343,
+          "mean_observed_hours": 11.856716417910448,
+          "mean_proportion_missing": 0.01194029850746269,
+          "windows": 335
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 7,
+          "mean_hours_since_last_observation": 0.026865671641791045,
+          "mean_observed_hours": 11.686567164179104,
+          "mean_proportion_missing": 0.026119402985074633,
+          "windows": 335
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 10,
+          "mean_hours_since_last_observation": 0.03582089552238806,
+          "mean_observed_hours": 11.567164179104477,
+          "mean_proportion_missing": 0.036069651741293535,
+          "windows": 335
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 3,
+          "mean_hours_since_last_observation": 0.008955223880597015,
+          "mean_observed_hours": 11.832835820895522,
+          "mean_proportion_missing": 0.013930348258706472,
+          "windows": 335
+        },
+        "systolic_bp": {
+          "current_missing_windows": 7,
+          "mean_hours_since_last_observation": 0.026865671641791045,
+          "mean_observed_hours": 11.686567164179104,
+          "mean_proportion_missing": 0.026119402985074633,
+          "windows": 335
+        }
+      },
+      "outer_fold_2_outcome_0": {
+        "heart_rate": {
+          "current_missing_windows": 7,
+          "mean_hours_since_last_observation": 0.005563282336578581,
+          "mean_observed_hours": 11.881780250347704,
+          "mean_proportion_missing": 0.009851645804357906,
+          "windows": 1438
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 12,
+          "mean_hours_since_last_observation": 0.009040333796940195,
+          "mean_observed_hours": 11.827538247566064,
+          "mean_proportion_missing": 0.014371812702828004,
+          "windows": 1438
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 10,
+          "mean_hours_since_last_observation": 0.0076495132127955496,
+          "mean_observed_hours": 11.867176634214186,
+          "mean_proportion_missing": 0.011068613815484471,
+          "windows": 1438
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 7,
+          "mean_hours_since_last_observation": 0.005563282336578581,
+          "mean_observed_hours": 11.885257301808068,
+          "mean_proportion_missing": 0.009561891515994438,
+          "windows": 1438
+        },
+        "systolic_bp": {
+          "current_missing_windows": 13,
+          "mean_hours_since_last_observation": 0.009735744089012517,
+          "mean_observed_hours": 11.819193324061196,
+          "mean_proportion_missing": 0.015067222994900327,
+          "windows": 1438
+        }
+      },
+      "outer_fold_2_outcome_1": {
+        "heart_rate": {
+          "current_missing_windows": 3,
+          "mean_hours_since_last_observation": 0.011267605633802818,
+          "mean_observed_hours": 11.915492957746478,
+          "mean_proportion_missing": 0.0070422535211267625,
+          "windows": 355
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 5,
+          "mean_hours_since_last_observation": 0.01971830985915493,
+          "mean_observed_hours": 11.84225352112676,
+          "mean_proportion_missing": 0.013145539906103287,
+          "windows": 355
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 6,
+          "mean_hours_since_last_observation": 0.01971830985915493,
+          "mean_observed_hours": 11.805633802816901,
+          "mean_proportion_missing": 0.01619718309859155,
+          "windows": 355
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 2,
+          "mean_hours_since_last_observation": 0.008450704225352112,
+          "mean_observed_hours": 11.935211267605634,
+          "mean_proportion_missing": 0.005399061032863851,
+          "windows": 355
+        },
+        "systolic_bp": {
+          "current_missing_windows": 5,
+          "mean_hours_since_last_observation": 0.016901408450704224,
+          "mean_observed_hours": 11.859154929577464,
+          "mean_proportion_missing": 0.011737089201877939,
+          "windows": 355
+        }
+      },
+      "outer_fold_3_outcome_0": {
+        "heart_rate": {
+          "current_missing_windows": 12,
+          "mean_hours_since_last_observation": 0.012099644128113879,
+          "mean_observed_hours": 11.798576512455517,
+          "mean_proportion_missing": 0.016785290628707,
+          "windows": 1405
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 17,
+          "mean_hours_since_last_observation": 0.018505338078291814,
+          "mean_observed_hours": 11.76797153024911,
+          "mean_proportion_missing": 0.01933570581257414,
+          "windows": 1405
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 17,
+          "mean_hours_since_last_observation": 0.019217081850533807,
+          "mean_observed_hours": 11.751601423487545,
+          "mean_proportion_missing": 0.02069988137603796,
+          "windows": 1405
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 16,
+          "mean_hours_since_last_observation": 0.020640569395017794,
+          "mean_observed_hours": 11.76797153024911,
+          "mean_proportion_missing": 0.01933570581257414,
+          "windows": 1405
+        },
+        "systolic_bp": {
+          "current_missing_windows": 17,
+          "mean_hours_since_last_observation": 0.018505338078291814,
+          "mean_observed_hours": 11.765836298932385,
+          "mean_proportion_missing": 0.01951364175563464,
+          "windows": 1405
+        }
+      },
+      "outer_fold_3_outcome_1": {
+        "heart_rate": {
+          "current_missing_windows": 2,
+          "mean_hours_since_last_observation": 0.007692307692307693,
+          "mean_observed_hours": 11.78974358974359,
+          "mean_proportion_missing": 0.01752136752136752,
+          "windows": 390
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 2,
+          "mean_hours_since_last_observation": 0.007692307692307693,
+          "mean_observed_hours": 11.771794871794873,
+          "mean_proportion_missing": 0.01901709401709402,
+          "windows": 390
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 5,
+          "mean_hours_since_last_observation": 0.015384615384615385,
+          "mean_observed_hours": 11.707692307692307,
+          "mean_proportion_missing": 0.02435897435897436,
+          "windows": 390
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 6,
+          "mean_hours_since_last_observation": 0.028205128205128206,
+          "mean_observed_hours": 11.717948717948717,
+          "mean_proportion_missing": 0.023504273504273504,
+          "windows": 390
+        },
+        "systolic_bp": {
+          "current_missing_windows": 3,
+          "mean_hours_since_last_observation": 0.010256410256410256,
+          "mean_observed_hours": 11.782051282051283,
+          "mean_proportion_missing": 0.018162393162393164,
+          "windows": 390
+        }
+      },
+      "outer_fold_4_outcome_0": {
+        "heart_rate": {
+          "current_missing_windows": 9,
+          "mean_hours_since_last_observation": 0.007913669064748202,
+          "mean_observed_hours": 11.880575539568346,
+          "mean_proportion_missing": 0.009952038369304557,
+          "windows": 1390
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 18,
+          "mean_hours_since_last_observation": 0.015107913669064749,
+          "mean_observed_hours": 11.81726618705036,
+          "mean_proportion_missing": 0.01522781774580336,
+          "windows": 1390
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 43,
+          "mean_hours_since_last_observation": 0.04892086330935252,
+          "mean_observed_hours": 11.614388489208633,
+          "mean_proportion_missing": 0.03213429256594724,
+          "windows": 1390
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 19,
+          "mean_hours_since_last_observation": 0.017266187050359712,
+          "mean_observed_hours": 11.81798561151079,
+          "mean_proportion_missing": 0.015167865707434055,
+          "windows": 1390
+        },
+        "systolic_bp": {
+          "current_missing_windows": 16,
+          "mean_hours_since_last_observation": 0.013669064748201438,
+          "mean_observed_hours": 11.83093525179856,
+          "mean_proportion_missing": 0.014088729016786573,
+          "windows": 1390
+        }
+      },
+      "outer_fold_4_outcome_1": {
+        "heart_rate": {
+          "current_missing_windows": 4,
+          "mean_hours_since_last_observation": 0.009876543209876543,
+          "mean_observed_hours": 11.809876543209876,
+          "mean_proportion_missing": 0.015843621399176958,
+          "windows": 405
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 5,
+          "mean_hours_since_last_observation": 0.012345679012345678,
+          "mean_observed_hours": 11.787654320987654,
+          "mean_proportion_missing": 0.017695473251028812,
+          "windows": 405
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 12,
+          "mean_hours_since_last_observation": 0.037037037037037035,
+          "mean_observed_hours": 11.54320987654321,
+          "mean_proportion_missing": 0.038065843621399184,
+          "windows": 405
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 6,
+          "mean_hours_since_last_observation": 0.022222222222222223,
+          "mean_observed_hours": 11.683950617283951,
+          "mean_proportion_missing": 0.026337448559670785,
+          "windows": 405
+        },
+        "systolic_bp": {
+          "current_missing_windows": 4,
+          "mean_hours_since_last_observation": 0.009876543209876543,
+          "mean_observed_hours": 11.804938271604938,
+          "mean_proportion_missing": 0.016255144032921814,
+          "windows": 405
+        }
+      },
+      "outer_fold_5_outcome_0": {
+        "heart_rate": {
+          "current_missing_windows": 15,
+          "mean_hours_since_last_observation": 0.013962765957446808,
+          "mean_observed_hours": 11.857712765957446,
+          "mean_proportion_missing": 0.0118572695035461,
+          "windows": 1504
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 26,
+          "mean_hours_since_last_observation": 0.02327127659574468,
+          "mean_observed_hours": 11.733377659574469,
+          "mean_proportion_missing": 0.02221852836879433,
+          "windows": 1504
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 27,
+          "mean_hours_since_last_observation": 0.04454787234042553,
+          "mean_observed_hours": 11.75,
+          "mean_proportion_missing": 0.020833333333333336,
+          "windows": 1504
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 19,
+          "mean_hours_since_last_observation": 0.016622340425531915,
+          "mean_observed_hours": 11.826462765957446,
+          "mean_proportion_missing": 0.014461436170212769,
+          "windows": 1504
+        },
+        "systolic_bp": {
+          "current_missing_windows": 24,
+          "mean_hours_since_last_observation": 0.021941489361702128,
+          "mean_observed_hours": 11.742686170212766,
+          "mean_proportion_missing": 0.021442819148936174,
+          "windows": 1504
+        }
+      },
+      "outer_fold_5_outcome_1": {
+        "heart_rate": {
+          "current_missing_windows": 0,
+          "mean_hours_since_last_observation": 0.0,
+          "mean_observed_hours": 11.993079584775087,
+          "mean_proportion_missing": 0.0005767012687427915,
+          "windows": 289
+        },
+        "mean_arterial_pressure": {
+          "current_missing_windows": 4,
+          "mean_hours_since_last_observation": 0.02422145328719723,
+          "mean_observed_hours": 11.913494809688581,
+          "mean_proportion_missing": 0.007208765859284891,
+          "windows": 289
+        },
+        "oxygen_saturation": {
+          "current_missing_windows": 0,
+          "mean_hours_since_last_observation": 0.0,
+          "mean_observed_hours": 11.993079584775087,
+          "mean_proportion_missing": 0.0005767012687427915,
+          "windows": 289
+        },
+        "respiratory_rate": {
+          "current_missing_windows": 2,
+          "mean_hours_since_last_observation": 0.006920415224913495,
+          "mean_observed_hours": 11.948096885813149,
+          "mean_proportion_missing": 0.0043252595155709355,
+          "windows": 289
+        },
+        "systolic_bp": {
+          "current_missing_windows": 3,
+          "mean_hours_since_last_observation": 0.010380622837370242,
+          "mean_observed_hours": 11.916955017301039,
+          "mean_proportion_missing": 0.006920415224913497,
+          "windows": 289
+        }
+      }
+    },
+    "measurements_per_patient_hour_mean": 1.1626607209215905,
+    "unavailable_map_mean_6h_windows": 0,
+    "windows_per_patient": {
+      "maximum": 650,
+      "mean": 97.5,
+      "minimum": 1
+    }
+  },
+  "outcome_grid": {
+    "map_lt_60_1_consecutive": {
+      "delta_auprc": 0.002447006217722314,
+      "delta_auprc_ci_95_lower": -0.010890360471154286,
+      "delta_auprc_ci_95_upper": 0.019540217213530556,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_60_2_consecutive": {
+      "delta_auprc": 0.002722242259249774,
+      "delta_auprc_ci_95_lower": -0.011206052368276239,
+      "delta_auprc_ci_95_upper": 0.016674357829713007,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_60_3_consecutive": {
+      "delta_auprc": 0.019992464250880027,
+      "delta_auprc_ci_95_lower": -0.004390289550491572,
+      "delta_auprc_ci_95_upper": 0.05375701021570789,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_65_1_consecutive": {
+      "delta_auprc": 0.006273219223312254,
+      "delta_auprc_ci_95_lower": -0.0025083634104349738,
+      "delta_auprc_ci_95_upper": 0.015622141448082822,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_65_2_consecutive": {
+      "delta_auprc": 0.0075286864432581035,
+      "delta_auprc_ci_95_lower": 0.0004996287013002788,
+      "delta_auprc_ci_95_upper": 0.01712977187518211,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_65_3_consecutive": {
+      "delta_auprc": 0.01397172358038079,
+      "delta_auprc_ci_95_lower": -0.000786076608103769,
+      "delta_auprc_ci_95_upper": 0.02723181538831119,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_70_1_consecutive": {
+      "delta_auprc": 0.003453167215855202,
+      "delta_auprc_ci_95_lower": 8.525859192947267e-06,
+      "delta_auprc_ci_95_upper": 0.00799578110689231,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_70_2_consecutive": {
+      "delta_auprc": 0.005358910695744679,
+      "delta_auprc_ci_95_lower": -0.001566790885561239,
+      "delta_auprc_ci_95_upper": 0.013845875299924714,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    },
+    "map_lt_70_3_consecutive": {
+      "delta_auprc": 0.0010087804135918699,
+      "delta_auprc_ci_95_lower": -0.010054447692679222,
+      "delta_auprc_ci_95_upper": 0.011367738439296641,
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "status": "completed"
+    }
+  },
+  "patient_equal_delta_auprc": 0.015609437384234592,
+  "provenance": {
+    "canonical_cohort_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "configuration_fingerprint": "sha256:4407c822d14d8a8fe1acb02809c50b05ea6fd022346bdf8c6669dd31ecc39631",
+    "environment": {
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0"
+      },
+      "platform_system": "Darwin",
+      "python_implementation": "CPython",
+      "python_version": "3.12.9"
+    },
+    "execution_timestamp": "2026-08-09T04:25:24.406193+00:00",
+    "fold_manifest_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+    "frozen_protocol_git_commit": "158656304a96a4229208aad7e07fe45959672bfe",
+    "frozen_protocol_sha256": "sha256:c0b2e69ee468fed8f257ee65bfc46ff396db2bc6a29dab9e2dd898e15fa27eb5",
+    "implementation_source_commit": "54414fae32cc1c8b7cece36b2f1a96d81a48db35",
+    "python_executable_basename": "python"
+  }
+}

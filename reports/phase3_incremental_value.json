@@ -1,0 +1,275 @@
+{
+  "advancement": {
+    "decision": "retain_map_mean_6h_or_no_strategy_ready",
+    "primary_advancement_passed": false,
+    "primary_criteria": {
+      "delta_auprc_at_least_0.02": {
+        "passed": false,
+        "status": "FAIL"
+      },
+      "no_primary_protocol_deviation": {
+        "passed": true,
+        "status": "PASS"
+      },
+      "oof_accounting_valid": {
+        "passed": true,
+        "status": "PASS"
+      },
+      "paired_ci_lower_above_zero": {
+        "passed": true,
+        "status": "PASS"
+      }
+    },
+    "robustness_criteria": {
+      "all_bp_source_deltas_not_below_minus_0.02": {
+        "passed": true,
+        "status": "PASS"
+      },
+      "patient_equal_delta_not_below_minus_0.02": {
+        "passed": true,
+        "status": "PASS"
+      },
+      "sensitivities_and_failures_disclosed": {
+        "passed": true,
+        "status": "PASS"
+      },
+      "threshold_and_score_semantics_reproducible": {
+        "passed": true,
+        "status": "PASS"
+      }
+    },
+    "robustness_review_passed": true
+  },
+  "benchmark_metrics": {
+    "auprc": 0.621869469148825,
+    "auroc": 0.8416282799601181,
+    "f1": 0.5762256548018805,
+    "fn": 487.0,
+    "fp": 1406.0,
+    "npv": 0.9224151664808029,
+    "ppv": 0.4779056813962124,
+    "prevalence": 0.19777034559643256,
+    "sensitivity": 0.7254791431792559,
+    "specificity": 0.8046136742634797,
+    "threshold": null,
+    "threshold_policy": "fold_specific_inner_cv",
+    "tn": 5790.0,
+    "tp": 1287.0
+  },
+  "calibrated_candidate_metrics": {
+    "auprc": 0.6255061185881545,
+    "auroc": 0.8434693456780762,
+    "brier_score": 0.11148826857622389,
+    "f1": 0.537453812562983,
+    "fn": 974.0,
+    "fp": 403.0,
+    "log_loss": 0.3619400063517131,
+    "npv": 0.8745976567529291,
+    "ppv": 0.6650041562759768,
+    "prevalence": 0.19777034559643256,
+    "sensitivity": 0.4509582863585118,
+    "specificity": 0.9439966648137854,
+    "threshold": 0.5,
+    "tn": 6793.0,
+    "tp": 800.0
+  },
+  "calibration": {
+    "intercept": -0.00029701117676997503,
+    "slope": 1.0001232933333872
+  },
+  "final_development_thresholds": {
+    "fixed_0.5": 0.5,
+    "sensitivity_0.8": 0.32082130082460697,
+    "youden": 0.37754066879814546
+  },
+  "folds": [
+    {
+      "benchmark_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.31002551887238755,
+        "youden": 0.36200632933901605
+      },
+      "calibration_method": "platt_logistic",
+      "calibration_training_scope": "outer_training_inner_oof_only",
+      "candidate_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.45835537843171203,
+        "youden": 0.5650934497582812
+      },
+      "inner_mean_auprc_by_C": {
+        "0.1": 0.6103837836132586,
+        "1.0": 0.607889347872855
+      },
+      "outer_fold": 1,
+      "outer_training_patients": 74,
+      "outer_validation_patients": 18,
+      "outer_validation_windows": 1794,
+      "patient_overlap": 0,
+      "selected_C": 0.1
+    },
+    {
+      "benchmark_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.3172006139065874,
+        "youden": 0.37754066879814546
+      },
+      "calibration_method": "platt_logistic",
+      "calibration_training_scope": "outer_training_inner_oof_only",
+      "candidate_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.48493837989227034,
+        "youden": 0.5630656876224911
+      },
+      "inner_mean_auprc_by_C": {
+        "0.1": 0.5708400347162281,
+        "1.0": 0.5667568688904331
+      },
+      "outer_fold": 2,
+      "outer_training_patients": 74,
+      "outer_validation_patients": 18,
+      "outer_validation_windows": 1793,
+      "patient_overlap": 0,
+      "selected_C": 0.1
+    },
+    {
+      "benchmark_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.33551774365212955,
+        "youden": 0.37754066879814546
+      },
+      "calibration_method": "platt_logistic",
+      "calibration_training_scope": "outer_training_inner_oof_only",
+      "candidate_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.49971994858914925,
+        "youden": 0.5009272738141272
+      },
+      "inner_mean_auprc_by_C": {
+        "0.1": 0.6176098192722935,
+        "1.0": 0.6143868919404841
+      },
+      "outer_fold": 3,
+      "outer_training_patients": 73,
+      "outer_validation_patients": 19,
+      "outer_validation_windows": 1795,
+      "patient_overlap": 0,
+      "selected_C": 0.1
+    },
+    {
+      "benchmark_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.32446367701054585,
+        "youden": 0.37754066879814546
+      },
+      "calibration_method": "platt_logistic",
+      "calibration_training_scope": "outer_training_inner_oof_only",
+      "candidate_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.4879704314994085,
+        "youden": 0.5216369005438934
+      },
+      "inner_mean_auprc_by_C": {
+        "0.1": 0.6536755896243575,
+        "1.0": 0.6497940357397242
+      },
+      "outer_fold": 4,
+      "outer_training_patients": 73,
+      "outer_validation_patients": 19,
+      "outer_validation_windows": 1795,
+      "patient_overlap": 0,
+      "selected_C": 0.1
+    },
+    {
+      "benchmark_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.32446367701054585,
+        "youden": 0.37754066879814546
+      },
+      "calibration_method": "platt_logistic",
+      "calibration_training_scope": "outer_training_inner_oof_only",
+      "candidate_threshold": {
+        "fixed_0.5": 0.5,
+        "sensitivity_0.8": 0.49646875038695987,
+        "youden": 0.526605205779289
+      },
+      "inner_mean_auprc_by_C": {
+        "0.1": 0.5960768155791795,
+        "1.0": 0.5914357456132846
+      },
+      "outer_fold": 5,
+      "outer_training_patients": 74,
+      "outer_validation_patients": 18,
+      "outer_validation_windows": 1793,
+      "patient_overlap": 0,
+      "selected_C": 0.1
+    }
+  ],
+  "oof_invariants": {
+    "each_window_predicted_once": true,
+    "number_of_patients": 92,
+    "number_of_windows": 8970,
+    "patient_overlap": 0
+  },
+  "primary": {
+    "ci_95_lower": 0.0004996287013002788,
+    "ci_95_upper": 0.01712977187518211,
+    "comparison_model": "logistic_regression",
+    "difference_definition": "comparison_minus_reference",
+    "favorable_direction": "positive",
+    "metric": "delta_auprc",
+    "number_of_valid_bootstraps": 1000,
+    "observed_difference": 0.0075286864432581035,
+    "proportion_bootstrap_difference_above_zero": 0.987,
+    "reference_model": "map_mean_6h"
+  },
+  "provenance": {
+    "canonical_cohort_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "configuration_fingerprint": "sha256:4407c822d14d8a8fe1acb02809c50b05ea6fd022346bdf8c6669dd31ecc39631",
+    "environment": {
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0"
+      },
+      "platform_system": "Darwin",
+      "python_implementation": "CPython",
+      "python_version": "3.12.9"
+    },
+    "execution_timestamp": "2026-08-09T04:25:24.406193+00:00",
+    "fold_manifest_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+    "frozen_protocol_git_commit": "158656304a96a4229208aad7e07fe45959672bfe",
+    "frozen_protocol_sha256": "sha256:c0b2e69ee468fed8f257ee65bfc46ff396db2bc6a29dab9e2dd898e15fa27eb5",
+    "implementation_source_commit": "54414fae32cc1c8b7cece36b2f1a96d81a48db35",
+    "python_executable_basename": "python"
+  },
+  "raw_candidate_metrics": {
+    "auprc": 0.6293981555920831,
+    "auroc": 0.8447827084193712,
+    "brier_score": 0.162626567181836,
+    "f1": 0.5701013513513514,
+    "fn": 424.0,
+    "fp": 1612.0,
+    "log_loss": 0.48708885047841977,
+    "npv": 0.929427430093209,
+    "ppv": 0.45577312626603644,
+    "prevalence": 0.19777034559643256,
+    "sensitivity": 0.7609921082299888,
+    "specificity": 0.7759866592551418,
+    "threshold": null,
+    "threshold_policy": "fold_specific_inner_cv",
+    "tn": 5584.0,
+    "tp": 1350.0
+  },
+  "secondary_delta_auroc": {
+    "ci_95_lower": -0.0002853697654447759,
+    "ci_95_upper": 0.006642685314395779,
+    "comparison_model": "logistic_regression",
+    "difference_definition": "comparison_minus_reference",
+    "favorable_direction": "positive",
+    "metric": "delta_auroc",
+    "number_of_valid_bootstraps": 1000,
+    "observed_difference": 0.003154428459253067,
+    "proportion_bootstrap_difference_above_zero": 0.961,
+    "reference_model": "map_mean_6h"
+  }
+}
