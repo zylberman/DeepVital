@@ -1,0 +1,23 @@
+{
+  "protocol_deviations": [],
+  "provenance": {
+    "canonical_cohort_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "configuration_fingerprint": "sha256:4407c822d14d8a8fe1acb02809c50b05ea6fd022346bdf8c6669dd31ecc39631",
+    "environment": {
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0"
+      },
+      "platform_system": "Darwin",
+      "python_implementation": "CPython",
+      "python_version": "3.12.9"
+    },
+    "execution_timestamp": "2026-08-09T04:25:24.406193+00:00",
+    "fold_manifest_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+    "frozen_protocol_git_commit": "158656304a96a4229208aad7e07fe45959672bfe",
+    "frozen_protocol_sha256": "sha256:c0b2e69ee468fed8f257ee65bfc46ff396db2bc6a29dab9e2dd898e15fa27eb5",
+    "implementation_source_commit": "54414fae32cc1c8b7cece36b2f1a96d81a48db35",
+    "python_executable_basename": "python"
+  }
+}
