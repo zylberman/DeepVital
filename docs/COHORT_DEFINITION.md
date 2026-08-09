@@ -1,6 +1,10 @@
 # DeepVital Phase 1B Cohort and Window Definition
 
-**Status:** Implemented and tested for the local MIMIC-IV FHIR demo  
+> **Historical document.** This file describes the legacy observation-bounded
+> 8,872-window route. The canonical administrative ICU-bounds route contains 8,970
+> windows; see `PHASE_1B_COHORT_DECISION.md` and `WINDOWING_AND_LABELING.md`.
+
+**Status:** Preserved historical implementation for the local MIMIC-IV FHIR demo
 **Intended use:** Retrospective research only; not for clinical decision-making
 
 This phase transforms the private canonical observation table into stay-bounded

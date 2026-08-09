@@ -1,5 +1,9 @@
 # DeepVital FHIR Data Inventory
 
+> **Historical discovery record.** This file predates canonical extraction and
+> preserves proposals as they stood during inventory. Current implemented mappings
+> are documented in `FHIR_TO_CANONICAL_MAPPING.md`.
+
 **Discovery date:** 2026-07-26  
 **Scope:** MIMIC-IV Clinical Database Demo on FHIR 2.1.0, local FHIR directory  
 **Status:** Inventory and schema discovery only

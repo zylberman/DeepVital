@@ -1,293 +1,202 @@
 # DeepVital
 
-**A research prototype for early prediction of sustained hypotension in intensive
-care using longitudinal vital signs.**
+DeepVital is a reproducible methodological research pipeline for early prediction
+of sustained hypotension from longitudinal ICU vital signs represented through
+FHIR-compatible clinical resources.
 
-> **Research use only.** DeepVital is not a medical device, has not undergone
-> clinical validation, and must not be used for diagnosis, treatment, monitoring,
-> triage, or other patient-care decisions.
+> **Research use only.** DeepVital is not a medical device, clinical
+> decision-support tool, validated diagnostic system, or deployment-ready
+> platform. Its outputs must not be used for patient-care decisions.
 
-## Overview
+## Current scientific status
 
-Sustained hypotension is a clinically important pattern in intensive care, but
-retrospective prediction is methodologically difficult: measurements are irregular,
-missingness is informative, multiple observations belong to the same patient, and
-future information can easily leak into predictors. DeepVital addresses these
-engineering and evaluation problems in a small research setting. It asks whether
-the previous 12 hours of routinely charted vital signs can identify windows followed
-by sustained hypotension during the next 6 hours.
+The repository implements FHIR inspection and canonical extraction, ICU-period-
+bounded hourly processing, leakage-aware temporal windowing and labeling,
+conventional machine-learning baselines, transparent clinical benchmarks, and
+patient-grouped nested cross-validation. All 100 patients in the MIMIC-IV Clinical
+Database Demo on FHIR 2.1.0 are treated as development data. The current evidence
+is internal validation only; the confirmatory test is pending, and no external or
+prospective validation has been performed.
 
-The current implementation uses the MIMIC-IV Clinical Database Demo on FHIR 2.1.0.
-It combines FHIR resource inspection, clinical data normalization, ICU-stay-aware
-temporal aggregation, explicit missing-data representations, future-only labeling,
-patient-level data splitting, transparent clinical benchmarks, and conventional
-machine-learning baselines. The available results are an internal developmental
-evaluation on a small demo cohort. They do not establish clinical effectiveness or
-generalizability.
+The canonical cohort contains 100 patients, 128 represented hospital admissions,
+140 ICU stays, and 8,970 eligible prediction windows from 92 patients. It includes
+1,774 positive windows (19.78%). These overlapping windows are not independent
+clinical events.
 
-## Clinical question
+## Clinical question and outcome
 
-At an hourly prediction time \(t\), can measurements available from \(t-11\)
-through \(t\) predict sustained hypotension in \(t+1\) through \(t+6\)?
+At each hourly prediction time \(t\), DeepVital asks whether information available
+from \(t-11\) through \(t\) can identify sustained hypotension in \(t+1\) through
+\(t+6\). The primary outcome requires observed hourly mean arterial pressure (MAP)
+strictly below 65 mmHg for at least two consecutive future hours. MAP at \(t\) is a
+predictor and is not part of the outcome. All six future MAP hours must be observed
+for the current primary analysis; incomplete assessment excludes the window and
+may select more intensively monitored periods.
 
-The primary outcome is:
-
-- mean arterial pressure (MAP) strictly below 65 mmHg;
-- for at least two consecutive hourly observations;
-- within the six hours after the prediction time.
-
-MAP at \(t\) is a predictor, not part of the future label. The label uses real
-hourly MAP aggregates only; forward-filled MAP is not accepted as outcome evidence.
-A primary-analysis window is excluded when any of the six future MAP hours required
-for outcome assessment is missing. Predictors contain only information available at
-or before \(t\).
-
-## Project pipeline
+## Architecture
 
 ```mermaid
 flowchart LR
-    A["MIMIC-IV demo FHIR resources"] --> B["Aggregate-only FHIR inventory"]
-    B --> C["Canonical ICU vital signs"]
-    C --> D["ICU-bounded hourly aggregation"]
-    D --> E["Bounded forward fill and missingness representation"]
-    E --> F["12-hour trailing patient windows"]
-    F --> G["Future-only sustained-hypotension labels"]
-    G --> H["Patient-level train / validation / developmental holdout split"]
-    H --> I["Clinical benchmarks and baseline model training"]
-    I --> J["Validation-only model and threshold selection"]
-    J --> K["Developmental holdout evaluation"]
-    K --> L["Aggregate metrics, patient bootstrap, and figures"]
+    A["MIMIC-IV demo FHIR resources"] --> B["Aggregate inspection"]
+    B --> C["Canonical vital-sign extraction"]
+    C --> D["Administrative ICU-period hourly grid"]
+    D --> E["Bounded forward fill and missingness metadata"]
+    E --> F["12-hour retrospective windows"]
+    F --> G["Future-only six-hour outcome"]
+    G --> H["Patient-grouped nested cross-validation"]
+    H --> I["Aggregate development reports"]
+    I -. "future frozen strategy" .-> J["Independent confirmatory test"]
 ```
 
-Every hourly grid and window is constructed within one `subject_id`, `hadm_id`,
-and `stay_id`. The public repository is intended to contain aggregate reports, not
-patient-level rows or split assignments.
+Every grid and window is constructed within a single patient, hospital admission,
+and ICU stay. Multiple measurements in the same variable-hour are aggregated by
+the median. There is no backward fill or future-dependent interpolation. Forward
+fill is limited to two hours and is accompanied by observation, missingness,
+forward-fill, and time-since-last-observation fields.
 
-## Dataset and cohort
+## Data and physiological variables
 
-The audited modeling build contains:
+The implemented FHIR extraction streams gzip-compressed NDJSON and reconstructs
+Patient, hospital Encounter, ICU Encounter, and Observation relationships. The
+canonical extraction retained 89,415 observations and preserves original values
+and units alongside normalized values. Fahrenheit is converted to degrees Celsius
+only through an explicit unit rule. Provisional physiological-range exclusions and
+unsupported observations are counted in an aggregate quality report.
 
-| Partition | Assigned patients | Patients with windows | Windows | Event prevalence |
-| --- | ---: | ---: | ---: | ---: |
-| Training | 70 | 63 | 5,636 | 19.30% |
-| Validation | 15 | 14 | 1,685 | 26.82% |
-| Developmental holdout | 15 | 15 | 1,551 | 14.12% |
-| **Total** | **100** | **92** | **8,872** | **19.83% overall** |
+Eight variables are represented:
 
-The build begins from 89,415 supported canonical observations representing 100
-patients, 128 hospital admissions, and 140 ICU stays. Hourly processing produced
-12,309 rows. It identified 10,008 candidate windows, excluded 1,136 for incomplete
-future MAP assessment, and retained 8,872 labeled windows: 1,759 positive and 7,113
-negative.
+- heart rate;
+- respiratory rate;
+- systolic blood pressure;
+- diastolic blood pressure;
+- mean arterial pressure;
+- peripheral oxygen saturation;
+- temperature;
+- oxygen flow.
 
-Splitting is deterministic and performed by patient. All admissions, ICU stays, and
-windows from the same patient remain in one partition. Patients assigned to a split
-but contributing no eligible window remain distinguishable in aggregate reporting.
+The code mappings are configuration-controlled but do not constitute definitive
+clinical ontology validation. Invasive, non-invasive, and alternate arterial
+pressure sources are currently pooled within variable-hour medians without a
+clinically validated source-priority rule. Oxygen flow is not treated as FiO2.
 
-These are overlapping prediction windows, not independent clinical events.
+## Canonical and historical Phase 1B routes
 
-## Features
+Two cohort-building routes previously coexisted:
 
-The baseline modeling table exposes 140 prespecified current and trailing features
-derived from heart rate, respiratory rate, systolic and diastolic blood pressure,
-MAP, oxygen saturation, temperature, and oxygen flow. Feature families include:
+| Route | Hourly rows | Eligible windows | Positive windows | Interpretation |
+| --- | ---: | ---: | ---: | --- |
+| Historical observation-bounded route | 12,309 | 8,872 | 1,759 | Preserved legacy development evidence |
+| Administrative ICU-bounds route | 12,502 | 8,970 | 1,774 | Current canonical cohort |
 
-- current and previous values;
-- one-hour changes;
-- rolling means, medians, minima, maxima, and standard deviations;
-- temporal slopes;
-- observed-measurement counts and missing proportions;
-- current observation, missingness, and bounded-forward-fill indicators;
-- time since the last real measurement;
-- pulse pressure and shock index with explicit missing indicators.
+The administrative route is canonical because its time-at-risk grid is defined by
+FHIR ICU Encounter periods rather than the first and last supported vital-sign
+observations. The decision was based on clinical-time definition, relationship
+validation, auditability, and reproducibility—not downstream performance.
 
-Forward filling is limited to two hours and never crosses an ICU stay. There is no
-backward filling. Oxygen flow is not treated as equivalent to FiO2. Patient,
-admission, stay, and window identifiers are excluded from predictors, as are the
-label, split, prediction timestamp, and future variables.
+## Internal validation
 
-## Models and clinical benchmarks
+The current internal validation uses five outer and three inner folds grouped by
+patient. All windows from a patient remain together. Each patient is assigned to
+one outer fold, and each of the 8,970 eligible windows receives exactly one
+out-of-fold prediction. Candidate and threshold selection occur only within inner
+cross-validation. Applicable imputers and scalers are fitted only on the relevant
+training fold.
 
-DeepVital compares conventional classifiers with deliberately simple clinical
-references:
+Conventional candidates include logistic regression, Gaussian Naive Bayes, and
+Histogram Gradient Boosting. The nested strategy evaluates prespecified variants
+of their regularization, variance-smoothing, or learning-rate parameters. The
+clinical comparators are training-fold prevalence, last MAP, six-hour mean and
+minimum MAP, MAP slope, shock index, and modified shock index.
 
-- a dummy classifier based on training prevalence;
-- logistic regression with median imputation, standardization, and class weighting;
-- Gaussian Naive Bayes with median imputation and standardization;
-- scikit-learn Histogram Gradient Boosting;
-- transparent MAP benchmarks based on current, previous, minimum, mean, change,
-  slope, and fixed thresholds;
-- shock index and modified shock index benchmarks.
+The MAP- and shock-index-derived outputs are bounded ranking scores, not calibrated
+probabilities. AUROC, AUPRC, and threshold-based metrics are applicable to these
+scores; Brier score and log loss are not. The prevalence and nested-ML outputs are
+probability estimates, although no post-hoc calibration model has been fitted.
 
-Applicable imputers and scalers are contained in pipelines fitted on training data.
-Histogram Gradient Boosting handles missing values natively. No post-hoc calibration
-model was fitted.
+## Current internal-development results
 
-The selected model is the transparent `map_mean_6h` benchmark: a risk score derived
-from the mean MAP over the trailing six hours. Selection used the highest validation
-AUPRC, then the lowest validation Brier score, then model name as a deterministic
-final tie-break. The selection of a simple benchmark is a useful result in itself;
-model complexity is not assumed to imply better performance.
+| Strategy | AUROC (95% patient-bootstrap CI) | AUPRC (95% CI) | Brier score | Log loss |
+| --- | --- | --- | ---: | ---: |
+| Six-hour mean MAP | 0.8416 (0.7984–0.8809) | 0.6219 (0.4914–0.7210) | Not applicable | Not applicable |
+| Last MAP | 0.8216 (0.7856–0.8559) | 0.5613 (0.4464–0.6538) | Not applicable | Not applicable |
+| Nested ML strategy | 0.8185 (0.7747–0.8633) | 0.5333 (0.4226–0.6423) | 0.1354 | 0.4228 |
 
-## Results
+In paired patient-level bootstrap comparisons, six-hour mean MAP minus the nested
+ML strategy was 0.0231 for AUROC (95% interval 0.0010–0.0419) and 0.0886 for AUPRC
+(0.0205–0.1453). Thus, in this internal development analysis, the six-hour mean
+MAP benchmark showed higher discrimination than the tested multivariable strategy.
+This does not establish clinical superiority, generalizability, or a final model.
 
-### Historical development results
+When a benchmark cannot be computed, the predeclared primary rule assigns a neutral
+score of 0.5 and reports availability and complete-case sensitivity. Nine windows
+from nine patients were affected for last MAP and modified shock index; eight
+windows from eight patients were affected for shock index. The two six-hour MAP
+summaries and MAP slope were calculable for all eligible windows.
 
-The numerical results below belong to the historical 8,872-window cohort and are
-formally named `development_holdout_v1`. They are preserved unchanged for audit
-continuity and are not results from the canonical administrative-bound cohort.
+All uncertainty intervals use 1,000 patient-cluster bootstrap replicates. Patients,
+not windows, are resampled, and all windows for a sampled patient remain together.
+Each outer fold retains the threshold selected from its inner folds. Results at a
+threshold of 0.5 are descriptive. The model-selection status is `not_final`, and
+the final-threshold status is `not_frozen`.
 
-> Estos resultados corresponden a evaluación de desarrollo. El conjunto fue
-> accedido cuatro veces y no debe interpretarse como un holdout confirmatorio
-> intacto.
+## Historical development holdout
 
-The table reports the selected benchmark at its validation-selected Youden
-threshold of 0.3775406688. Values are copied from the existing aggregate reports;
-they were not recalculated for this README.
+The earlier 8,872-window experiment is retained as `development_holdout_v1`, with
+`evaluation_role: development`, `confirmatory_holdout: false`, and
+`test_evaluation_count: 4`. Its metrics are preserved for audit continuity, but the
+partition is not an untouched confirmatory holdout. The access count has not been
+reset, and Git history does not support reconstructing every individual access with
+complete certainty. See [the holdout reuse assessment](docs/HOLDOUT_REUSE_ASSESSMENT.md).
 
-| Partition | AUROC | AUPRC | Brier score | Sensitivity | Specificity | PPV | NPV | F1 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Validation | 0.7897 | 0.6124 | 0.1622 | 0.7389 | 0.7486 | 0.5186 | 0.8866 | 0.6095 |
-| Developmental holdout | 0.8649 | 0.5490 | 0.1024 | 0.6849 | 0.8686 | 0.4615 | 0.9437 | 0.5515 |
+## Confirmatory evaluation status
 
-For the developmental holdout, patient-cluster bootstrap yielded 95% percentile
-intervals of 0.6987–0.9554 for AUROC, 0.1739–0.7875 for AUPRC, and
-0.0621–0.1461 for Brier score. All 1,000 requested replicates were valid. These
-wide intervals reflect the small number of patients and should temper comparisons
-between models.
+`confirmatory_test_pending` remains the current state. A future confirmatory test
+requires entirely new patients, a frozen protocol, cohort fingerprint, serialized
+model and model hash, fixed feature schema, and frozen threshold. The implemented
+confirmatory evaluator is inference-only, checks development-patient overlap, and
+records first consumption and exact technical reproductions. It has not been run.
 
-> The developmental holdout was processed during pipeline and metric corrections
-> and should not be interpreted as a completely independent confirmatory
-> evaluation.
-
-The selection record reports four accesses to this partition. The selected model
-and validation-derived thresholds did not change, but the reuse is a protocol
-deviation. Consequently, these results are best understood as internal development
-evidence, not as a final performance claim.
-
-## Evaluation safeguards
-
-Implemented safeguards include:
-
-- patient-level splitting with zero patient overlap;
-- ICU-stay-bounded aggregation and window construction;
-- predictors ending at \(t\) and outcomes beginning at \(t+1\);
-- future labels based on observed, not forward-filled, MAP;
-- training-only fitting of model parameters, imputers, and scalers;
-- model selection using validation metrics only;
-- Youden and target-sensitivity thresholds selected on validation only;
-- deterministic seeds for splitting, models, and bootstrap;
-- patient-cluster bootstrap that resamples patients with replacement and retains
-  all windows for every sampled patient;
-- aggregate reports without patient, admission, stay, window, or prediction-time
-  identifiers.
-
-These controls reduce common leakage and dependence errors, but they do not replace
-evaluation on larger and independently defined cohorts.
-
-## Figures
-
-The current figures are compact aggregate plots generated from the developmental
-evaluation. Exact numerical values are available in `reports/`; the plots should
-not be interpreted without the accompanying protocol and limitations.
-
-### Precision–recall curve
-
-![Precision–recall curves](reports/figures/precision_recall_curves.png)
-
-### ROC curve
-
-![ROC curves](reports/figures/roc_curves.png)
-
-### Calibration curve
-
-![Calibration curves](reports/figures/calibration_curves.png)
-
-Additional artifacts include
-[`decision_thresholds.png`](reports/figures/decision_thresholds.png) and
-[`risk_distribution.png`](reports/figures/risk_distribution.png).
-
-## Repository structure
+## Repository and documentation
 
 ```text
-configs/            Data, labeling, splitting, modeling, and evaluation settings
-docs/               Protocols, audits, data definitions, and model documentation
-scripts/            Inspection, extraction, dataset construction, training, evaluation
-src/deepvital/      Reusable clinical data, feature, model, and evaluation modules
-tests/              Synthetic fixtures and methodological unit tests
-reports/            Aggregate quality, cohort, metric, and comparison artifacts
-models/             Local serialized baselines and model-selection metadata
+configs/            Versioned data, outcome, model, and evaluation settings
+docs/               Current protocols, methods, governance, and historical records
+scripts/            Explicit pipeline entry points
+src/deepvital/      Reusable extraction, cohort, feature, model, and evaluation code
+tests/              Synthetic and methodological tests
+reports/            Versioned aggregate reports; no patient-level prediction rows
 ```
 
-Patient-level local artifacts under `data/processed/` and serialized `.joblib`
-models are ignored by Git.
+The documentation entry point is [docs/README.md](docs/README.md). Current-state
+summaries are in [PROJECT_STATUS.md](docs/PROJECT_STATUS.md),
+[RESEARCH_PROTOCOL.md](docs/RESEARCH_PROTOCOL.md),
+[METHODS_CURRENT.md](docs/METHODS_CURRENT.md), and
+[RESULTS_CURRENT.md](docs/RESULTS_CURRENT.md).
 
-## Installation
+## Installation and software verification
 
-The repository currently uses a requirements file rather than an installable Python
-package. A local virtual environment can be prepared with:
+Python 3.12 is the CI reference version.
 
 ```bash
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-`requirements.txt` currently names major runtime dependencies but does not pin their
-versions completely. Reproducing the exact development environment therefore
-requires additional environment capture. PostgreSQL access is optional for legacy
-local exploration and must be configured through `DEEPVITAL_DATABASE_URL`; secrets
-must not be committed.
-
-## Testing
-
-The automated suite uses synthetic resources, fixtures, and temporary paths:
-
-```bash
-python -m pytest -q
-python -m ruff check .
-```
-
-At the current repository state, 70 tests pass, including 18 Phase 2 tests covering
-feature exclusion, clinical benchmarks, probability metrics, validation-only
-selection behavior, threshold reuse, patient-level bootstrap, deterministic seeds,
-calibration summaries, and aggregate report schemas.
-
-Passing unit tests demonstrate the tested software contracts. They do not reproduce
-model training, establish clinical validity, or provide new evaluation evidence.
-
-## Synthetic reproducibility demo
-
-The public synthetic workflow exercises generation, 12-hour windowing, future
-6-hour labels, patient-level splitting, model fitting, validation-only selection,
-and a synthetic holdout without reading clinical data or Phase 2 artifacts.
-
-```bash
+python -m pip install -r requirements-dev.txt
 make check
-make demo
 ```
 
-See [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for the reproducibility
-boundary, generated artifacts, and the distinction between synthetic demonstration
-and the authorized clinical-data experiment.
+The current baseline verification at merge commit `0b7ce15` completed with 70
+passing tests and Ruff reporting no violations. Twelve Joblib/NumPy
+`DeprecationWarning` messages arose inside an external dependency; no functional
+failure was observed. Runtime dependencies are not fully pinned, so exact
+environment capture remains technical debt.
 
-## Reproducing the pipeline
+The public synthetic demonstration can be run with `make demo`. It does not
+reproduce the clinical experiment or provide clinical evidence.
 
-The full numerical results require authorized local access to the MIMIC-IV demo
-resources and private intermediate files. MIMIC data are not redistributed by this
-repository. The commands below document the implemented order; paths should be
-reviewed before use.
+## Reproducing authorized-data stages
 
-### 1. Aggregate FHIR inspection
-
-```bash
-python scripts/inspect_fhir.py \
-  data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir \
-  --output-dir reports
-```
-
-### 2. Canonical extraction
+The following commands require authorized local data. They must not be run merely
+to verify installation, and their paths and outputs must be reviewed before use.
 
 ```bash
 python scripts/extract_canonical_vitals.py \
@@ -295,135 +204,50 @@ python scripts/extract_canonical_vitals.py \
   --output data/processed/canonical_vitals.csv \
   --quality-report reports/canonical_extraction_quality.json \
   --format csv
-```
 
-### 3. Canonical ICU-bounded cohort
-
-```bash
 python scripts/build_canonical_cohort.py \
   --canonical-input data/processed/canonical_vitals.csv \
-  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir
+  --fhir-dir data/mimic-iv-clinical-database-demo-on-fhir-2.1.0/fhir \
+  --require-clean-worktree
 ```
 
-This is the only official cohort command. It produced the canonical v1 aggregate
-counts of 12,502 hourly rows and 8,970 eligible windows. The historical combined
-builder produced 12,309 and 8,872 respectively; it is deprecated, refuses accidental
-execution, and is retained only to reproduce historical development artifacts.
+Patient-level raw, interim, and processed products are ignored by Git. The public
+repository contains aggregate reports and fingerprints only. MIMIC-IV access and
+redistribution conditions continue to apply.
 
-## Evaluation roles after protocol repair
+## Development workflow and CI
 
-- **Historical development:** `development_holdout_v1`, 8,872 windows; metrics
-  preserved unchanged; the holdout was accessed four times.
-- **Internal validation:** `internal_nested_cross_validation` on the canonical
-  cohort, with patient-grouped outer and inner folds. All 92 patients contributing
-  eligible windows are each assigned to exactly one outer fold; all windows from a
-  patient remain together and every eligible window receives exactly one OOF
-  prediction. Clinical benchmarks and the nested ML strategy are evaluated on the
-  same 8,970 windows. The trailing
-  six-hour MAP mean currently has AUPRC 0.6219, versus 0.5333 for the nested ML
-  strategy. These are development comparisons, not a final model selection or
-  external validation.
-- **Confirmatory test:** pending. It requires completely new patients, a frozen
-  protocol, cohort fingerprint, serialized model, and threshold.
-- **External validation:** future work on an independently sourced clinical setting.
-
-See `docs/HOLDOUT_REUSE_ASSESSMENT.md`, `docs/PHASE_1B_COHORT_DECISION.md`, and
-`docs/EVALUATION_PROTOCOL.md` for the evidence and frozen rules.
-
-Every outer fold retains the threshold selected solely from its inner folds.
-Pooled metrics at threshold 0.5 are descriptive. No single final threshold is
-currently frozen; it can be estimated only after selecting a model strategy using
-all development data and out-of-fold predictions.
-
-The clinical sigmoid transforms are ranking scores rather than calibrated
-probabilities. Their Brier score and log loss are therefore not reported. The
-constant-prevalence and nested ML outputs are probability estimates, although no
-post-hoc calibration was fitted. Missing clinical scores use neutral 0.5 in the
-primary predeclared analysis and are also reported in complete-case sensitivity
-analyses.
-
-### 4. Baseline training and validation selection
-
-```bash
-python scripts/train_baseline_models.py
+```text
+feature branch → local tests → Ruff → git diff --check → push
+→ pull request → GitHub Actions → review → merge into main
 ```
 
-This command fits models on training data, produces validation predictions, selects
-the model and thresholds, writes validation reports, and updates local model
-artifacts.
+GitHub Actions runs on pushes and pull requests using Python 3.12, installs
+`requirements-dev.txt`, executes `python -m ruff check .`, and then executes
+`python -m pytest -q`. These checks validate software contracts; they do not
+recompute or validate clinical results.
 
-### 5. Developmental holdout evaluation
+## Principal limitations
 
-> **The evaluation command accesses the developmental holdout and should not be
-> rerun casually.** It also overwrites aggregate evaluation artifacts and increments
-> the access count in the model-selection record.
+- The source is a 100-patient demonstration dataset; only 92 patients contribute
+  eligible windows.
+- Evidence is internal development evidence, not confirmatory or external
+  validation.
+- Patients contribute correlated, overlapping windows; clustered inference does
+  not create additional independent patients.
+- Complete future MAP ascertainment may introduce selection bias.
+- Missingness may be clinically and operationally informative.
+- Blood-pressure source pooling lacks a validated source-precedence analysis.
+- Outcome-threshold and duration sensitivity analyses remain planned.
+- No post-hoc probability calibration has been fitted.
+- No transportability, decision-curve, workflow, prospective alerting, impact, or
+  clinical-benefit evaluation has been completed.
+- Future restricted confirmatory or external datasets may require additional
+  approvals and governance controls.
 
-```bash
-python scripts/evaluate_baseline_models.py
-```
+## License, ethics, and data use
 
-Do not run this command merely to verify installation. Use the synthetic pytest
-suite for software verification.
-
-## Limitations
-
-- The project uses a 100-patient MIMIC-IV-on-FHIR demo, with only 92 patients
-  contributing eligible windows.
-- Split prevalence differs materially: 19.30% in training, 26.82% in validation,
-  and 14.12% in the developmental holdout.
-- Overlapping windows from the same patient are correlated. Patient-level splitting,
-  equal-patient weighting, and clustered bootstrap address parts of this dependence
-  but do not create additional independent patients.
-- The developmental holdout was processed four times during pipeline and metric
-  corrections. It is not a fully independent confirmatory assessment.
-- No external validation dataset has been evaluated.
-- No prospective or clinical validation has been performed.
-- No post-hoc calibration model was fitted. Reported calibration intercepts,
-  slopes, curves, and Brier scores are descriptive.
-- Requiring complete future MAP may select periods with more intensive monitoring.
-- Invasive and non-invasive blood-pressure sources are pooled by hourly median
-  without a clinically validated source-priority rule.
-- Oxygen flow is not FiO2 and is not a validated NEWS2 oxygen variable.
-- The small, non-stratified patient split produces unstable estimates and wide
-  patient-bootstrap intervals.
-- The available results are not generalizable to other hospitals, populations,
-  devices, charting practices, or prospective workflows.
-
-## Intended use
-
-DeepVital is an educational and research software project demonstrating clinical
-data engineering, FHIR processing, temporal cohort construction, leakage-aware
-machine learning, and transparent evaluation. It is not intended to generate
-patient-facing alerts or support direct clinical decisions. Any future progression
-toward silent testing or workflow integration would require governance review,
-independent data, prospective protocols, usability and safety assessment, and
-appropriate regulatory analysis.
-
-## Current status
-
-| Phase | Status |
-| --- | --- |
-| FHIR inventory and audit | Complete |
-| Canonical extraction | Complete |
-| Windowing and labeling | Complete |
-| Clinical and ML baselines | Complete as developmental evaluation |
-| Patient-grouped nested cross-validation | Planned |
-| External validation | Not available |
-| Temporal deep learning model | Not started |
-
-## Author
-
-The repository does not currently provide a verified author name. DeepVital is
-presented as an interdisciplinary portfolio project at the intersection of medical
-practice and information-technology engineering. No institutional endorsement or
-clinical deployment experience is implied.
-
-## License and data
-
-No project-level `LICENSE` file is currently present; selecting and documenting a
-software license remains pending.
-
-MIMIC-IV and MIMIC-IV-on-FHIR data remain subject to their own access, credentialing,
-and use conditions. Raw and processed clinical data are stored locally, excluded
-from version control, and must not be redistributed through this repository. Public
-examples and automated tests use synthetic data.
+No project-level `LICENSE` file is currently present. Ethics and data-use
+statements should be finalized according to the requirements of the underlying
+dataset and the intended venue. No institutional approval or affiliation is
+asserted by this repository.

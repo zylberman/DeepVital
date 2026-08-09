@@ -1,5 +1,8 @@
 # Phase 1B Completion Audit
 
+> **Historical document.** This audit covers the legacy 8,872-window route. It is
+> preserved for traceability and is not the canonical cohort report.
+
 **Audit date:** 2026-07-26  
 **Scope:** Hourly aggregation, missingness, retrospective windows, future MAP label,
 and patient-level splitting  

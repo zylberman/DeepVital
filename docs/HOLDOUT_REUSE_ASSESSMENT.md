@@ -5,9 +5,8 @@
 **Evaluation role:** development
 **Confirmatory holdout:** no
 
-> Estos resultados corresponden a evaluación de desarrollo. El conjunto fue
-> accedido cuatro veces y no debe interpretarse como un holdout confirmatorio
-> intacto.
+These results are development evidence. The partition was accessed four times and
+must not be interpreted as an intact confirmatory holdout.
 
 ## Evidence boundary
 

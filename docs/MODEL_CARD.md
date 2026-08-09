@@ -1,5 +1,9 @@
 # DeepVital Phase 2 baseline model card
 
+> **Historical model card.** This document records the earlier 8,872-window
+> `development_holdout_v1` experiment. It does not describe a current final model.
+> See `RESULTS_CURRENT.md` and `EXPERIMENT_REGISTRY.md`.
+
 ## Intended use
 
 Research-only benchmarking of sustained hypotension prediction in the MIMIC-IV
@@ -44,5 +48,6 @@ intervals use 1,000 deterministic patient-cluster bootstrap replicates.
   clustering but uncertainty remains wide.
 - Validation and test prevalence differ materially.
 - Neutral risk 0.5 is used when a transparent clinical score is unavailable.
-- Results are internal validation on a demo dataset, not external validation.
+- Results are historical development evidence on a demo dataset, not confirmatory
+  or external validation.
 - Association and predictive utility do not imply causal importance.

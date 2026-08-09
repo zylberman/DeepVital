@@ -1,5 +1,9 @@
 # Phase 1B Data-Leakage Safeguards
 
+> **Historical Phase 1B audit.** The invariants remain relevant, but the numerical
+> completion evidence belongs to the legacy 8,872-window route. Current evidence is
+> documented in `RESEARCH_PROTOCOL.md` and `reports/canonical_v1/`.
+
 ## Implemented invariants
 
 - Every hourly grid and window is constructed within one `subject_id`, `hadm_id`,

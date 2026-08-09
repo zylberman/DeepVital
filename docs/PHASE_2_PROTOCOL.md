@@ -1,5 +1,9 @@
 # Phase 2 protocol
 
+> **Historical protocol.** This file describes the earlier train/validation/
+> developmental-holdout experiment. The current protocol is
+> `EVALUATION_PROTOCOL.md` and `RESEARCH_PROTOCOL.md`.
+
 Phase 2 freezes the Phase 1B cohort, patient split, 12-hour trailing predictor
 window, and future-only six-hour sustained-hypotension outcome. It compares
 transparent MAP and shock-index benchmarks with four conventional classifiers.
