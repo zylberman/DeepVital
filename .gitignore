@@ -36,6 +36,10 @@ reports/metrics/
 reports/tables/
 artifacts/
 
+# Operational preregistration is generated after the implementation commit.
+# Keeping it ignored permits HEAD==source_commit with a clean formal-run tree.
+reports/phase3_protocol_registration.json
+
 # Jupyter
 .ipynb_checkpoints/
 
