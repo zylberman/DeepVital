@@ -9,7 +9,8 @@
 ## Summary
 
 DeepVital implements a reproducible pipeline from FHIR resource inspection through
-prespecified patient-grouped development evaluation. Phase 3 is complete. The
+prespecified patient-grouped development evaluation. Phase 3 is **completed and
+closed for development analysis**. The
 prespecified 18-predictor L2 logistic candidate showed a small positive incremental
 AUPRC over `map_mean_6h`, but the gain did not reach the frozen `+0.020`
 development relevance margin. `map_mean_6h` is therefore retained as the
@@ -83,8 +84,13 @@ confirmatory test. Phase 3 is also development-only internal evidence.
 
 ## Next milestone
 
-Consolidate Phase 3 reporting, investigate the failed incomplete-future-MAP inputs
-without rewriting the original result, and seek a genuinely independent cohort.
-External work should first reproduce `map_mean_6h` and, if scientifically justified,
-the frozen logistic candidate, then assess transportability and calibration. No
-additional model shopping on this development cohort is warranted.
+Preserve the closed Phase 3 record and seek a genuinely independent cohort under a
+separately governed protocol. External work should first reproduce `map_mean_6h`
+and, if scientifically justified in advance, the frozen logistic candidate, then
+assess transportability and calibration. The failed incomplete-future-MAP inputs
+may be investigated only as post-Phase-3 supplementary technical work without
+rewriting the original result. No additional model shopping on this development
+cohort is warranted.
+
+The immutable result set, provenance chain, decision, and unresolved sensitivity
+failures are summarized in `PHASE_3_CLOSURE.md`.

@@ -124,9 +124,15 @@ records.
 | Original formal result commit | `c7db731` |
 | CSV line-ending normalization | `d3c6915` |
 | Result integration | PR #5 |
+| Result release tag | `phase3-development-results-v1` |
+| Formal execution timestamp | `2026-08-09T04:25:24.406193+00:00` |
+| Archived preregistration | `reports/archive/phase3_protocol_registration_v1.json` |
 
 The preregistration JSON itself was not committed before execution. Its SHA-256 was
-published in the preregistration tag before the formal run. Commit `d3c6915`
+published in the preregistration tag before the formal run. The subsequently
+archived byte-for-byte artifact has SHA-256
+`03bf1ce0efa6eb5e431b1e76654a878e9059353c8f6d11cdd0d6d09f6632a7c1`, matching
+that preregistered value. Commit `d3c6915`
 normalized CSV line endings only; it did not change scientific values. The formal
 reports disclose the two failed incomplete-future-MAP sensitivity analyses and an
 empty primary protocol-deviation list.
