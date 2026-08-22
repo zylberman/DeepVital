@@ -143,4 +143,3 @@ This verification does not:
 
 The synthetic metrics are software-demonstration outputs and must not be
 interpreted as evidence of clinical performance.
-
