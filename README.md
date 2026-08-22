@@ -277,7 +277,20 @@ recompute or validate clinical results.
 
 ## License, ethics, and data use
 
-No project-level `LICENSE` file is currently present. Ethics and data-use
-statements should be finalized according to the requirements of the underlying
-dataset and the intended venue. No institutional approval or affiliation is
-asserted by this repository.
+DeepVital is released under the [MIT License](LICENSE).
+
+The MIT License applies to the original source code in this repository. It does
+not grant permission to redistribute MIMIC-IV data or other third-party materials.
+Users must independently comply with the applicable PhysioNet credentialing,
+training, and data-use requirements.
+
+This repository presents methodological research software and aggregate results.
+It does not claim institutional approval, clinical validation, or authorization
+for patient-care use.
+
+## Data availability
+
+This repository does not distribute MIMIC-IV patient-level data. Access to the
+clinical source data requires the corresponding PhysioNet credentials, training,
+and data-use agreement. The public synthetic demonstration does not contain real
+patient information.
