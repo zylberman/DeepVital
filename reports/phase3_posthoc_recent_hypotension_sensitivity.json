@@ -1,0 +1,340 @@
+{
+  "analysis": {
+    "confirmatory": false,
+    "forward_filled_values_used_as_hypotension_evidence": false,
+    "hypotension_rule": "at least one observed hourly MAP strictly below 65 mmHg",
+    "interpretation": "Post-hoc assessment of persistence versus forecasting; not independent validation.",
+    "map_threshold_mm_hg": 65.0,
+    "model_reselected_for_subgroups": false,
+    "name": "recent observed hypotension post-hoc sensitivity analysis",
+    "prespecified": false,
+    "recent_period": "t-5 through t inclusive",
+    "role": "reviewer-requested internal sensitivity analysis",
+    "threshold_reselected_for_subgroups": false,
+    "validation_description": "patient-grouped nested cross-validation internal validation"
+  },
+  "cohort_accounting": {
+    "all_eligible_windows": {
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "positive_windows": 1774,
+      "prevalence": 0.19777034559643256
+    },
+    "complete_recent_normotension": {
+      "number_of_patients": 83,
+      "number_of_windows": 4756,
+      "positive_windows": 302,
+      "prevalence": 0.06349873843566022
+    },
+    "current_observed_normotension": {
+      "number_of_patients": 92,
+      "number_of_windows": 7329,
+      "positive_windows": 872,
+      "prevalence": 0.11897939691635967
+    },
+    "no_observed_recent_hypotension": {
+      "number_of_patients": 83,
+      "number_of_windows": 5213,
+      "positive_windows": 326,
+      "prevalence": 0.0625359677728755
+    }
+  },
+  "cohort_results": {
+    "all_eligible_windows": {
+      "benchmark_metrics": {
+        "auprc": 0.621869469148825,
+        "auroc": 0.8416282799601181,
+        "f1": 0.5762256548018805,
+        "fn": 487.0,
+        "fp": 1406.0,
+        "npv": 0.9224151664808029,
+        "ppv": 0.4779056813962124,
+        "prevalence": 0.19777034559643256,
+        "sensitivity": 0.7254791431792559,
+        "specificity": 0.8046136742634797,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 5790.0,
+        "tp": 1287.0
+      },
+      "candidate_metrics": {
+        "auprc": 0.6293981555920831,
+        "auroc": 0.8447827084193712,
+        "brier_score": 0.162626567181836,
+        "f1": 0.5701013513513514,
+        "fn": 424.0,
+        "fp": 1612.0,
+        "log_loss": 0.48708885047841977,
+        "npv": 0.929427430093209,
+        "ppv": 0.45577312626603644,
+        "prevalence": 0.19777034559643256,
+        "sensitivity": 0.7609921082299888,
+        "specificity": 0.7759866592551418,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 5584.0,
+        "tp": 1350.0
+      },
+      "number_of_patients": 92,
+      "number_of_windows": 8970,
+      "paired_differences": {
+        "delta_auprc": {
+          "ci_95_lower": 0.0004996287013002788,
+          "ci_95_upper": 0.01712977187518211,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auprc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": 0.0075286864432581035,
+          "proportion_bootstrap_difference_above_zero": 0.987,
+          "reference_model": "map_mean_6h"
+        },
+        "delta_auroc": {
+          "ci_95_lower": -0.0002853697654447759,
+          "ci_95_upper": 0.006642685314395779,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auroc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": 0.003154428459253067,
+          "proportion_bootstrap_difference_above_zero": 0.961,
+          "reference_model": "map_mean_6h"
+        }
+      },
+      "positive_windows": 1774,
+      "prevalence": 0.19777034559643256
+    },
+    "complete_recent_normotension": {
+      "benchmark_metrics": {
+        "auprc": 0.13837662862460026,
+        "auroc": 0.692725045126488,
+        "f1": 0.15725806451612903,
+        "fn": 263.0,
+        "fp": 155.0,
+        "npv": 0.9423498465585269,
+        "ppv": 0.20103092783505155,
+        "prevalence": 0.06349873843566022,
+        "sensitivity": 0.1291390728476821,
+        "specificity": 0.9651998203861697,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 4299.0,
+        "tp": 39.0
+      },
+      "candidate_metrics": {
+        "auprc": 0.139051362879062,
+        "auroc": 0.6910374482941146,
+        "brier_score": 0.10236192831254255,
+        "f1": 0.19344773790951642,
+        "fn": 240.0,
+        "fp": 277.0,
+        "log_loss": 0.3407836484237226,
+        "npv": 0.9456644781525922,
+        "ppv": 0.18289085545722714,
+        "prevalence": 0.06349873843566022,
+        "sensitivity": 0.2052980132450331,
+        "specificity": 0.9378087112707678,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 4177.0,
+        "tp": 62.0
+      },
+      "number_of_patients": 83,
+      "number_of_windows": 4756,
+      "paired_differences": {
+        "delta_auprc": {
+          "ci_95_lower": -0.031731882243368134,
+          "ci_95_upper": 0.019532199957626905,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auprc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": 0.0006747342544617396,
+          "proportion_bootstrap_difference_above_zero": 0.515,
+          "reference_model": "map_mean_6h"
+        },
+        "delta_auroc": {
+          "ci_95_lower": -0.01436527047833292,
+          "ci_95_upper": 0.010595157746841942,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auroc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": -0.0016875968323734059,
+          "proportion_bootstrap_difference_above_zero": 0.385,
+          "reference_model": "map_mean_6h"
+        }
+      },
+      "positive_windows": 302,
+      "prevalence": 0.06349873843566022
+    },
+    "current_observed_normotension": {
+      "benchmark_metrics": {
+        "auprc": 0.3645266586570236,
+        "auroc": 0.7837795692890015,
+        "f1": 0.41045751633986927,
+        "fn": 401.0,
+        "fp": 952.0,
+        "npv": 0.9321029461564511,
+        "ppv": 0.3309908643710471,
+        "prevalence": 0.11897939691635967,
+        "sensitivity": 0.5401376146788991,
+        "specificity": 0.8525631098033142,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 5505.0,
+        "tp": 471.0
+      },
+      "candidate_metrics": {
+        "auprc": 0.36083460827100267,
+        "auroc": 0.7794716068046484,
+        "brier_score": 0.14556115984135914,
+        "f1": 0.4049689440993789,
+        "fn": 383.0,
+        "fp": 1054.0,
+        "log_loss": 0.4438521526026656,
+        "npv": 0.9338057379882475,
+        "ppv": 0.3169151004536617,
+        "prevalence": 0.11897939691635967,
+        "sensitivity": 0.5607798165137615,
+        "specificity": 0.8367663001393836,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 5403.0,
+        "tp": 489.0
+      },
+      "number_of_patients": 92,
+      "number_of_windows": 7329,
+      "paired_differences": {
+        "delta_auprc": {
+          "ci_95_lower": -0.015847434625549547,
+          "ci_95_upper": 0.009625976284874077,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auprc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": -0.0036920503860209397,
+          "proportion_bootstrap_difference_above_zero": 0.312,
+          "reference_model": "map_mean_6h"
+        },
+        "delta_auroc": {
+          "ci_95_lower": -0.011181218243855776,
+          "ci_95_upper": 0.0018929595080212393,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auroc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": -0.004307962484353056,
+          "proportion_bootstrap_difference_above_zero": 0.09,
+          "reference_model": "map_mean_6h"
+        }
+      },
+      "positive_windows": 872,
+      "prevalence": 0.11897939691635967
+    },
+    "no_observed_recent_hypotension": {
+      "benchmark_metrics": {
+        "auprc": 0.14083212260635558,
+        "auroc": 0.7036076682722786,
+        "f1": 0.1550094517958412,
+        "fn": 285.0,
+        "fp": 162.0,
+        "npv": 0.9431137724550899,
+        "ppv": 0.2019704433497537,
+        "prevalence": 0.0625359677728755,
+        "sensitivity": 0.12576687116564417,
+        "specificity": 0.9668508287292817,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 4725.0,
+        "tp": 41.0
+      },
+      "candidate_metrics": {
+        "auprc": 0.1438051753359596,
+        "auroc": 0.7024131883637696,
+        "brier_score": 0.10074466766597596,
+        "f1": 0.19799139167862265,
+        "fn": 257.0,
+        "fp": 302.0,
+        "log_loss": 0.3361739610618813,
+        "npv": 0.9469227591904171,
+        "ppv": 0.18598382749326145,
+        "prevalence": 0.0625359677728755,
+        "sensitivity": 0.2116564417177914,
+        "specificity": 0.9382033967669327,
+        "threshold": null,
+        "threshold_policy": "fold_specific_inner_cv",
+        "tn": 4585.0,
+        "tp": 69.0
+      },
+      "number_of_patients": 83,
+      "number_of_windows": 5213,
+      "paired_differences": {
+        "delta_auprc": {
+          "ci_95_lower": -0.028769520254161293,
+          "ci_95_upper": 0.023828429040424193,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auprc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": 0.00297305272960402,
+          "proportion_bootstrap_difference_above_zero": 0.589,
+          "reference_model": "map_mean_6h"
+        },
+        "delta_auroc": {
+          "ci_95_lower": -0.013868855745110261,
+          "ci_95_upper": 0.011341576352948517,
+          "comparison_model": "logistic_regression",
+          "difference_definition": "comparison_minus_reference",
+          "favorable_direction": "positive",
+          "metric": "delta_auroc",
+          "number_of_valid_bootstraps": 1000,
+          "observed_difference": -0.0011944799085089608,
+          "proportion_bootstrap_difference_above_zero": 0.436,
+          "reference_model": "map_mean_6h"
+        }
+      },
+      "positive_windows": 326,
+      "prevalence": 0.0625359677728755
+    }
+  },
+  "input_validation": {
+    "dataset_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "expected_dataset_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "fold_manifest_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+    "number_of_patients": 92,
+    "number_of_windows": 8970
+  },
+  "limitations": [
+    "The analysis was requested after inspection of the primary Phase 3 results.",
+    "Overlapping windows from the same patient remain correlated.",
+    "Patient-cluster bootstrap preserves patient-level clustering but does not create independent events.",
+    "The no-observed-recent-hypotension cohort may contain hours with missing MAP.",
+    "The complete-recent-normotension cohort is stricter but may select more intensively monitored periods."
+  ],
+  "original_primary_reproduction": {
+    "absolute_difference": 0.0,
+    "expected_delta_auprc": 0.0075286864432581035,
+    "matched_with_absolute_tolerance_1e_minus_12": true,
+    "reproduced_delta_auprc": 0.0075286864432581035
+  },
+  "reviewer_requested_positive_window_accounting": {
+    "all_windows": 8970,
+    "positive_windows": 1774,
+    "positive_windows_with_any_observed_hypotension_t_minus_5_to_t": 1448,
+    "positive_windows_with_complete_recent_map_assessment": 1651,
+    "positive_windows_with_current_observed_hypotension": 879,
+    "positive_windows_without_any_observed_map_t_minus_5_to_t": 0,
+    "proportion_of_positive_windows_with_any_observed_hypotension_t_minus_5_to_t": 0.8162344983089064,
+    "proportion_of_positive_windows_with_complete_recent_map_assessment": 0.9306651634723788,
+    "proportion_of_positive_windows_with_current_observed_hypotension": 0.4954904171364149,
+    "proportion_of_positive_windows_without_any_observed_map_t_minus_5_to_t": 0.0
+  }
+}

@@ -128,10 +128,13 @@ aggregate artifacts cannot reproduce point-level OOF ROC/PR/calibration curves.
 
 ## Declarations and gaps
 
-Ethics/exemption, official data-use wording, authors, affiliations, ORCIDs, CRediT,
-funding, conflicts, acknowledgements, AI disclosure, code license, dataset license,
-and primary citations remain author responsibilities. No DOI/Zenodo record exists.
-See `08_DECLARATIONS_AND_ETHICS.md` and `10_MISSING_INFORMATION_QUESTIONS.md`.
+Ethics/exemption, official data-use wording, final manuscript authorship and CRediT
+roles, funding, conflicts, acknowledgements, AI disclosure, dataset license, and
+primary citations remain author responsibilities. Public software metadata identify
+Byron Mena Acosta, Independent Researcher, Ecuador, with ORCID
+`https://orcid.org/0009-0005-8809-202X`; the repository uses the MIT License. No
+DOI/Zenodo record exists. See `08_DECLARATIONS_AND_ETHICS.md` and
+`10_MISSING_INFORMATION_QUESTIONS.md`.
 
 ## Evidence navigation
 

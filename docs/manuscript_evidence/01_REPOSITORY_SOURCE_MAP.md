@@ -27,7 +27,7 @@ model card/current methods, then narrative summaries.
 | Governance | `docs/DATA_GOVERNANCE.md`; `.gitignore`; `.env.example` | Privacy and publication boundary | Project-level safeguards, not institutional approval |
 | Dataset inventory | `docs/{FHIR_DATA_INVENTORY,FHIR_TO_CANONICAL_MAPPING,CANONICAL_DATA_MODEL}.md`; `reports/fhir_*` | Aggregate FHIR structure and mappings | Supporting evidence |
 | Legacy/historical docs | `docs/AUDIT.md`; `CODEX_MASTER_SPEC.md`; `COHORT_DEFINITION.md`; Phase 1/2 docs | Earlier state and requirements | Cite only with status context |
-| License/citation | no `LICENSE`, `CITATION.cff`, Zenodo file, or DOI found | Publication metadata | Missing |
+| License/citation | `LICENSE`; `CITATION.cff`; no Zenodo record or DOI | Publication metadata | MIT license and software citation metadata present; archival DOI absent |
 | Public repository | Git remote `https://github.com/zylberman/DeepVital.git` | Code location | Verified locally |
 
 No patient-level data, predictions, or private fold assignments are included in

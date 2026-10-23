@@ -9,9 +9,11 @@ development-study manuscript, but not a claim of external, confirmatory,
 prospective, or clinical validation.
 
 **Manuscript readiness:** ready for structured drafting after author-supplied
-ethics, authorship, affiliation, funding, conflict-of-interest, licensing, and
-data-access statements are completed. These omissions block a public preprint
-submission package, not interpretation of the frozen Phase 3 analysis.
+ethics, manuscript authorship and contributions, funding, conflict-of-interest,
+and data-access statements are completed. The repository now identifies the
+software author and affiliation and provides an MIT license and citation metadata.
+The remaining omissions block a public preprint submission package, not
+interpretation of the frozen Phase 3 analysis.
 
 ## Ten confirmed facts
 
@@ -40,9 +42,9 @@ submission package, not interpretation of the frozen Phase 3 analysis.
 
 ### Before preprint
 
-- Author list, affiliations, corresponding author, ORCIDs, contributions, funding, conflicts, acknowledgements, and generative-AI disclosure.
+- Final manuscript author list, corresponding author, contributions, funding, conflicts, acknowledgements, and generative-AI disclosure. Public software metadata identify Byron Mena Acosta, Independent Researcher, Ecuador, and ORCID `https://orcid.org/0009-0005-8809-202X`.
 - Venue-appropriate ethics/exemption and PhysioNet/MIMIC data-use wording.
-- A project code license and verified code/data availability statements.
+- Verified code/data availability statements and confirmation that the existing MIT license covers the intended release.
 - Primary bibliographic citations for MIMIC-IV, MIMIC-IV FHIR, TRIPOD+AI, PROBAST+AI, and the clinical MAP threshold.
 
 ### Before journal submission
