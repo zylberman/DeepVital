@@ -1,0 +1,200 @@
+{
+  "analysis": {
+    "confirmatory": false,
+    "external_validation": false,
+    "interpretation": "Calibration was estimated from outer-fold out-of-fold predictions. Each patient was absent from the model used to produce that patient's predictions.",
+    "model_refitted": true,
+    "name": "candidate calibration analysis",
+    "post_hoc_reporting": true,
+    "primary_phase3_decision_changed": false,
+    "role": "reviewer-requested post-hoc internal reporting",
+    "validation_description": "patient-grouped nested cross-validation internal validation"
+  },
+  "calibration": {
+    "analysis_role": "reviewer-requested post-hoc calibration reporting",
+    "binning": {
+      "interval_rule": "[lower, upper), except the final interval includes 1.0",
+      "method": "ten fixed-width probability intervals",
+      "number_of_bins": 10
+    },
+    "number_of_positive_windows": 1774,
+    "number_of_windows": 8970,
+    "validation_description": "patient-grouped nested cross-validation internal validation",
+    "variants": {
+      "after_platt": {
+        "calibration_intercept": -0.00029701117676997503,
+        "calibration_slope": 1.0001232933333872,
+        "points": [
+          {
+            "bin": 0,
+            "count": 4487,
+            "lower_bound": 0.0,
+            "mean_predicted": 0.03919037827947559,
+            "observed_proportion": 0.0483619344773791,
+            "upper_bound": 0.1
+          },
+          {
+            "bin": 1,
+            "count": 1319,
+            "lower_bound": 0.1,
+            "mean_predicted": 0.14565746706545413,
+            "observed_proportion": 0.12509476876421532,
+            "upper_bound": 0.2
+          },
+          {
+            "bin": 2,
+            "count": 822,
+            "lower_bound": 0.2,
+            "mean_predicted": 0.24791977535707616,
+            "observed_proportion": 0.21897810218978103,
+            "upper_bound": 0.3
+          },
+          {
+            "bin": 3,
+            "count": 631,
+            "lower_bound": 0.3,
+            "mean_predicted": 0.34821717483761566,
+            "observed_proportion": 0.31695721077654515,
+            "upper_bound": 0.4
+          },
+          {
+            "bin": 4,
+            "count": 508,
+            "lower_bound": 0.4,
+            "mean_predicted": 0.4465514231223783,
+            "observed_proportion": 0.41732283464566927,
+            "upper_bound": 0.5
+          },
+          {
+            "bin": 5,
+            "count": 506,
+            "lower_bound": 0.5,
+            "mean_predicted": 0.5511083539757241,
+            "observed_proportion": 0.5375494071146245,
+            "upper_bound": 0.6
+          },
+          {
+            "bin": 6,
+            "count": 433,
+            "lower_bound": 0.6,
+            "mean_predicted": 0.6512867985937509,
+            "observed_proportion": 0.6882217090069284,
+            "upper_bound": 0.7
+          },
+          {
+            "bin": 7,
+            "count": 264,
+            "lower_bound": 0.7,
+            "mean_predicted": 0.7394653651544676,
+            "observed_proportion": 0.8712121212121212,
+            "upper_bound": 0.8
+          }
+        ]
+      },
+      "before_platt": {
+        "calibration_intercept": -1.3968926292217552,
+        "calibration_slope": 1.030469192611148,
+        "points": [
+          {
+            "bin": 0,
+            "count": 1814,
+            "lower_bound": 0.0,
+            "mean_predicted": 0.043749092299540514,
+            "observed_proportion": 0.020396912899669238,
+            "upper_bound": 0.1
+          },
+          {
+            "bin": 1,
+            "count": 1194,
+            "lower_bound": 0.1,
+            "mean_predicted": 0.1479748760245078,
+            "observed_proportion": 0.05443886097152429,
+            "upper_bound": 0.2
+          },
+          {
+            "bin": 2,
+            "count": 951,
+            "lower_bound": 0.2,
+            "mean_predicted": 0.2495209683600427,
+            "observed_proportion": 0.0683491062039958,
+            "upper_bound": 0.3
+          },
+          {
+            "bin": 3,
+            "count": 842,
+            "lower_bound": 0.3,
+            "mean_predicted": 0.3491520016519713,
+            "observed_proportion": 0.11163895486935867,
+            "upper_bound": 0.4
+          },
+          {
+            "bin": 4,
+            "count": 915,
+            "lower_bound": 0.4,
+            "mean_predicted": 0.44820767389867305,
+            "observed_proportion": 0.11475409836065574,
+            "upper_bound": 0.5
+          },
+          {
+            "bin": 5,
+            "count": 833,
+            "lower_bound": 0.5,
+            "mean_predicted": 0.5487808746531354,
+            "observed_proportion": 0.2112845138055222,
+            "upper_bound": 0.6
+          },
+          {
+            "bin": 6,
+            "count": 790,
+            "lower_bound": 0.6,
+            "mean_predicted": 0.6487681664651657,
+            "observed_proportion": 0.310126582278481,
+            "upper_bound": 0.7
+          },
+          {
+            "bin": 7,
+            "count": 671,
+            "lower_bound": 0.7,
+            "mean_predicted": 0.7477686744155245,
+            "observed_proportion": 0.44411326378539495,
+            "upper_bound": 0.8
+          },
+          {
+            "bin": 8,
+            "count": 591,
+            "lower_bound": 0.8,
+            "mean_predicted": 0.8471155703205252,
+            "observed_proportion": 0.6277495769881557,
+            "upper_bound": 0.9
+          },
+          {
+            "bin": 9,
+            "count": 369,
+            "lower_bound": 0.9,
+            "mean_predicted": 0.9397680231140434,
+            "observed_proportion": 0.8617886178861789,
+            "upper_bound": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "input_validation": {
+    "dataset_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "expected_dataset_fingerprint": "sha256:b091325fa74648d09d2eff3c78c560b3041a923af6c5e6c12cf01d85d862ef5e",
+    "fold_manifest_fingerprint": "sha256:fff63cd0a5ab44625cd1490e3eaa5f5a01cce2d9e352ece216f8ba95d2cc9b99",
+    "number_of_patients": 92,
+    "number_of_windows": 8970
+  },
+  "limitations": [
+    "This post-hoc analysis uses the same internal development cohort as the primary Phase 3 analysis.",
+    "The 8,970 overlapping prediction windows arise from only 92 patients and are not independent observations.",
+    "The calibration curves are descriptive internal out-of-fold estimates, not independent confirmation."
+  ],
+  "original_primary_reproduction": {
+    "absolute_difference": 0.0,
+    "expected_delta_auprc": 0.0075286864432581035,
+    "matched_with_absolute_tolerance_1e_minus_12": true,
+    "reproduced_delta_auprc": 0.0075286864432581035
+  }
+}
