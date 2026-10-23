@@ -7,15 +7,15 @@
 | PhysioNet compliance/training | Missing | Authorized access mentioned only | Credentialing/course status and agreement applicable to actual source |
 | Data availability | Draftable | Restricted inputs excluded; aggregate reports public | Confirm exact dataset URL/version and access instructions |
 | Code availability | Draftable | `https://github.com/zylberman/DeepVital.git`, commit/tag verified | Confirm public release URL and archival DOI if created |
-| Code license | Missing | No project-level `LICENSE` | Select and add license before public reuse claims |
+| Code license | Present | Project-level MIT `LICENSE`; `CITATION.cff` declares `license: MIT` | Confirm compatibility with any future third-party additions |
 | Data license | Missing in publication-ready form | Provider terms acknowledged | Cite exact MIMIC-IV Demo/FHIR license and redistribution restrictions |
 | Funding | Missing | No assertion | Funder/grant or “no specific funding” confirmation |
 | Conflicts of interest | Missing | No assertion | Author declarations |
-| Author contributions | Missing | No author list | CRediT roles agreed by all authors |
+| Author contributions | Missing | Public software metadata identify Byron Mena Acosta, but do not define manuscript authorship or CRediT roles | CRediT roles agreed by all manuscript authors |
 | Acknowledgements | Missing | No assertion | Contributors/infrastructure/data providers |
 | Generative AI disclosure | Missing | This evidence packet was AI-assisted | Authors must disclose according to venue policy and retain human accountability |
-| ORCID | Missing | No records | Each author as applicable |
-| Affiliations | Missing | Repository declines to assert | Exact institutional affiliations |
+| ORCID | Present for the software author | `CITATION.cff`: `https://orcid.org/0009-0005-8809-202X` | Confirm for the final manuscript author list |
+| Affiliations | Present for the software author | `CITATION.cff`: `Independent Researcher, Ecuador` | Confirm for the final manuscript author list |
 | Corresponding author | Missing | No record | Name and contact |
 | Coauthors | Missing | No record | Determine authorship using accepted criteria; do not infer from Git alone |
 

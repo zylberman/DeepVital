@@ -2,13 +2,16 @@
 
 ## Priority 1 — required before preprint
 
-1. Who are the authors, their exact affiliations, ORCIDs, and corresponding author?
+1. Will Byron Mena Acosta (`Independent Researcher, Ecuador`; ORCID
+   `https://orcid.org/0009-0005-8809-202X`) be the sole manuscript author, and what
+   corresponding-author contact should be used?
 2. What CRediT contributions did each author make, and have all authors approved authorship?
 3. What ethics approval, exemption, or institutional determination applies? Provide institution, identifier, date, and approved wording.
 4. Under which exact PhysioNet/MIMIC credentialing and data-use terms was the local FHIR demo obtained?
 5. What funding and conflicts-of-interest statements are accurate?
 6. What generative-AI disclosure is required by the target venue for this audit and later drafting?
-7. Which code license will govern the repository?
+7. Does the existing MIT software license cover every original code component
+   intended for the manuscript release, and are any third-party notices required?
 8. What is the target preprint server/journal, and which reporting/declaration format does it require?
 
 ## Priority 2 — scientific reporting

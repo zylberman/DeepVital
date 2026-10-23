@@ -116,8 +116,10 @@ minimum MAP, MAP slope, shock index, and modified shock index.
 
 The MAP- and shock-index-derived outputs are bounded ranking scores, not calibrated
 probabilities. AUROC, AUPRC, and threshold-based metrics are applicable to these
-scores; Brier score and log loss are not. The prevalence and nested-ML outputs are
-probability estimates, although no post-hoc calibration model has been fitted.
+scores; Brier score and log loss are not. In the earlier broad nested comparison,
+the prevalence and nested-ML outputs were probability estimates and no post-hoc
+calibration model was fitted. Phase 3 separately applied Platt recalibration to the
+logistic candidate using outer-training inner-OOF predictions only.
 
 ## Current internal-development results
 
@@ -212,9 +214,11 @@ python -m pip install -r requirements-dev.txt
 make check
 ```
 
-Phase 3 implementation and results passed repository CI before merge through PR #5.
-Runtime dependencies are not fully pinned, so exact environment reproduction
-continues to require recorded package metadata and matching private inputs.
+GitHub Actions is configured to run Ruff and the synthetic test suite. The same
+checks pass locally, but a green remote run for the current public commit was not
+independently verified during the latest documentation audit. Runtime dependencies
+are not fully pinned, so exact environment reproduction continues to require
+recorded package metadata and matching private inputs.
 
 The public synthetic demonstration can be run with `make demo`. It does not
 reproduce the clinical experiment or provide clinical evidence.
@@ -278,6 +282,8 @@ recompute or validate clinical results.
 ## License, ethics, and data use
 
 DeepVital is released under the [MIT License](LICENSE).
+
+Software citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
 The MIT License applies to the original source code in this repository. It does
 not grant permission to redistribute MIMIC-IV data or other third-party materials.
